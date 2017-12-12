@@ -91,7 +91,7 @@ strong
 }
 
 #header
-{width: 100%; 
+{font-size: .7rem; font-weight: 700; width: 100%; 
     padding: 1rem .5rem;
 }
 
@@ -151,7 +151,7 @@ body.footer-sticky .body-wrapper
 .dropmenu ul li a
 {display: block; padding: 10px 30px 10px 20px; 
 
-    text-decoration: none; color: #1bb3e9;
+    text-decoration: none; color: #454d5d;
 }
 
 .dropmenu ul li a:before
