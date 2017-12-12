@@ -1,0 +1,9 @@
+name: Quark
+version: 0.1.0
+description: New Grav Default Theme
+icon: rebel
+license: MIT
+
+form:
+  validation: loose
+

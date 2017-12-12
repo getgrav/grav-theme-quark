@@ -1,0 +1,77 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% set grid_size = 'grid-xl' %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+<head>
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include 'partials/metadata.html.twig' %}
+
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+    {% block stylesheets %}
+        {% do assets.addCss('theme://css-compiled/spectre.css') %}
+        {% do assets.addCss('theme://css-compiled/theme.css') %}
+        {% do assets.addCss('theme://css/custom.css') %}
+        {% do assets.addCss('theme://css/line-awesome-font-awesome.min.css') %}
+    {% endblock %}
+    {{ assets.css() }}
+
+    {% block javascripts %}
+        {% do assets.addJs('jquery', 101) %}
+    {% endblock %}
+    {{ assets.js() }}
+
+{% endblock head%}
+</head>
+<body id="top" class="header-fixed footer-sticky {{ page.header.body_classes }}">
+    <div class="body-wrapper">
+    {% block header %}
+        <section id="header" class="section bg-gray">
+            <section class="container {{ grid_size }}">
+                <nav class="navbar">
+                    <section class="navbar-section logo">
+                        <a href="{{ home_url }}" class="navbar-brand mr-10"><img src="{{ url('theme://images/grav-logo.svg') }}" alt="{{ site.title }}"/></a>
+                    </section>
+                    <section class="navbar-section">
+                        <nav class="dropmenu animated">
+                        {% include 'partials/navigation.html.twig' %}
+                        </nav>
+                        {% if config.plugins.login.enabled and grav.user.username %}
+                            <span class="login-status-wrapper"><i class="icon dripicons-user"></i> {% include 'partials/login-status.html.twig' %}</span>
+                        {% endif %}
+                    </section>
+                </nav>
+            </section>
+        </section>
+    {% endblock %}
+
+    {% block body %}
+        <section id="body" class="container {{ grid_size }}">
+            <div class="container">
+                {% block messages %}
+                    {% include 'partials/messages.html.twig' ignore missing %}
+                {% endblock %}
+                {% block content %}{% endblock %}
+            </div>
+        </section>
+    {% endblock %}
+    </div>
+{% block footer %}
+    <section id="footer" class="section bg-gray">
+        <section class="container {{ grid_size }}">
+            <p><a href="http://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="http://www.rockettheme.com">RocketTheme</a>.</p>
+        </div>
+    </section>
+{% endblock %}
+
+{% block bottom %}
+    {{ assets.js('bottom') }}
+{% endblock %}
+
+</body>

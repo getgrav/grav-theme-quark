@@ -1,0 +1,15 @@
+// Sticky Footer solution
+body.footer-sticky {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .body-wrapper {
+    flex: 1;
+  }
+}
+
+#footer {
+  color: #acb3c2;
+  padding: 1rem 0 0;
+}

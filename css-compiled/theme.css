@@ -1,0 +1,225 @@
+html
+{
+    height: 100%;
+}
+
+#body
+{
+    padding: 5rem 0;
+}
+
+.bg-gray
+{padding: 1rem; color: #667189; 
+    background: #f8f9fa;
+}
+
+h1 + h2
+{
+    margin-top: -20px; margin-bottom: 30px;
+}
+
+b,
+strong
+{
+    font-weight: 700;
+}
+
+.heavy
+{
+    font-weight: 700;
+}
+
+.light
+{
+    font-weight: 200;
+}
+
+#error
+{position: relative; margin-top: 5rem; 
+
+    text-align: center;
+}
+
+#error .icon
+{
+    font-size: 50px;
+}
+
+#messages
+{
+    margin-bottom: 1rem;
+}
+
+#messages .icon
+{
+    font-size: 120%;
+}
+
+.notices p
+{
+    margin: 1rem 0;
+}
+
+/* raleway-regular - latin */
+@font-face
+{
+    font-family: 'Raleway'; font-weight: 400; font-style: normal; src: local('Raleway'), local('Raleway-Regular'), url('../fonts/raleway-v12-latin-regular.woff2') format('woff2'), url('../fonts/raleway-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* raleway-700 - latin */
+@font-face
+{
+    font-family: 'Raleway'; font-weight: 700; font-style: normal; src: local('Raleway Bold'), local('Raleway-Bold'), url('../fonts/raleway-v12-latin-700.woff2') format('woff2'), url('../fonts/raleway-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-200 - latin */
+@font-face
+{
+    font-family: 'Montserrat'; font-weight: 200; font-style: normal; src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url('../fonts/montserrat-v12-latin-200.woff2') format('woff2'), url('../fonts/montserrat-v12-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-regular - latin */
+@font-face
+{
+    font-family: 'Montserrat'; font-weight: 400; font-style: normal; src: local('Montserrat Regular'), local('Montserrat-Regular'), url('../fonts/montserrat-v12-latin-regular.woff2') format('woff2'), url('../fonts/montserrat-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-700 - latin */
+@font-face
+{
+    font-family: 'Montserrat'; font-weight: 700; font-style: normal; src: local('Montserrat Bold'), local('Montserrat-Bold'), url('../fonts/montserrat-v12-latin-700.woff2') format('woff2'), url('../fonts/montserrat-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+#header
+{width: 100%; 
+    padding: 1rem .5rem;
+}
+
+#header .logo img
+{
+    min-width: 150px; max-height: 75px;
+}
+
+.header-fixed #header
+{
+    position: fixed; z-index: 200; top: 0;
+}
+
+.header-fixed #header ~ #body
+{
+    margin-top: 1rem;
+}
+
+.login-status-wrapper
+{
+    white-space: nowrap;
+}
+
+.login-status-wrapper .icon
+{
+    font-size: 120%;
+}
+
+body.footer-sticky
+{display: -ms-flexbox; display: flex;     flex-direction: column; 
+
+    min-height: 100%; -ms-flex-direction: column;
+}
+
+body.footer-sticky .body-wrapper
+{
+    -ms-flex: 1;        flex: 1;
+}
+
+#footer
+{padding: 1rem 0 0; 
+
+    color: #acb3c2;
+}
+
+.dropmenu ul
+{display: -ms-flexbox; display: flex; margin: 0; 
+
+    white-space: nowrap;
+}
+
+.dropmenu ul li
+{
+    position: relative; margin: 0;
+}
+
+.dropmenu ul li a
+{display: block; padding: 10px 30px 10px 20px; 
+
+    text-decoration: none; color: #1bb3e9;
+}
+
+.dropmenu ul li a:before
+{font-family: 'FontAwesome'; display: inline-block; float: right; margin-right: -20px; 
+
+    content: '\f110'; vertical-align: middle;
+}
+
+.dropmenu ul li a:only-child
+{padding-right: 20px; 
+
+    background: none;
+}
+
+.dropmenu ul li a:only-child:before
+{
+    content: '';
+}
+
+.dropmenu ul li:hover
+{
+    background: #1bb3e9;
+}
+
+.dropmenu ul li:hover > a
+{
+    color: #fff;
+}
+
+.dropmenu ul li:hover > ul
+{
+    display: block; visibility: visible;
+}
+
+.dropmenu ul ul li a:before
+{
+    content: '\f112';
+}
+
+.dropmenu ul ul
+{
+    position: absolute; top: 100%; visibility: hidden; list-style: none; background: #fff; box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+}
+
+.dropmenu ul ul ul
+{
+    position: absolute; top: 0; left: 100%;
+}
+
+.dropmenu > ul > li
+{
+    display: inline-block;
+}
+
+.dropmenu.animated ul li
+{
+    transition: background .7s, color .5s;
+}
+
+.dropmenu.animated ul li:hover > ul
+{transform: translateY(0); 
+
+    opacity: 1;
+}
+
+.dropmenu.animated ul ul
+{
+    transition: transform .3s, opacity .5s; transform: translateY(-10px); opacity: 0;
+}
+
+/*# sourceMappingURL=theme.css.map */

@@ -1,0 +1,36 @@
+@mixin breakpoint($point) {
+  @if $point == 2x {
+    @media (min-width:$size-2x) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (max-width: $size-xl) {
+      @content;
+    }
+
+  } @else if $point == lg {
+    @media (max-width: $size-lg) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (max-width: $size-md) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (max-width: $size-sm) {
+      @content;
+    }
+  } @else if $point == xs {
+    @media (max-width: $size-xs) {
+      @content;
+    }
+  }  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg, xl, 2x";
+  }
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}

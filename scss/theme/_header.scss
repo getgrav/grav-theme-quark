@@ -1,0 +1,28 @@
+#header {
+  padding: 1rem .5rem;
+  width: 100%;
+
+  .logo img {
+    min-width: 150px;
+    max-height: 75px;
+  }
+
+  // Fixed Header solution
+  .header-fixed & {
+    position: fixed;
+    top: 0;
+    z-index: 200;
+
+    ~ #body {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.login-status-wrapper {
+  white-space: nowrap;
+
+  .icon {
+    font-size: 120%;
+  }
+}
