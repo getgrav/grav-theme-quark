@@ -1,0 +1,13 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% set grid_size = theme_config.grid_size %}
+{% set showcase_image = page.media.images|first.grayscale().contrast(20).brightness(-125).colorize(-35,81,122) %}
+
+<section id="showcase" class="section" {% if showcase_image %}style="background-image: url({{ showcase_image.url }});"{% endif %}>
+    <section class="container {{ grid_size }}">
+    {{ content }}
+
+    {% for button in page.header.buttons %}
+        <a class="button{% if button.primary %} primary{% endif %}" href="{{ button.url }}">{{ button.text }}</a>
+    {% endfor %}
+    </section>
+</section>

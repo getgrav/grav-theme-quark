@@ -1,17 +1,8 @@
-// Colors
-$dropmenu-bg: $light-color;
-$dropmenu-text: $dark-color;
-$dropmenu-hover-bg: $primary-color;
-$dropmenu-hover-text: $light-color;
-
-// Padding
-$dropmenu-horiz-padding: 20px;
-$dropmenu-vert-padding: 10px;
-$dropmenu-child-padding: 10px;
-
-$dropmenu-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-
 .dropmenu {
+
+  @include breakpoint(md) {
+    display: none;
+  }
 
   ul {
     white-space: nowrap;
@@ -28,6 +19,10 @@ $dropmenu-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
         padding: $dropmenu-vert-padding ($dropmenu-horiz-padding + $dropmenu-child-padding) $dropmenu-vert-padding $dropmenu-horiz-padding;
         display: block;
 
+        &:hover, &.active {
+          color: $dropmenu-hover-text;
+        }
+
         &:before {
           content: '\f110';
           font-family: 'FontAwesome';
@@ -38,7 +33,7 @@ $dropmenu-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
         }
 
         &:only-child {
-          background: none;
+          //background: none;
           padding-right: $dropmenu-horiz-padding;
 
           &:before {
@@ -48,12 +43,6 @@ $dropmenu-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
       }
 
       &:hover {
-        background: $dropmenu-hover-bg;
-
-        & > a {
-          color: $dropmenu-hover-text;
-        }
-
         & > ul {
           display: block;
           visibility: visible;

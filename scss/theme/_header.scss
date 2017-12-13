@@ -1,23 +1,38 @@
 #header {
-  padding: 1rem .5rem;
+  padding-top: 0.5rem;
   width: 100%;
+  height: $header-height;
+  background: $light-color;
+  border-bottom: 1px solid $gray-color-light;
+
+  @extend .default-animation;
 
   font-size: 0.7rem;
   font-weight: 700;
 
-  .logo img {
-    min-width: 150px;
-    max-height: 75px;
+  .logo svg {
+    width: 150px;
+    display: inherit;
+
+    @extend .default-animation;
   }
 
   // Fixed Header solution
   .header-fixed & {
     position: fixed;
     top: 0;
-    z-index: 200;
+    z-index: 2;
+  }
+}
 
-    ~ #body {
-      margin-top: 1rem;
+// Animate Fixed Header
+body.header-fixed.header-animated {
+  #header.scrolled {
+    height: $header-height - 1rem;
+    padding-top: 0.2rem;
+
+    .logo svg {
+      width: 100px;
     }
   }
 }

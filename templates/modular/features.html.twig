@@ -1,0 +1,25 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% set grid_size = theme_config.grid_size %}
+
+<section id="features" class="section {{ page.header.class}}">
+    <section class="container {{ grid_size }}">
+
+        {{ content }}
+
+        <div class="feature-items">
+        {% for feature in page.header.features %}
+           <div class="feature">
+                <i class="fa fa-fw fa-{{ feature.icon }}"></i>
+                <div class="feature-content icon-offset">
+                    {% if feature.header %}
+                    <h4>{{ feature.header }}</h4>
+                    {% endif %}
+                    {% if feature.text %}
+                    <p>{{ feature.text }}</p>
+                    {% endif %}
+                </div>
+           </div>
+        {% endfor %}
+        </div>
+    </section>
+</section>

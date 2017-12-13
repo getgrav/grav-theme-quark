@@ -3,14 +3,24 @@ html {
 }
 
 #body {
-  padding: 5rem 0;
+  .container {
+    padding: $vert-padding;
+  }
+
+  // Fixed Header solution
+  .header-fixed & {
+    padding-top: $header-height;
+  }
 }
 
-.bg-gray {
-  background: #f8f9fa;
-  color: #667189;
-  padding: 1rem;
+section.section {
+  padding: 0 $horiz-padding;
 }
+
+.default-animation {
+  transition: all 0.5s ease;
+}
+
 
 
 

@@ -1,0 +1,22 @@
+// Layout
+$horiz-padding: 1rem;
+$vert-padding: 2rem 0 2rem;
+
+// Header
+$header-height: 3.3rem;
+
+// Dropdown Menu
+$dropmenu-bg: $light-color;
+$dropmenu-text: $dark-color;
+$dropmenu-hover-text: $primary-color;
+$dropmenu-horiz-padding: 20px;
+$dropmenu-vert-padding: 10px;
+$dropmenu-child-padding: 10px;
+$dropmenu-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+
+// Mobile Menu
+$mobile-color-main: $primary-color;
+$mobile-color-active: #FFF;
+$mobile-color-link: #FFF;
+$mobile-button-height: 27px;
+$mobile-button-width: 35px;

@@ -10,9 +10,9 @@ h6 {
   font-weight: 200;
   line-height: 1.2;
   margin-bottom: .5em;
-  margin-top: 0;
+  margin-top: 2rem;
   font-family: $title-font-family;
-  color: darken($body-font-color, 5%);
+  color: darken($body-font-color, 10%);
 }
 .h1,
 .h2,
@@ -24,12 +24,11 @@ h6 {
 }
 h1,
 .h1 {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.4rem;
 }
 h2,
 .h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 h3,
 .h3 {
@@ -93,12 +92,12 @@ blockquote {
 // Lists
 ul,
 ol {
-  margin: $unit-4 0 $unit-4 $unit-4;
+  margin: $unit-4 0 $unit-4 $unit-8;
   padding: 0;
 
   ul,
   ol {
-    margin: $unit-4 0 $unit-4 $unit-4;
+    margin: $unit-4 0 $unit-4 $unit-8;
   }
 
   li {
@@ -107,7 +106,7 @@ ol {
 }
 
 ul {
-  list-style: disc inside;
+  list-style: disc;
 
   ul {
     list-style-type: circle;
@@ -115,7 +114,7 @@ ul {
 }
 
 ol {
-  list-style: decimal inside;
+  list-style: decimal;
 
   ol {
     list-style-type: lower-alpha;

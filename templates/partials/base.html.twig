@@ -1,5 +1,6 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
-{% set grid_size = 'grid-xl' %}
+{% set grid_size = theme_config.grid_size %}
+{% set theme_classes = (theme_config.fixed_header ? 'header-fixed ' : '') ~ (theme_config.animate_fixed_header ? 'header-animated ' : '' ) ~ (theme_config.sticky_footer ? 'footer-sticky ' : '' ) %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
 <head>
@@ -24,43 +25,58 @@
 
     {% block javascripts %}
         {% do assets.addJs('jquery', 101) %}
+        {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
+        {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
     {% endblock %}
     {{ assets.js() }}
 
 {% endblock head%}
 </head>
-<body id="top" class="header-fixed footer-sticky {{ page.header.body_classes }}">
+<body id="top" class="{{ theme_classes }}{{ page.header.body_classes }}">
     <div class="body-wrapper">
     {% block header %}
-        <section id="header" class="section bg-gray">
+        <section id="header" class="section">
             <section class="container {{ grid_size }}">
                 <nav class="navbar">
                     <section class="navbar-section logo">
-                        <a href="{{ home_url }}" class="navbar-brand mr-10"><img src="{{ url('theme://images/grav-logo.svg') }}" alt="{{ site.title }}"/></a>
+                        <a href="{{ home_url }}" class="navbar-brand mr-10">{% include('@images/grav-logo.svg') %}</a>
                     </section>
                     <section class="navbar-section">
+
                         <nav class="dropmenu animated">
+                            {% block header_navigation %}
                         {% include 'partials/navigation.html.twig' %}
+                            {% endblock %}
                         </nav>
+
                         {% if config.plugins.login.enabled and grav.user.username %}
-                            <span class="login-status-wrapper"><i class="icon dripicons-user"></i> {% include 'partials/login-status.html.twig' %}</span>
+                            <span class="login-status-wrapper"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' %}</span>
                         {% endif %}
+
                     </section>
                 </nav>
             </section>
         </section>
+        <div class="mobile-menu">
+            <div class="button_container" id="toggle">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+            </div>
+        </div>
     {% endblock %}
 
     {% block body %}
-        <section id="body" class="container {{ grid_size }}">
-            <div class="container">
+        <section id="body" class="section">
+            <section class="container {{ grid_size }}">
                 {% block messages %}
                     {% include 'partials/messages.html.twig' ignore missing %}
                 {% endblock %}
                 {% block content %}{% endblock %}
-            </div>
+            </section>
         </section>
     {% endblock %}
+
     </div>
 {% block footer %}
     <section id="footer" class="section bg-gray">
@@ -69,6 +85,14 @@
         </div>
     </section>
 {% endblock %}
+
+    <div class="mobile-container">
+        <div class="overlay" id="overlay">
+            <nav class="overlay-menu">
+                {% include 'partials/navigation.html.twig' with {tree: true} %}
+            </nav>
+        </div>
+    </div>
 
 {% block bottom %}
     {{ assets.js('bottom') }}

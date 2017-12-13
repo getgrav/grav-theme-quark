@@ -1,1 +1,5 @@
 enabled: true
+grid_size: grid-lg
+fixed_header: true
+animate_fixed_header: true
+sticky_footer: true

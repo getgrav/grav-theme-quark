@@ -4,6 +4,26 @@ h1 + h2 {
   margin-bottom: 30px;
 }
 
+
+// Codeblocks
+pre {
+  code {
+    background: #f8f8f8;
+    display: block;
+    padding: 1rem !important;
+    line-height: 1.5;
+    color: inherit;
+    border-radius: 2px;
+    overflow-x: auto;
+  }
+}
+
+// Icon Tweaks
+i.fa {
+  font-size: 130%;
+  vertical-align: middle;
+}
+
 // Font Weights
 b,
 strong {
@@ -39,6 +59,7 @@ strong {
 
 // notices
 .notices {
+  margin: 1.5rem 0;
   p {
     margin: 1rem 0;
   }
