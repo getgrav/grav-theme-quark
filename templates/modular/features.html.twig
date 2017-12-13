@@ -1,25 +1,28 @@
-{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
-{% set grid_size = theme_config.grid_size %}
+{% set grid_size = themevar('grid-size') %}
 
 <section id="modular-features" class="section {{ page.header.class}}">
-    <section class="container {{ grid_size }}">
+        <section class="container {{ grid_size }}">
+            <div class="frame-box">
 
-        {{ content }}
+                {{ content }}
 
-        <div class="feature-items">
-        {% for feature in page.header.features %}
-           <div class="feature">
-                <i class="fa fa-fw fa-{{ feature.icon }}"></i>
-                <div class="feature-content icon-offset">
-                    {% if feature.header %}
-                    <h4>{{ feature.header }}</h4>
-                    {% endif %}
-                    {% if feature.text %}
-                    <p>{{ feature.text }}</p>
-                    {% endif %}
+                <div class="columns">
+                {% for feature in page.header.features %}
+                   <div class="column col-4 col-md-6 col-sm-12">
+                       <div class="feature-icon">
+                           <i class="fa fa-fw fa-{{ feature.icon }}"></i>
+                           {% if feature.header %}
+                               <h6>{{ feature.header }}</h6>
+                           {% endif %}
+                       </div>
+                       <div class="feature-content">
+                           {% if feature.text %}
+                            <p>{{ feature.text }}</p>
+                           {% endif %}
+                       </div>
+                   </div>
+                {% endfor %}
                 </div>
-           </div>
-        {% endfor %}
-        </div>
-    </section>
+            </div>
+        </section>
 </section>

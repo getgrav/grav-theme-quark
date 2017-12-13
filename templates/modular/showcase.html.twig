@@ -1,13 +1,10 @@
-{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
-{% set grid_size = theme_config.grid_size %}
+{% set grid_size = themevar('grid-size') %}
 {% set showcase_image = page.media.images|first %}
 
-<section id="modular-showcase" class="section text-light" {% if showcase_image %}style="background-image: url({{ showcase_image.url }});"{% endif %}>
-    <section class="container {{ grid_size }}">
+<section id="modular-showcase" class="section text-light {{ page.header.background.parallax ? 'parallax' : '' }} {{ page.header.background.parallax ? 'parallax' : '' }}" {% if showcase_image %}style="background-image: url({{ showcase_image.url }});"{% endif %}>
+    <section class="container {{ grid_size }}" style="text-align: {{ page.header.text_align|default('left') }}">
+
     {{ content }}
 
-    {% for button in page.header.buttons %}
-        <a class="button{% if button.primary %} primary{% endif %}" href="{{ button.url }}">{{ button.text }}</a>
-    {% endfor %}
     </section>
 </section>

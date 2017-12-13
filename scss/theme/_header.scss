@@ -1,32 +1,49 @@
 #header {
   width: 100%;
-  height: $header-height;
-  background: $light-color;
-  color: $dark-color;
+  height: $header-height-large;
   border-bottom: 1px solid rgba($gray-color, 0.2);
   @extend .default-animation;
 
-  .navbar-section {
-    height: $header-height;
-    @extend .default-animation;
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  background: $light-color;
+  color: $dark-color;
+
+  a {
+    color: $dark-color;
   }
 
-  .header-transparent &:not(.scrolled) {
-    background: rgba($light-color, 0);
-    border-bottom: 0;
+  .logo svg path {
+    fill: $dark-color;
   }
 
   .header-dark &:not(.scrolled) {
-    color: rgba($light-color, 0.8);
+    background: $dark-color;
+    color: $light-color;
+    a {
+      color: $light-color;
+    }
+    .dropmenu ul ul a {
+        color: $dark-color;
+    }
     .logo svg path {
       fill: $light-color;
     }
   }
 
+  .header-dark.header-transparent &:not(.scrolled) {
+    background: rgba($dark-color, 0.1);
+  }
 
+  .header-transparent &:not(.scrolled) {
+    background: rgba($light-color, 0.1);
+  }
 
-  font-size: 0.7rem;
-  font-weight: 700;
+  .navbar-section {
+    height: $header-height-large;
+    @extend .default-animation;
+  }
 
   .logo svg {
     width: 150px;
@@ -46,10 +63,10 @@
 // Animate Fixed Header
 body.header-fixed.header-animated {
   #header.scrolled {
-    height: $header-height - 1rem;
+    height: $header-height-small;
 
     .navbar-section {
-      height: $header-height - 1rem;
+      height: $header-height-small;
     }
 
     .logo svg {

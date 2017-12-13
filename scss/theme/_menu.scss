@@ -9,20 +9,18 @@
     margin: 0;
     display: flex;
 
+
+
     li {
       position: relative;
       margin: 0;
 
       a {
         text-decoration: none;
-        color: $dark-color;
         padding: $dropmenu-vert-padding ($dropmenu-horiz-padding + $dropmenu-child-padding) $dropmenu-vert-padding $dropmenu-horiz-padding;
         display: block;
 
-        .header-dark #header:not(.scrolled) & {
-          color: rgba($light-color, 0.8);
 
-        }
 
         &:hover, &.active {
           color: $dropmenu-hover-text !important;

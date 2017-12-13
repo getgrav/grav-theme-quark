@@ -9,14 +9,22 @@ function scrollHeader() {
         $("#header").removeClass("scrolled");
 }
 
+function parallaxBackground() {
+    $('.parallax').css('background-positionY', ($(window).scrollTop() * -0.3) + 'px');
+}
+
 jQuery(document).ready(function($){
 
     // Scroll Events
     if (!isTouch){
         $(document).scroll(function() {
             scrollHeader();
+            parallaxBackground();
         });
     };
+
+    // Parallax
+
 
     // Touch scroll
     $(document).on({

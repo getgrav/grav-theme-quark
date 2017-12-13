@@ -1,5 +1,4 @@
-{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
-{% set grid_size = theme_config.grid_size %}
+{% set grid_size = themevar('grid-size') %}
 
 <section id="modular-text" class="section {{ page.header.class}}">
     <section class="container {{ grid_size }}">

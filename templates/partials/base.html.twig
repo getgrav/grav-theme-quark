@@ -1,6 +1,5 @@
-{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
-{% set grid_size = theme_config.grid_size %}
-{% set theme_classes = (theme_config.fixed_header ? 'header-fixed ' : '') ~ (theme_config.animate_fixed_header ? 'header-animated ' : '' ) ~ (theme_config.sticky_footer ? 'footer-sticky ' : '' ) %}
+{% set body_classes = bodyclass(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
+{% set grid_size = themevar('grid-size') %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
 <head>
@@ -30,9 +29,9 @@
     {% endblock %}
     {{ assets.js() }}
 
-{% endblock head%}
+{% endblock head %}
 </head>
-<body id="top" class="{{ theme_classes }}{{ page.header.body_classes }}">
+<body id="top" class="{{ body_classes }}">
     <div class="body-wrapper">
     {% block header %}
         <section id="header" class="section">
@@ -82,7 +81,7 @@
     <section id="footer" class="section bg-gray">
         <section class="container {{ grid_size }}">
             <p><a href="http://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="http://www.rockettheme.com">RocketTheme</a>.</p>
-        </div>
+        </section>
     </section>
 {% endblock %}
 

@@ -1,5 +1,84 @@
 #modular-showcase {
-  padding: 6rem 0;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: center;
+
+  &.parallax {
+    background-attachment: fixed;
+  }
+
+  p {
+    font-size: 150%;
+  }
+}
+
+#modular-features {
+  text-align: center;
+
+  &.offset-box {
+
+    .frame-box {
+      margin: -3rem -2rem 3rem;
+      padding: 1rem 2rem 1rem;
+
+      background: $light-color;
+      box-shadow: 0 0 50px 0 rgba($dark-color, 0.1);
+    }
+  }
+
+  .frame-box {
+    > p {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .column {
+    padding: 1rem;
+
+    &:hover {
+      .feature-icon {
+        color: $gray-color;
+        h6 {
+          color: $primary-color;
+        }
+      }
+      .feature-content {
+        color: $gray-color-dark;
+      }
+    }
+  }
+
+  .feature-icon {
+    font-size: 100px;
+    height: 100px;
+    color: $gray-color-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 1rem 0;
+    @extend .default-animation;
+
+    i {
+      position: absolute;
+    }
+
+    h6 {
+      background: $light-color;
+      line-height: 1;
+      z-index: 1;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin: 0;
+      display: block;
+      color: $gray-color-dark;
+    }
+  }
+
+  .feature-content {
+    color: $gray-color;
+  }
 }

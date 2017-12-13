@@ -10,7 +10,7 @@ html
 
 .header-fixed #body
 {
-    padding-top: 3.3rem;
+    padding-top: 4rem;
 }
 
 section.section
@@ -21,7 +21,8 @@ section.section
 .default-animation,
 #header,
 #header .navbar-section,
-#header .logo svg
+#header .logo svg,
+#modular-features .feature-icon
 {
     transition: all .5s ease;
 }
@@ -164,7 +165,7 @@ strong
 
 .mobile-menu .button_container span
 {position: absolute; top: 0; left: 0; width: 100%; height: 5px; cursor: pointer; transition: all .35s ease; border: none; 
-    background: #4081f6;
+    background: #3085ee;
 }
 
 .mobile-menu .button_container span:nth-of-type(2)
@@ -247,60 +248,55 @@ strong
     content: '\2212';
 }
 
-/* raleway-regular - latin */
-@font-face
-{
-    font-family: 'Raleway'; font-weight: 400; font-style: normal; src: local('Raleway'), local('Raleway-Regular'), url('../fonts/raleway-v12-latin-regular.woff2') format('woff2'), url('../fonts/raleway-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* raleway-700 - latin */
-@font-face
-{
-    font-family: 'Raleway'; font-weight: 700; font-style: normal; src: local('Raleway Bold'), local('Raleway-Bold'), url('../fonts/raleway-v12-latin-700.woff2') format('woff2'), url('../fonts/raleway-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* montserrat-200 - latin */
-@font-face
-{
-    font-family: 'Montserrat'; font-weight: 200; font-style: normal; src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'), url('../fonts/montserrat-v12-latin-200.woff2') format('woff2'), url('../fonts/montserrat-v12-latin-200.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* montserrat-regular - latin */
-@font-face
-{
-    font-family: 'Montserrat'; font-weight: 400; font-style: normal; src: local('Montserrat Regular'), local('Montserrat-Regular'), url('../fonts/montserrat-v12-latin-regular.woff2') format('woff2'), url('../fonts/montserrat-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* montserrat-700 - latin */
-@font-face
-{
-    font-family: 'Montserrat'; font-weight: 700; font-style: normal; src: local('Montserrat Bold'), local('Montserrat-Bold'), url('../fonts/montserrat-v12-latin-700.woff2') format('woff2'), url('../fonts/montserrat-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
 #header
 {font-size: .7rem; font-weight: 700; 
 
-    width: 100%; height: 3.3rem; color: #454d5d; border-bottom: 1px solid rgba(172, 179, 194, .2); background: #fff;
+    width: 100%; height: 4rem; color: #454d5d; border-bottom: 1px solid rgba(172, 179, 194, .2); background: #fff;
 }
 
-#header .navbar-section
+#header a
 {
-    height: 3.3rem;
+    color: #454d5d;
 }
 
-.header-transparent #header:not(.scrolled)
-{border-bottom: 0; 
-    background: rgba(255, 255, 255, 0);
+#header .logo svg path
+{
+    fill: #454d5d;
 }
 
 .header-dark #header:not(.scrolled)
+{color: #fff; 
+    background: #454d5d;
+}
+
+.header-dark #header:not(.scrolled) a
 {
-    color: rgba(255, 255, 255, .8);
+    color: #fff;
+}
+
+.header-dark #header:not(.scrolled) .dropmenu ul ul a
+{
+    color: #454d5d;
 }
 
 .header-dark #header:not(.scrolled) .logo svg path
 {
     fill: #fff;
+}
+
+.header-dark.header-transparent #header:not(.scrolled)
+{
+    background: rgba(69, 77, 93, .1);
+}
+
+.header-transparent #header:not(.scrolled)
+{
+    background: rgba(255, 255, 255, .1);
+}
+
+#header .navbar-section
+{
+    height: 4rem;
 }
 
 #header .logo svg
@@ -383,18 +379,13 @@ body.footer-sticky .body-wrapper
 .dropmenu ul li a
 {display: block; padding: 7px 30px 7px 20px; 
 
-    text-decoration: none; color: #454d5d;
-}
-
-.header-dark #header:not(.scrolled) .dropmenu ul li a
-{
-    color: rgba(255, 255, 255, .8);
+    text-decoration: none;
 }
 
 .dropmenu ul li a:hover,
 .dropmenu ul li a.active
 {
-    color: #4081f6 !important;
+    color: #3085ee !important;
 }
 
 .dropmenu ul li a:before
@@ -456,7 +447,72 @@ body.footer-sticky .body-wrapper
 
 #modular-showcase
 {
-    padding: 6rem 0; background-position: 50% 50%; background-size: cover;
+    padding-top: 6rem; padding-bottom: 6rem; background-position: center; background-size: cover;
+}
+
+#modular-showcase.parallax
+{
+    background-attachment: fixed;
+}
+
+#modular-showcase p
+{
+    font-size: 150%;
+}
+
+#modular-features
+{
+    text-align: center;
+}
+
+#modular-features.offset-box .frame-box
+{
+    margin: -3rem -2rem 3rem; padding: 1rem 2rem 1rem; background: #fff; box-shadow: 0 0 50px 0 rgba(69, 77, 93, .1);
+}
+
+#modular-features .frame-box > p
+{
+    max-width: 600px; margin-right: auto; margin-left: auto;
+}
+
+#modular-features .column
+{
+    padding: 1rem;
+}
+
+#modular-features .column:hover .feature-icon
+{
+    color: #acb3c2;
+}
+
+#modular-features .column:hover .feature-icon h6
+{
+    color: #3085ee;
+}
+
+#modular-features .column:hover .feature-content
+{
+    color: #667189;
+}
+
+#modular-features .feature-icon
+{
+    font-size: 100px; position: relative; display: -ms-flexbox; display: flex; height: 100px; margin: 1rem 0; color: #f6f6f8; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center;
+}
+
+#modular-features .feature-icon i
+{
+    position: absolute;
+}
+
+#modular-features .feature-icon h6
+{font-weight: 600; line-height: 1; z-index: 1; display: block; margin: 0; text-transform: uppercase; color: #667189; 
+    background: #fff;
+}
+
+#modular-features .feature-content
+{
+    color: #acb3c2;
 }
 
 /*# sourceMappingURL=theme.css.map */
