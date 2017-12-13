@@ -46,25 +46,25 @@
 }
 
 .calendar .calendar-date .date-item.date-today
-{color: #2879ff; 
-    border-color: #d8e7ff;
+{color: #4081f6; 
+    border-color: #e8f0fe;
 }
 
 .calendar .calendar-date .date-item:focus
 {
-    box-shadow: 0 0 0 .1rem rgba(40, 121, 255, .2);
+    box-shadow: 0 0 0 .1rem rgba(64, 129, 246, .2);
 }
 
 .calendar .calendar-date .date-item:focus,
 .calendar .calendar-date .date-item:hover
-{text-decoration: none; color: #2879ff; border-color: #d8e7ff; 
-    background: #f7faff;
+{text-decoration: none; color: #4081f6; border-color: #e8f0fe; 
+    background: white;
 }
 
 .calendar .calendar-date .date-item:active,
 .calendar .calendar-date .date-item.active
-{color: #fff; border-color: #0060fe; 
-    background: #196fff;
+{color: #fff; border-color: #1967f4; 
+    background: #3177f5;
 }
 
 .calendar .calendar-date .date-item.badge::after
@@ -88,7 +88,7 @@
 .calendar .calendar-range::before
 {position: absolute; top: 50%; right: 0; left: 0; height: 1.4rem; content: ''; transform: translateY(-50%); 
 
-    background: #e7f0ff;
+    background: #f7f9ff;
 }
 
 .calendar .calendar-range.range-start::before
@@ -103,7 +103,7 @@
 
 .calendar .calendar-range .date-item
 {
-    color: #2879ff;
+    color: #4081f6;
 }
 
 .calendar.calendar-lg .calendar-body
@@ -361,7 +361,7 @@
 .filter .filter-tag#tag-7:checked ~ .filter-nav .chip[for='tag-7'],
 .filter .filter-tag#tag-8:checked ~ .filter-nav .chip[for='tag-8']
 {color: #fff; 
-    background: #2879ff;
+    background: #4081f6;
 }
 
 .filter .filter-tag#tag-1:checked ~ .filter-body .filter-item:not([data-tag~='tag-1']),
@@ -620,7 +620,7 @@
 }
 
 .progress
-{position: relative; width: 100%; height: .2rem; color: #2879ff; border: 0; border-radius: .1rem; background: #f0f1f4; 
+{position: relative; width: 100%; height: .2rem; color: #4081f6; border: 0; border-radius: .1rem; background: #f0f1f4; 
 
     -webkit-appearance: none;       -moz-appearance: none;            appearance: none;
 }
@@ -632,17 +632,17 @@
 
 .progress::-webkit-progress-value
 {border-radius: .1rem; 
-    background: #2879ff;
+    background: #4081f6;
 }
 
 .progress::-moz-progress-bar
 {border-radius: .1rem; 
-    background: #2879ff;
+    background: #4081f6;
 }
 
 .progress:indeterminate
 {
-    animation: progress-indeterminate 1.5s linear infinite; background: #f0f1f4 linear-gradient(to right, #2879ff 30%, #f0f1f4 30%) top left/150% 150% no-repeat;
+    animation: progress-indeterminate 1.5s linear infinite; background: #f0f1f4 linear-gradient(to right, #4081f6 30%, #f0f1f4 30%) top left/150% 150% no-repeat;
 }
 
 .progress:indeterminate::-moz-progress-bar
@@ -670,7 +670,7 @@
 
 .slider:focus
 {outline: none; 
-    box-shadow: 0 0 0 .1rem rgba(40, 121, 255, .2);
+    box-shadow: 0 0 0 .1rem rgba(64, 129, 246, .2);
 }
 
 .slider.tooltip:not([data-tooltip])::after
@@ -679,19 +679,19 @@
 }
 
 .slider::-webkit-slider-thumb
-{width: .6rem; height: .6rem; margin-top: -.25rem; transition: transform .2s ease; border: 0; border-radius: 50%; background: #2879ff; 
+{width: .6rem; height: .6rem; margin-top: -.25rem; transition: transform .2s ease; border: 0; border-radius: 50%; background: #4081f6; 
 
     -webkit-appearance: none;
 }
 
 .slider::-moz-range-thumb
 {width: .6rem; height: .6rem; transition: transform .2s ease; border: 0; border-radius: 50%; 
-    background: #2879ff;
+    background: #4081f6;
 }
 
 .slider::-ms-thumb
 {width: .6rem; height: .6rem; transition: transform .2s ease; border: 0; border-radius: 50%; 
-    background: #2879ff;
+    background: #4081f6;
 }
 
 .slider:active::-webkit-slider-thumb
@@ -747,7 +747,7 @@
 
 .slider::-ms-fill-lower
 {
-    background: #2879ff;
+    background: #4081f6;
 }
 
 .timeline .timeline-item
@@ -781,13 +781,13 @@
 .timeline .timeline-item .timeline-icon::before
 {position: absolute; top: .4rem; left: .4rem; display: block; width: .4rem; height: .4rem; content: ''; 
 
-    border: .1rem solid #2879ff; border-radius: 50%;
+    border: .1rem solid #4081f6; border-radius: 50%;
 }
 
 .timeline .timeline-item .timeline-icon.icon-lg
 {line-height: 1rem; 
 
-    background: #2879ff;
+    background: #4081f6;
 }
 
 .timeline .timeline-item .timeline-icon.icon-lg::before
