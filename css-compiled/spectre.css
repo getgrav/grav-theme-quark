@@ -314,11 +314,6 @@ a
     color: #2879ff; outline: none;
 }
 
-a:focus
-{
-    box-shadow: 0 0 0 .1rem rgba(40, 121, 255, .2);
-}
-
 a:focus,
 a:hover,
 a:active,

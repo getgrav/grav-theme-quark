@@ -4,6 +4,10 @@ h1 + h2 {
   margin-bottom: 30px;
 }
 
+a:focus {
+  outline: none !important;
+}
+
 
 // Codeblocks
 pre {
