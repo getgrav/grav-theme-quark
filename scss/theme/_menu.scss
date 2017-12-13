@@ -15,12 +15,17 @@
 
       a {
         text-decoration: none;
-        color: $dropmenu-text;
+        color: $dark-color;
         padding: $dropmenu-vert-padding ($dropmenu-horiz-padding + $dropmenu-child-padding) $dropmenu-vert-padding $dropmenu-horiz-padding;
         display: block;
 
+        .header-dark #header:not(.scrolled) & {
+          color: rgba($light-color, 0.8);
+
+        }
+
         &:hover, &.active {
-          color: $dropmenu-hover-text;
+          color: $dropmenu-hover-text !important;
         }
 
         &:before {

@@ -3,7 +3,20 @@
   width: 100%;
   height: $header-height;
   background: $light-color;
-  border-bottom: 1px solid $gray-color-light;
+  color: $dark-color;
+  border-bottom: 1px solid rgba($gray-color, 0.2);
+
+  .header-transparent &:not(.scrolled) {
+    background: rgba($light-color, 0);
+    border-bottom: 0;
+  }
+
+  .header-dark &:not(.scrolled) {
+    color: rgba($light-color, 0.8);
+    .logo svg path {
+      fill: $light-color;
+    }
+  }
 
   @extend .default-animation;
 

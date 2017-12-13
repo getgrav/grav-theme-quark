@@ -61,6 +61,21 @@ strong
     font-weight: 200;
 }
 
+.text-light
+{
+    color: rgba(255, 255, 255, .8);
+}
+
+.text-light h1,
+.text-light h2,
+.text-light h3,
+.text-light h4,
+.text-light h5,
+.text-light h6
+{
+    color: rgba(255, 255, 255, .9);
+}
+
 #error
 {position: relative; margin-top: 5rem; 
 
@@ -263,7 +278,22 @@ strong
 
 #header
 {font-size: .7rem; font-weight: 700; width: 100%; height: 3.3rem; 
-    padding-top: .5rem; border-bottom: 1px solid #f6f6f8; background: #fff;
+    padding-top: .5rem; color: #454d5d; border-bottom: 1px solid rgba(172, 179, 194, .2); background: #fff;
+}
+
+.header-transparent #header:not(.scrolled)
+{border-bottom: 0; 
+    background: rgba(255, 255, 255, 0);
+}
+
+.header-dark #header:not(.scrolled)
+{
+    color: rgba(255, 255, 255, .8);
+}
+
+.header-dark #header:not(.scrolled) .logo svg path
+{
+    fill: #fff;
 }
 
 #header .logo svg
@@ -344,10 +374,15 @@ body.footer-sticky .body-wrapper
     text-decoration: none; color: #454d5d;
 }
 
+.header-dark #header:not(.scrolled) .dropmenu ul li a
+{
+    color: rgba(255, 255, 255, .8);
+}
+
 .dropmenu ul li a:hover,
 .dropmenu ul li a.active
 {
-    color: #2879ff;
+    color: #2879ff !important;
 }
 
 .dropmenu ul li a:before
@@ -407,9 +442,9 @@ body.footer-sticky .body-wrapper
     transition: transform .3s, opacity .5s; transform: translateY(-10px); opacity: 0;
 }
 
-section#showcase
+#modular-showcase
 {
-    padding: 6rem 0;
+    padding: 6rem 0; background-position: 50% 50%; background-size: cover;
 }
 
 /*# sourceMappingURL=theme.css.map */

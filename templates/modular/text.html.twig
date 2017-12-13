@@ -1,7 +1,7 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 {% set grid_size = theme_config.grid_size %}
 
-<section id="text" class="section {{ page.header.class}}">
+<section id="modular-text" class="section {{ page.header.class}}">
     <section class="container {{ grid_size }}">
         {% set image = page.media.images|first %}
         {% if image %}

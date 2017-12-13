@@ -42,6 +42,15 @@ strong {
   font-weight: 200;
 }
 
+// Colors
+.text-light {
+  color: rgba($light-color, 0.8);
+
+  h1, h2, h3, h4, h5, h6 {
+    color: rgba($light-color, 0.9);
+  }
+}
+
 // Error configuration
 #error {
   text-align: center;
