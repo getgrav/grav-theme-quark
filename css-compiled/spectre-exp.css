@@ -63,8 +63,8 @@
 
 .calendar .calendar-date .date-item:active,
 .calendar .calendar-date .date-item.active
-{color: #fff; border-color: #1370e3; 
-    background: #227ded;
+{color: #fff; border-color: #126bd9; 
+    background: #1877ec;
 }
 
 .calendar .calendar-date .date-item.badge::after

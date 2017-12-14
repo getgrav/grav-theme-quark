@@ -8,6 +8,19 @@
   z-index: 2;
 }
 
+.mobile-logo {
+  svg {
+    max-width: 150px;
+    margin-top: 1rem;
+    margin-left: 1.4rem;
+
+    path {
+      fill: $light-color;
+    }
+
+  }
+}
+
 // Hamburger Menu
 .mobile-menu {
 
@@ -88,28 +101,26 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity .35s, visibility .35s, height .35s;
-  overflow: hidden;
 
   &.open {
-    opacity: .9;
+    opacity: .95;
     visibility: visible;
     height: 100%;
 
   }
   nav {
+
     position: relative;
-    height: 70%;
-    top: 50%;
-    transform: translateY(-50%);
     margin: 0 auto;
     text-align: center;
   }
 }
 
 .overlay-menu {
+  height: calc(100% - 90px);
+  overflow-y: scroll;
+
   & > .tree {
-    min-width: 400px;
-    display: inline-block;
     text-align: left;
   }
 }
@@ -117,26 +128,41 @@
 
 .treemenu {
 
+  &.treemenu-root {
+    margin: 1rem;
+  }
+
   li {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 0 0 1px;
+    padding: 5px 0;
+    line-height: 1.2rem;
+
+    background: rgba($gray-color-dark,0.1);
 
     a {
-      line-height: 2;
-      font-size: 2rem;
+      display: block;
+      margin-left: 1.2rem;
+      font-size: 1rem;
+
+      &:hover, &:focus, &.active {
+        color: $primary-color-light !important;
+        text-decoration: none;
+      }
     }
   }
 
   ul {
-    margin: 0 0 1rem 3rem;
+    margin: 0 0 0 1rem;
   }
 
   .toggler {
     cursor: pointer;
     vertical-align: top;
-    font-size: 2.5rem;
-    line-height: 1;
+    font-size: 1.1rem;
+    line-height: 1rem;
+    padding-left: 5px;
+    float: left;
 
     &:before {
       display: inline-block; margin-right: 2pt;
@@ -147,7 +173,7 @@
     opacity: 0.3; cursor: default;
 
     &:before {
-      content: "\2212";
+      content: "\2022";
     }
   }
 
@@ -158,4 +184,8 @@
   li.tree-opened > .toggler:before {
     content: "\2212";
   }
+}
+
+.mobile-nav-open {
+  overflow-y: hidden;
 }

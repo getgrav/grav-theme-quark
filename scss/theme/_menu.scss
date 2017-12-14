@@ -9,8 +9,6 @@
     margin: 0;
     display: flex;
 
-
-
     li {
       position: relative;
       margin: 0;
@@ -20,9 +18,7 @@
         padding: $dropmenu-vert-padding ($dropmenu-horiz-padding + $dropmenu-child-padding) $dropmenu-vert-padding $dropmenu-horiz-padding;
         display: block;
 
-
-
-        &:hover, &.active {
+        &:hover, &:focus, &.active {
           color: $dropmenu-hover-text !important;
         }
 

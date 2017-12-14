@@ -119,6 +119,16 @@ strong
     position: absolute; z-index: 2; top: 40%; left: 0; margin: 0 auto;
 }
 
+.mobile-logo svg
+{
+    max-width: 150px; margin-top: 1rem; margin-left: 1.4rem;
+}
+
+.mobile-logo svg path
+{
+    fill: #fff;
+}
+
 .mobile-menu
 {z-index: 3; top: 0; right: 0; 
 
@@ -185,44 +195,63 @@ strong
 
 .overlay
 {
-    position: fixed; top: 0; left: 0; visibility: hidden; overflow: hidden; width: 100%; height: 0; transition: opacity .35s, visibility .35s, height .35s; opacity: 0; background: #000;
+    position: fixed; top: 0; left: 0; visibility: hidden; width: 100%; height: 0; transition: opacity .35s, visibility .35s, height .35s; opacity: 0; background: #000;
 }
 
 .overlay.open
 {visibility: visible; height: 100%; 
 
-    opacity: .9;
+    opacity: .95;
 }
 
 .overlay nav
 {
-    position: relative; top: 50%; height: 70%; margin: 0 auto; transform: translateY(-50%); text-align: center;
+    position: relative; margin: 0 auto; text-align: center;
+}
+
+.overlay-menu
+{overflow-y: scroll; 
+
+    height: calc(100% - 90px);
 }
 
 .overlay-menu > .tree
-{display: inline-block; 
+{
+    text-align: left;
+}
 
-    min-width: 400px; text-align: left;
+.treemenu.treemenu-root
+{
+    margin: 1rem;
 }
 
 .treemenu li
-{margin: 0; padding: 0; 
+{line-height: 1.2rem; margin: 0 0 1px; padding: 5px 0; 
 
-    list-style: none;
+    list-style: none; background: rgba(102, 113, 137, .1);
 }
 
 .treemenu li a
-{font-size: 2rem; 
-    line-height: 2;
+{font-size: 1rem; 
+
+    display: block; margin-left: 1.2rem;
+}
+
+.treemenu li a:hover,
+.treemenu li a:focus,
+.treemenu li a.active
+{text-decoration: none; 
+
+    color: #4893f0 !important;
 }
 
 .treemenu ul
 {
-    margin: 0 0 1rem 3rem;
+    margin: 0 0 0 1rem;
 }
 
 .treemenu .toggler
-{font-size: 2.5rem; line-height: 1; 
+{font-size: 1.1rem; line-height: 1rem; float: left; padding-left: 5px; 
 
     cursor: pointer; vertical-align: top;
 }
@@ -240,7 +269,7 @@ strong
 
 .treemenu li.tree-empty > .toggler:before
 {
-    content: '\2212';
+    content: '\2022';
 }
 
 .treemenu li.tree-closed > .toggler:before
@@ -251,6 +280,11 @@ strong
 .treemenu li.tree-opened > .toggler:before
 {
     content: '\2212';
+}
+
+.mobile-nav-open
+{
+    overflow-y: hidden;
 }
 
 #header
@@ -388,6 +422,7 @@ body.footer-sticky .body-wrapper
 }
 
 .dropmenu ul li a:hover,
+.dropmenu ul li a:focus,
 .dropmenu ul li a.active
 {
     color: #3085ee !important;

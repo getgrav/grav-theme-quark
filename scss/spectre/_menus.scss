@@ -29,7 +29,9 @@
       padding: $unit-1 $unit-2;
       text-decoration: none;
       &:focus,
-      &:hover {
+      &:hover,
+      &:active,
+      &.active {
         background: $secondary-color;
         color: $primary-color;
       }

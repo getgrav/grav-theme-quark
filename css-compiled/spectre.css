@@ -573,14 +573,14 @@ dl dd
 
 .btn:focus,
 .btn:hover
-{text-decoration: none; border-color: #227ded; 
+{text-decoration: none; border-color: #1877ec; 
     background: #e1edfd;
 }
 
 .btn:active,
 .btn.active
-{text-decoration: none; color: #fff; border-color: #1370e3; 
-    background: #227ded;
+{text-decoration: none; color: #fff; border-color: #126bd9; 
+    background: #1877ec;
 }
 
 .btn:active.loading::after,
@@ -597,20 +597,20 @@ dl dd
 }
 
 .btn.btn-primary
-{color: #fff; border-color: #227ded; 
+{color: #fff; border-color: #1877ec; 
     background: #3085ee;
 }
 
 .btn.btn-primary:focus,
 .btn.btn-primary:hover
-{color: #fff; border-color: #1370e3; 
-    background: #1877ec;
+{color: #fff; border-color: #126bd9; 
+    background: #1372e7;
 }
 
 .btn.btn-primary:active,
 .btn.btn-primary.active
-{color: #fff; border-color: #126bd9; 
-    background: #1372e7;
+{color: #fff; border-color: #1166d0; 
+    background: #126dde;
 }
 
 .btn.btn-primary.loading::after,
@@ -2308,7 +2308,9 @@ summary.accordion-header::-webkit-details-marker
 }
 
 .menu .menu-item > a:focus,
-.menu .menu-item > a:hover
+.menu .menu-item > a:hover,
+.menu .menu-item > a:active,
+.menu .menu-item > a.active
 {color: #3085ee; 
     background: #e1edfd;
 }
