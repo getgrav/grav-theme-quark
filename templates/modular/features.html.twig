@@ -1,5 +1,5 @@
 {% set grid_size = themevar('grid-size') %}
-
+{% set columns = page.header.class == 'small' ? 'col-3 col-md-4 col-sm-6' : 'col-4 col-md-6 col-sm-12'  %}
 <section id="modular-features" class="section {{ page.header.class}}">
         <section class="container {{ grid_size }}">
             <div class="frame-box">
@@ -8,7 +8,7 @@
 
                 <div class="columns">
                 {% for feature in page.header.features %}
-                   <div class="column col-4 col-md-6 col-sm-12">
+                   <div class="column {{ columns }}">
                        <div class="feature-icon">
                            <i class="fa fa-fw fa-{{ feature.icon }}"></i>
                            {% if feature.header %}

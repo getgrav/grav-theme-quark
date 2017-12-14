@@ -15,6 +15,8 @@ function parallaxBackground() {
 
 jQuery(document).ready(function($){
 
+    scrollHeader();
+
     // Scroll Events
     if (!isTouch){
         $(document).scroll(function() {
@@ -22,9 +24,6 @@ jQuery(document).ready(function($){
             parallaxBackground();
         });
     };
-
-    // Parallax
-
 
     // Touch scroll
     $(document).on({

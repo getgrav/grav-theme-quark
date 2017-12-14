@@ -37,6 +37,11 @@ a:focus
     outline: none !important;
 }
 
+img
+{
+    max-width: 100%;
+}
+
 pre code
 {line-height: 1.5; display: block; overflow-x: auto; padding: 1rem !important; color: inherit; border-radius: 2px; 
     background: #f8f8f8;
@@ -447,7 +452,7 @@ body.footer-sticky .body-wrapper
 
 #modular-showcase
 {
-    padding-top: 6rem; padding-bottom: 6rem; background-position: center; background-size: cover;
+    padding-top: 6rem; padding-bottom: 9rem; background-position: center; background-size: cover;
 }
 
 #modular-showcase.parallax
@@ -468,6 +473,27 @@ body.footer-sticky .body-wrapper
 #modular-features.offset-box .frame-box
 {
     margin: -3rem -2rem 3rem; padding: 1rem 2rem 1rem; background: #fff; box-shadow: 0 0 50px 0 rgba(69, 77, 93, .1);
+}
+
+#modular-features.small .feature-icon
+{
+    display: block;
+}
+
+#modular-features.small .feature-icon i
+{font-size: 64px; 
+
+    position: relative; display: block; margin: 1rem auto; color: #acb3c2;
+}
+
+#modular-features.small .feature-icon h6
+{
+    text-transform: none;
+}
+
+#modular-features .frame-box
+{
+    padding: 3rem 0;
 }
 
 #modular-features .frame-box > p
@@ -513,6 +539,11 @@ body.footer-sticky .body-wrapper
 #modular-features .feature-content
 {
     color: #acb3c2;
+}
+
+#modular-text
+{
+    padding: 4rem 0;
 }
 
 /*# sourceMappingURL=theme.css.map */

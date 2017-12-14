@@ -1,6 +1,6 @@
 #modular-showcase {
   padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-bottom: 9rem;
   background-size: cover;
   background-position: center;
 
@@ -17,17 +17,33 @@
   text-align: center;
 
   &.offset-box {
-
     .frame-box {
       margin: -3rem -2rem 3rem;
       padding: 1rem 2rem 1rem;
-
       background: $light-color;
       box-shadow: 0 0 50px 0 rgba($dark-color, 0.1);
     }
   }
 
+  &.small {
+    .feature-icon {
+      display: block;
+      i {
+        position: relative;
+        display: block;
+        font-size: 64px;
+        margin: 1rem auto;
+        color: $gray-color;
+      }
+      h6 {
+        text-transform: none;
+      }
+    }
+  }
+
   .frame-box {
+    padding: 3rem 0;
+
     > p {
       max-width: 600px;
       margin-left: auto;
@@ -81,4 +97,8 @@
   .feature-content {
     color: $gray-color;
   }
+}
+
+#modular-text {
+  padding: 4rem 0;
 }
