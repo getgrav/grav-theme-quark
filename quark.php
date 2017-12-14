@@ -2,7 +2,6 @@
 namespace Grav\Theme;
 
 use Grav\Common\Theme;
-use Grav\Common\Utils;
 
 class Quark extends Theme
 {

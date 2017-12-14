@@ -2308,9 +2308,7 @@ summary.accordion-header::-webkit-details-marker
 }
 
 .menu .menu-item > a:focus,
-.menu .menu-item > a:hover,
-.menu .menu-item > a:active,
-.menu .menu-item > a.active
+.menu .menu-item > a:hover
 {color: #3085ee; 
     background: #e1edfd;
 }

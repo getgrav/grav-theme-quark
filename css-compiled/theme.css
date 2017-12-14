@@ -507,7 +507,7 @@ body.footer-sticky .body-wrapper
 
 #modular-features.offset-box .frame-box
 {
-    margin: -3rem -2rem 3rem; padding: 1rem 2rem 1rem; background: #fff; box-shadow: 0 0 50px 0 rgba(69, 77, 93, .1);
+    margin: -3rem -1.4rem 3rem; padding: 1rem 1rem; background: #fff; box-shadow: 0 0 75px 0 rgba(69, 77, 93, .1);
 }
 
 #modular-features.small .feature-icon
@@ -578,7 +578,7 @@ body.footer-sticky .body-wrapper
 
 #modular-text
 {
-    padding: 4rem 0;
+    padding-top: 4rem; padding-bottom: 4rem;
 }
 
 /*# sourceMappingURL=theme.css.map */

@@ -18,10 +18,10 @@
 
   &.offset-box {
     .frame-box {
-      margin: -3rem -2rem 3rem;
-      padding: 1rem 2rem 1rem;
+      margin: -3rem (-1rem - $layout-spacing) 3rem;
+      padding: 1rem 1rem;
       background: $light-color;
-      box-shadow: 0 0 50px 0 rgba($dark-color, 0.1);
+      box-shadow: 0 0 75px 0 rgba($dark-color, 0.1);
     }
   }
 
@@ -100,5 +100,6 @@
 }
 
 #modular-text {
-  padding: 4rem 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
