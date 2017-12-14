@@ -1,4 +1,4 @@
-{% set grid_size = themevar('grid-size') %}
+{% set grid_size = theme_var('grid-size') %}
 {% set showcase_image = page.media.images|first %}
 
 <section id="modular-showcase" class="section text-light {{ page.header.background.parallax ? 'parallax' : '' }} {{ page.header.background.parallax ? 'parallax' : '' }}" {% if showcase_image %}style="background-image: url({{ showcase_image.url }});"{% endif %}>
