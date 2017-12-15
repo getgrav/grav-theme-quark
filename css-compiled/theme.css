@@ -405,13 +405,13 @@ body.header-fixed.header-animated #header.scrolled ~ .mobile-menu .button_contai
     font-size: 120%;
 }
 
-body.footer-sticky
+body.sticky-footer
 {display: -ms-flexbox; display: flex;     flex-direction: column; 
 
     min-height: 100%; -ms-flex-direction: column;
 }
 
-body.footer-sticky .body-wrapper
+body.sticky-footer .body-wrapper
 {
     -ms-flex: 1;        flex: 1;
 }
