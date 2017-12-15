@@ -1,0 +1,16 @@
+{% set item_col = theme.blog.show_sidebar ? 'col-8 col-md-12' : 'col-12' %}
+{% set sidebar_col = theme.blog.show_sidebar ? 'col-4 col-md-12' : 'col-12' %}
+<div class="columns">
+    <div id="item" class="column {{ item_col }}">
+        {% if theme.default.show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+            {% include 'partials/breadcrumbs.html.twig' %}
+        {% endif %}
+        {% block item %}{% endblock %}
+    </div>
+    {% if theme.blog.show_sidebar %}
+    <div id="sidebar" class="column {{ sidebar_col }}">
+        {% include 'partials/sidebar.html.twig' with {blog: blog}%}
+    </div>
+    {% endif %}
+</div>
+

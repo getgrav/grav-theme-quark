@@ -1,0 +1,31 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block hero %}
+    {% embed 'partials/hero.html.twig' %}
+        {% block hero_content %}
+            {% if theme.blog.title == 'hero' %}
+                <div class="content-title">
+                    {% include 'partials/blog/title.html.twig' with {title_level: 'h1'} %}
+                    {% if page.header.subtitle %}
+                        <h4>{{ page.header.subtitle }}</h4>
+                    {% endif %}
+                </div>
+            {% endif %}
+            {% if theme.blog.date == 'hero' %}
+                {% include 'partials/blog/date.html.twig' %}
+            {% endif %}
+            {% if theme.blog.taxonomy == 'hero' %}
+                {% include 'partials/blog/taxonomy.html.twig' %}
+            {% endif %}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
+
+{% block content %}
+    {% embed 'partials/blog/layout.html.twig' with {blog: page.parent} %}
+        {% block item %}
+            {% include 'partials/blog-item.html.twig' with {blog: page.parent} %}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
+

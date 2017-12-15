@@ -1,0 +1,9 @@
+
+<div class="e-content">
+    {{ page.content }}
+</div>
+
+{% if page.header.continue_link is sameas(true) and config.plugins.comments.enabled %}
+    {% include 'partials/comments.html.twig' %}
+{% endif %}
+

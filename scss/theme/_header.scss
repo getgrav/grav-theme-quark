@@ -15,17 +15,20 @@
   }
 
   .logo svg path {
-    fill: $dark-color;
+    fill: darken($dark-color, 10%);;
   }
 
   .header-dark &:not(.scrolled) {
     background: $dark-color;
     color: $light-color;
     a {
-      color: $light-color;
+      color: rgba($light-color, 0.7) !important;
+    }
+    a.active {
+      color: $light-color !important;
     }
     .dropmenu ul ul a {
-        color: $dark-color;
+        color: $dark-color !important;
     }
     .logo svg path {
       fill: $light-color;
@@ -33,11 +36,12 @@
   }
 
   .header-dark.header-transparent &:not(.scrolled) {
-    background: rgba($dark-color, 0.1);
+    background: rgba(#000, 0.05);
   }
 
   .header-transparent &:not(.scrolled) {
-    background: rgba($light-color, 0.1);
+    background: rgba(#fff, 0.05);
+    //border-bottom: 0 !important;
   }
 
   .navbar-section {

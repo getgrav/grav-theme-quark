@@ -1,0 +1,40 @@
+<div class="content-item h-entry">
+
+    {% if theme.blog.date == 'header' or
+          theme.blog.taxonomy == 'header'  %}
+        <div class="blog-item-header">
+            {% if theme.blog.date == 'header' %}
+                {% include 'partials/blog/date.html.twig' %}
+            {% endif %}
+            {% if theme.blog.taxonomy == 'header' %}
+                {% include 'partials/blog/taxonomy.html.twig' %}
+            {% endif %}
+        </div>
+    {% endif %}
+
+    {% if theme.blog.title == 'content' %}
+        <div class="content-title text-center">
+            {% include 'partials/blog/title.html.twig' with {title_level: 'h2'} %}
+            {% if page.header.subtitle %}
+            <h4>{{ page.header.subtitle }}</h4>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    {% include 'partials/blog/page-full.html.twig' %}
+
+    {% if theme.blog.date == 'footer' or
+    theme.blog.taxonomy == 'footer'  %}
+        <div class="blog-item-footer">
+            {% if theme.blog.date == 'footer' %}
+                {% include 'partials/blog/date.html.twig' %}
+            {% endif %}
+            {% if theme.blog.taxonomy == 'footer' %}
+                {% include 'partials/blog/taxonomy.html.twig' %}
+            {% endif %}
+        </div>
+    {% endif %}
+
+</div>
+
+{% include 'partials/blog/prev-next.html.twig' %}

@@ -21,6 +21,28 @@ section.section {
   transition: all 0.5s ease;
 }
 
+.overlay-light, .overlay-dark {
+  z-index: 0;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  .overlay-light & {
+    background: rgba(#fff, 0.4);
+  }
+
+  .overlay-dark & {
+    background: rgba(#000, 0.4);
+  }
+}
+
+
 
 
 

@@ -1,11 +1,12 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    <div id="error">
-        <div class="error-icon">
-            <i class="icon dripicons-link-broken"></i>
-        </div>
-        <h1>404 Error</h1>
-        <h4>{{ page.content }}</h4>
-    </div>
+	<div id="error">
+		<div>
+			<h1>{{ 'ERROR'|t }} {{ page.header.http_response_code }}</h1>
+			<p>
+				{{ page.content }}
+			</p>
+		</div>
+	</div>
 {% endblock %}

@@ -47,7 +47,6 @@
 {% endblock %}
 
 {% block body %}
-    {{ page.content }}
     {% for module in page.collection() %}
         <div id="{{ _self.pageLinkName(module.menu) }}"></div>
         {{ module.content }}

@@ -27,6 +27,27 @@ section.section
     transition: all .5s ease;
 }
 
+.overlay-light,
+.overlay-dark
+{
+    z-index: 0;
+}
+
+.image-overlay
+{
+    position: absolute; z-index: -1; top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.overlay-light .image-overlay
+{
+    background: rgba(255, 255, 255, .4);
+}
+
+.overlay-dark .image-overlay
+{
+    background: rgba(0, 0, 0, .4);
+}
+
 h1 + h2
 {
     margin-top: -20px; margin-bottom: 30px;
@@ -300,7 +321,7 @@ strong
 
 #header .logo svg path
 {
-    fill: #454d5d;
+    fill: #2f3540;
 }
 
 .header-dark #header:not(.scrolled)
@@ -310,12 +331,17 @@ strong
 
 .header-dark #header:not(.scrolled) a
 {
-    color: #fff;
+    color: rgba(255, 255, 255, .7) !important;
+}
+
+.header-dark #header:not(.scrolled) a.active
+{
+    color: #fff !important;
 }
 
 .header-dark #header:not(.scrolled) .dropmenu ul ul a
 {
-    color: #454d5d;
+    color: #454d5d !important;
 }
 
 .header-dark #header:not(.scrolled) .logo svg path
@@ -325,12 +351,12 @@ strong
 
 .header-dark.header-transparent #header:not(.scrolled)
 {
-    background: rgba(69, 77, 93, .1);
+    background: rgba(0, 0, 0, .05);
 }
 
 .header-transparent #header:not(.scrolled)
 {
-    background: rgba(255, 255, 255, .1);
+    background: rgba(255, 255, 255, .05);
 }
 
 #header .navbar-section
@@ -485,6 +511,32 @@ body.footer-sticky .body-wrapper
     transition: transform .3s, opacity .5s; transform: translateY(-10px); opacity: 0;
 }
 
+#blog-showcase
+{position: relative; 
+
+    padding-top: 6rem; padding-bottom: 9rem; background-position: center; background-size: cover;
+}
+
+#blog-showcase.parallax
+{
+    background-attachment: fixed;
+}
+
+#blog-showcase h1
+{
+    font-size: 4rem;
+}
+
+#blog-showcase h1 + h2
+{
+    margin-top: -40px; color: rgba(255, 255, 255, .6);
+}
+
+#blog-showcase p
+{
+    font-size: 150%;
+}
+
 #modular-showcase
 {
     padding-top: 6rem; padding-bottom: 9rem; background-position: center; background-size: cover;
@@ -493,6 +545,11 @@ body.footer-sticky .body-wrapper
 #modular-showcase.parallax
 {
     background-attachment: fixed;
+}
+
+#modular-showcase h1
+{
+    font-size: 3rem;
 }
 
 #modular-showcase p
