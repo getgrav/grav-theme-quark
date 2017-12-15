@@ -328,7 +328,7 @@ h3,
 h4,
 h5,
 h6
-{font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; font-weight: 200; line-height: 1.2; margin-top: 2rem; margin-bottom: .5em; 
+{font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; font-weight: 500; line-height: 1.2; margin-top: 2rem; margin-bottom: .5em; 
 
     color: inherit;    color: #3a414e;
 }
@@ -340,13 +340,13 @@ h6
 .h5,
 .h6
 {
-    font-weight: 200;
+    font-weight: 500;
 }
 
 h1,
 .h1
 {
-    font-size: 2.4rem;
+    font-size: 4rem; font-weight: 100;
 }
 
 h2,

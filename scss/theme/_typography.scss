@@ -1,7 +1,14 @@
+.title-center {
+  h1, h2 {
+    text-align: center;
+  }
+}
+
 // Typography Hints
 h1 + h2 {
-  margin-top: -20px;
-  margin-bottom: 30px;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  font-weight: 700;
 }
 
 a:focus {

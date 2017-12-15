@@ -14,7 +14,8 @@ html {
 }
 
 section.section {
-  padding: 0 $horiz-padding;
+  padding-left: $horiz-padding;
+  padding-right: $horiz-padding;
   position: relative;
 }
 
@@ -26,6 +27,41 @@ section.section {
   z-index: 0;
 }
 
+// Hero
+.hero {
+  padding-top: 6rem;
+  padding-bottom: 7rem;
+  background-size: cover;
+  background-position: center;
+
+  &.parallax {
+    background-attachment: fixed;
+  }
+
+  h1 {
+    color: $header-text-dark;
+  }
+
+  h2 {
+    color: rgba($header-text-dark, 0.8);
+  }
+
+  &.text-light {
+    h1 {
+      color: $header-text-light;
+    }
+    h2 {
+      color: rgba($header-text-light, 0.8);
+    }
+  }
+
+  p {
+    font-size: 130%;
+    font-weight: 300;
+  }
+}
+
+// Overlay
 .image-overlay {
   position: absolute;
   top: 0;

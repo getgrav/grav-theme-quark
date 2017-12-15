@@ -1,53 +1,31 @@
+#blog-hero {
 
-#blog-showcase {
-  padding-top: 6rem;
-  padding-bottom: 9rem;
-  background-size: cover;
-  background-position: center;
-
-  &.parallax {
-    background-attachment: fixed;
-  }
-
-  h1 {
-    font-size: 4rem;
-    color: $header-text-dark;
-  }
-
-  h2 {
-    color: rgba($header-text-dark, 0.8);
-  }
-
-  h1 + h2 {
-    margin-top: -40px;
-  }
-
-  &.text-light {
-    h1 {
-      color: $header-text-light;
-    }
-    h2 {
-      color: rgba($header-text-light, 0.6);
-    }
-  }
-
-  p {
-    font-size: 150%;
-  }
 }
 
 #blog-listing {
 
   .bricklayer-column {
     padding-left: 0px;
-    padding-right: 20px;
+    padding-right: 25px;
 
   }
   .card {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    border: 0;
+    box-shadow: 0 10px 45px -9px rgba(0,0,0,0.1);
   }
 
   .card-footer {
     text-align: right;
+  }
+
+  .blog-date {
+    font-size: 13px;
+  }
+
+  .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 }

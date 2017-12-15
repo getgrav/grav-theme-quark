@@ -14,9 +14,8 @@ html
 }
 
 section.section
-{position: relative; 
-
-    padding: 0 1rem;
+{position: relative; padding-right: 1rem; 
+    padding-left: 1rem;
 }
 
 .default-animation,
@@ -34,6 +33,41 @@ section.section
 .overlay-dark-gradient
 {
     z-index: 0;
+}
+
+.hero
+{
+    padding-top: 6rem; padding-bottom: 7rem; background-position: center; background-size: cover;
+}
+
+.hero.parallax
+{
+    background-attachment: fixed;
+}
+
+.hero h1
+{
+    color: #242931;
+}
+
+.hero h2
+{
+    color: rgba(36, 41, 49, .8);
+}
+
+.hero.text-light h1
+{
+    color: #fff;
+}
+
+.hero.text-light h2
+{
+    color: rgba(255, 255, 255, .8);
+}
+
+.hero p
+{
+    font-size: 130%; font-weight: 300;
 }
 
 .image-overlay
@@ -61,9 +95,16 @@ section.section
     background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .2));
 }
 
-h1 + h2
+.title-center h1,
+.title-center h2
 {
-    margin-top: -20px; margin-bottom: 30px;
+    text-align: center;
+}
+
+h1 + h2
+{font-weight: 700; 
+
+    margin-top: -50px; margin-bottom: 50px;
 }
 
 a:focus
@@ -524,54 +565,14 @@ body.sticky-footer .body-wrapper
     transition: transform .3s, opacity .5s; transform: translateY(-10px); opacity: 0;
 }
 
-#blog-showcase
-{
-    padding-top: 6rem; padding-bottom: 9rem; background-position: center; background-size: cover;
-}
-
-#blog-showcase.parallax
-{
-    background-attachment: fixed;
-}
-
-#blog-showcase h1
-{
-    font-size: 4rem; color: #242931;
-}
-
-#blog-showcase h2
-{
-    color: rgba(36, 41, 49, .8);
-}
-
-#blog-showcase h1 + h2
-{
-    margin-top: -40px;
-}
-
-#blog-showcase.text-light h1
-{
-    color: #fff;
-}
-
-#blog-showcase.text-light h2
-{
-    color: rgba(255, 255, 255, .6);
-}
-
-#blog-showcase p
-{
-    font-size: 150%;
-}
-
 #blog-listing .bricklayer-column
-{padding-right: 20px; 
+{padding-right: 25px; 
     padding-left: 0;
 }
 
 #blog-listing .card
 {
-    margin-bottom: 20px;
+    margin-bottom: 25px; border: 0; box-shadow: 0 10px 45px -9px rgba(0, 0, 0, .1);
 }
 
 #blog-listing .card-footer
@@ -579,44 +580,14 @@ body.sticky-footer .body-wrapper
     text-align: right;
 }
 
-#modular-showcase
+#blog-listing .blog-date
 {
-    padding-top: 6rem; padding-bottom: 7rem; background-position: center; background-size: cover;
+    font-size: 13px;
 }
 
-#modular-showcase.parallax
+#blog-listing .label
 {
-    background-attachment: fixed;
-}
-
-#modular-showcase h1
-{
-    font-size: 4rem; color: #242931;
-}
-
-#modular-showcase h2
-{
-    color: rgba(36, 41, 49, .8);
-}
-
-#modular-showcase h1 + h2
-{
-    margin-top: -40px;
-}
-
-#modular-showcase.text-light h1
-{
-    color: #fff;
-}
-
-#modular-showcase.text-light h2
-{
-    color: rgba(255, 255, 255, .8);
-}
-
-#modular-showcase p
-{
-    font-size: 150%;
+    font-size: 12px; font-weight: bold; text-transform: uppercase;
 }
 
 #modular-features
