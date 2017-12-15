@@ -40,10 +40,16 @@ section.section {
 
   h1 {
     color: $header-text-dark;
+    font-size: 4rem;
   }
 
   h2 {
     color: rgba($header-text-dark, 0.8);
+    font-size: 2.5rem;
+  }
+
+  h1 + h2 {
+    margin-top: -45px;
   }
 
   &.text-light {

@@ -346,7 +346,15 @@ h6
 h1,
 .h1
 {
-    font-size: 4rem; font-weight: 100;
+    font-size: 3rem; font-weight: 100;
+}
+
+h1 strong,
+h1 bold,
+.h1 strong,
+.h1 bold
+{
+    font-weight: 400;
 }
 
 h2,

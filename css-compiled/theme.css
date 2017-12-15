@@ -46,13 +46,20 @@ section.section
 }
 
 .hero h1
-{
+{font-size: 4rem; 
+
     color: #242931;
 }
 
 .hero h2
-{
+{font-size: 2.5rem; 
+
     color: rgba(36, 41, 49, .8);
+}
+
+.hero h1 + h2
+{
+    margin-top: -45px;
 }
 
 .hero.text-light h1
@@ -104,7 +111,7 @@ section.section
 h1 + h2
 {font-weight: 700; 
 
-    margin-top: -50px; margin-bottom: 50px;
+    margin-top: -35px; margin-bottom: 50px;
 }
 
 a:focus
