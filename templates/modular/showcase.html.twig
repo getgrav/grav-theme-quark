@@ -2,7 +2,7 @@
 {% set showcase_image = page.media.images|first %}
 
 <section id="modular-showcase" class="section {{ page.header.showcase_classes }} {{ page.header.background.parallax ? 'parallax' : '' }} {{ page.header.background.parallax ? 'parallax' : '' }}" {% if showcase_image %}style="background-image: url({{ showcase_image.url }});"{% endif %}>
-    <div class="overlay"></div>
+    <div class="image-overlay"></div>
     <section class="container {{ grid_size }}" style="text-align: {{ page.header.text_align|default('left') }}">
 
     {{ content }}

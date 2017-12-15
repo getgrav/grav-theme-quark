@@ -1,6 +1,19 @@
 {% extends 'partials/base.html.twig' %}
 {% set blog_image = page.media.images[page.header.showcase_image] ?: page.media.images|first %}
 {% set collection = page.collection() %}
+{% set show_breadcrumbs = page.header.show_breadcrumbs|default(true) %}
+{% set show_sidebar = page.header.show_sidebar|default(true) %}
+{% set show_pagination = page.header.show_pagination|default(true) %}
+
+{% block stylesheets %}
+    {% do assets.addCss('theme://css/bricklayer.css') %}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% do assets.add('theme://js/bricklayer.min.js') %}
+{% endblock %}
 
 {% block body %}
 
@@ -13,20 +26,39 @@
         </section>
     </section>
 
-    {% embed 'partials/blog/layout.html.twig' with {blog: page} %}
-        {% block item %}
-            {% for child in collection %}
-                {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
-            {% endfor %}
+    <section id="blog-listing" class="section">
+        <section class="container {{ grid_size }}">
+        {% embed 'partials/layout.html.twig' with {blog: page} %}
+            {% block item %}
 
-            {% if config.plugins.pagination.enabled and collection.params.pagination %}
-                <div id="listing-footer">
-                    {% include 'partials/pagination.html.twig' with {base_url: page.url, pagination: collection.params.pagination} %}
+                {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+                    {% include 'partials/breadcrumbs.html.twig' %}
+                {% endif %}
+
+                <div class="bricklayer">
+                {% for child in collection %}
+                    {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
+                {% endfor %}
                 </div>
-            {% endif %}
-        {% endblock %}
-    {% endembed %}
 
+                {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
+                    <div id="listing-footer">
+                        {% include 'partials/pagination.html.twig' with {base_url: page.url, pagination: collection.params.pagination} %}
+                    </div>
+                {% endif %}
+
+            {% endblock %}
+
+            {% block sidebar %}
+                {% include 'partials/sidebar.html.twig' %}
+            {% endblock %}
+        {% endembed %}
+        </section>
+    </section>
+    <script>
+        //Bricklayer
+        var bricklayer = new Bricklayer(document.querySelector('.bricklayer'))
+    </script>
 {% endblock %}
 
 

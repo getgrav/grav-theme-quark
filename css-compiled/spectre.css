@@ -318,9 +318,8 @@ a:focus,
 a:hover,
 a:active,
 a.active
-{text-decoration: underline; 
-
-    color: #1877ec;
+{
+    color: #105fc2;
 }
 
 h1,
@@ -674,7 +673,7 @@ dl dd
 .btn.btn-link:active,
 .btn.btn-link.active
 {
-    color: #1877ec;
+    color: #105fc2;
 }
 
 .btn.btn-sm

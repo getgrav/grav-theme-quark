@@ -4,7 +4,6 @@
   padding-bottom: 9rem;
   background-size: cover;
   background-position: center;
-  position: relative;
 
   &.parallax {
     background-attachment: fixed;
@@ -21,8 +20,6 @@
 
   h1 + h2 {
     margin-top: -40px;
-
-
   }
 
   &.text-light {
@@ -36,5 +33,21 @@
 
   p {
     font-size: 150%;
+  }
+}
+
+#blog-listing {
+
+  .bricklayer-column {
+    padding-left: 0px;
+    padding-right: 20px;
+
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .card-footer {
+    text-align: right;
   }
 }

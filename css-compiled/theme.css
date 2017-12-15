@@ -14,7 +14,8 @@ html
 }
 
 section.section
-{
+{position: relative; 
+
     padding: 0 1rem;
 }
 
@@ -82,7 +83,7 @@ pre code
 
 i.fa
 {
-    font-size: 130%; vertical-align: middle;
+    font-size: 130%; margin-top: -3px; vertical-align: middle;
 }
 
 b,
@@ -524,8 +525,7 @@ body.sticky-footer .body-wrapper
 }
 
 #blog-showcase
-{position: relative; 
-
+{
     padding-top: 6rem; padding-bottom: 9rem; background-position: center; background-size: cover;
 }
 
@@ -564,9 +564,24 @@ body.sticky-footer .body-wrapper
     font-size: 150%;
 }
 
+#blog-listing .bricklayer-column
+{padding-right: 20px; 
+    padding-left: 0;
+}
+
+#blog-listing .card
+{
+    margin-bottom: 20px;
+}
+
+#blog-listing .card-footer
+{
+    text-align: right;
+}
+
 #modular-showcase
 {
-    padding-top: 6rem; padding-bottom: 9rem; background-position: center; background-size: cover;
+    padding-top: 6rem; padding-bottom: 7rem; background-position: center; background-size: cover;
 }
 
 #modular-showcase.parallax
@@ -576,7 +591,27 @@ body.sticky-footer .body-wrapper
 
 #modular-showcase h1
 {
-    font-size: 3rem;
+    font-size: 4rem; color: #242931;
+}
+
+#modular-showcase h2
+{
+    color: rgba(36, 41, 49, .8);
+}
+
+#modular-showcase h1 + h2
+{
+    margin-top: -40px;
+}
+
+#modular-showcase.text-light h1
+{
+    color: #fff;
+}
+
+#modular-showcase.text-light h2
+{
+    color: rgba(255, 255, 255, .8);
 }
 
 #modular-showcase p
