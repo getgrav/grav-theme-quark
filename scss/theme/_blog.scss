@@ -1,3 +1,4 @@
+
 #blog-showcase {
   padding-top: 6rem;
   padding-bottom: 9rem;
@@ -11,11 +12,26 @@
 
   h1 {
     font-size: 4rem;
+    color: $header-text-dark;
+  }
+
+  h2 {
+    color: rgba($header-text-dark, 0.8);
   }
 
   h1 + h2 {
     margin-top: -40px;
-    color: rgba($light-color, 0.6);
+
+
+  }
+
+  &.text-light {
+    h1 {
+      color: $header-text-light;
+    }
+    h2 {
+      color: rgba($header-text-light, 0.6);
+    }
   }
 
   p {

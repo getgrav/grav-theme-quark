@@ -21,7 +21,7 @@ section.section {
   transition: all 0.5s ease;
 }
 
-.overlay-light, .overlay-dark {
+.overlay-light, .overlay-dark, .overlay-light-gradient, .overlay-dark-gradient {
   z-index: 0;
 }
 
@@ -37,8 +37,16 @@ section.section {
     background: rgba(#fff, 0.4);
   }
 
+  .overlay-light-gradient & {
+    background: linear-gradient(to bottom, rgba(#fff,0.5), rgba(#fff,0.2));
+  }
+
   .overlay-dark & {
     background: rgba(#000, 0.4);
+  }
+
+  .overlay-dark-gradient & {
+    background: linear-gradient(to bottom, rgba(#000,0.5), rgba(#000,0.2));
   }
 }
 

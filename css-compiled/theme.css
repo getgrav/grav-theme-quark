@@ -28,7 +28,9 @@ section.section
 }
 
 .overlay-light,
-.overlay-dark
+.overlay-dark,
+.overlay-light-gradient,
+.overlay-dark-gradient
 {
     z-index: 0;
 }
@@ -43,9 +45,19 @@ section.section
     background: rgba(255, 255, 255, .4);
 }
 
+.overlay-light-gradient .image-overlay
+{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, .5), rgba(255, 255, 255, .2));
+}
+
 .overlay-dark .image-overlay
 {
     background: rgba(0, 0, 0, .4);
+}
+
+.overlay-dark-gradient .image-overlay
+{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, .2));
 }
 
 h1 + h2
@@ -524,12 +536,27 @@ body.sticky-footer .body-wrapper
 
 #blog-showcase h1
 {
-    font-size: 4rem;
+    font-size: 4rem; color: #242931;
+}
+
+#blog-showcase h2
+{
+    color: rgba(36, 41, 49, .8);
 }
 
 #blog-showcase h1 + h2
 {
-    margin-top: -40px; color: rgba(255, 255, 255, .6);
+    margin-top: -40px;
+}
+
+#blog-showcase.text-light h1
+{
+    color: #fff;
+}
+
+#blog-showcase.text-light h2
+{
+    color: rgba(255, 255, 255, .6);
 }
 
 #blog-showcase p

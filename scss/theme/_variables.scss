@@ -5,6 +5,8 @@ $vert-padding: 2rem 0 2rem;
 // Header
 $header-height-large: 4rem;
 $header-height-small: 2.3rem;
+$header-text-light: $light-color;
+$header-text-dark: darken($dark-color, 15%);
 
 // Dropdown Menu
 $dropmenu-bg: $light-color;
