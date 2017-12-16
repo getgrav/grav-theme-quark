@@ -22,10 +22,12 @@ gulp.task('watch', function() {
 gulp.task('build', function() {
   gulp.src(paths.source)
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'compact', precision: 10}))
+    .pipe(sass({outputStyle: 'compact', precision: 10})
+      .on('error', sass.logError)
+    )
     .pipe(autoprefixer())
     .pipe(csscomb())
-    .pipe(sourcemaps.write('.',{includeContent:false, sourceRoot: '../'}))
+    .pipe(sourcemaps.write('.', {includeContent: false, sourceRoot: '../scss'}))
     .pipe(gulp.dest(dest_dir))
     .pipe(cleancss())
     .pipe(rename({
