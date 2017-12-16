@@ -32,9 +32,17 @@ jQuery(document).ready(function($){
         }
     });
 
-    // Smooth scroll to top
-    $('#toTop').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 500);
+    //Smooth scroll to start
+    $('#to-start').click(function(){
+        var start_y = $('#body-wrapper').position().top;
+        var header_offset = 45;
+        window.scroll({ top: start_y - header_offset, left: 0, behavior: 'smooth' });
+        return false;
+    });
+
+    //Smooth scroll to top
+    $('#to-top').click(function(){
+        window.scroll({ top: 0, left: 0, behavior: 'smooth' });
         return false;
     });
 

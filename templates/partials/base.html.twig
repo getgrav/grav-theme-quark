@@ -32,7 +32,7 @@
 {% endblock head %}
 </head>
 <body id="top" class="{{ body_classes }}">
-    <div class="body-wrapper">
+    <div id="page-wrapper">
     {% block header %}
         <section id="header" class="section">
             <section class="container {{ grid_size }}">
@@ -68,7 +68,7 @@
     {% block hero %}{% endblock %}
 
     {% block body %}
-        <section id="body" class="section">
+        <section id="body-wrapper" class="section">
             <section class="container {{ grid_size }}">
                 {% block messages %}
                     {% include 'partials/messages.html.twig' ignore missing %}

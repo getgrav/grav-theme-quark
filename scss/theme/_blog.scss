@@ -1,8 +1,19 @@
 #blog-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  min-height: 500px;
 
+  #to-start {
+    display: inline-block;
+    position: absolute;
+    bottom: 10px;
+    font-size: 2rem;
+  }
 }
 
-#blog-listing {
+.blog-listing {
 
   .bricklayer-column {
     padding-left: 0px;
@@ -24,8 +35,13 @@
   }
 
   .label {
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: bold;
+
   }
+}
+
+.label {
+
+  font-size: 12px;
+  text-transform: uppercase;
+
 }

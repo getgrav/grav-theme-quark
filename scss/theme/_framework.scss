@@ -2,7 +2,7 @@ html {
   height: 100%;
 }
 
-#body {
+#body-wrapper {
   .container {
     padding: $vert-padding;
   }
@@ -10,6 +10,12 @@ html {
   // Fixed Header solution
   .header-fixed & {
     padding-top: $header-height-large;
+  }
+}
+
+.header-fixed {
+  .hero + #body-wrapper {
+    padding-top: 0;
   }
 }
 
@@ -33,6 +39,10 @@ section.section {
   padding-bottom: 7rem;
   background-size: cover;
   background-position: center;
+  
+  .header-fixed & {
+    background-position: 50% 0;
+  }
 
   &.parallax {
     background-attachment: fixed;
