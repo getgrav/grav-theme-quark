@@ -25,10 +25,10 @@ gulp.task('build', function() {
     .pipe(sass({outputStyle: 'compact', precision: 10})
       .on('error', sass.logError)
     )
-    .pipe(autoprefixer())
-    .pipe(csscomb())
-    .pipe(sourcemaps.write('.', {includeContent: false, sourceRoot: '../scss'}))
+    .pipe(sourcemaps.write())
+    .pipe(autoprefixer())       
     .pipe(gulp.dest(dest_dir))
+    .pipe(csscomb())
     .pipe(cleancss())
     .pipe(rename({
       suffix: '.min'
