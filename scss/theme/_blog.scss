@@ -1,16 +1,7 @@
 #blog-hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   height: 40vh;
   min-height: 350px;
-
-  #to-start {
-    display: inline-block;
-    position: absolute;
-    bottom: 10px;
-    font-size: 2rem;
-  }
 }
 
 #breadcrumbs {

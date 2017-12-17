@@ -25,16 +25,16 @@ section.section {
   position: relative;
 }
 
-.default-animation {
-  transition: all 0.5s ease;
-}
-
 .overlay-light, .overlay-dark, .overlay-light-gradient, .overlay-dark-gradient {
   z-index: 0;
 }
 
 // Hero
 .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   padding-top: 6rem;
   padding-bottom: 7rem;
   background-size: cover;
@@ -75,6 +75,14 @@ section.section {
     font-size: 130%;
     font-weight: 300;
   }
+
+  #to-start {
+    display: inline-block;
+    position: absolute;
+    bottom: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+  }
 }
 
 // Overlay
@@ -102,6 +110,8 @@ section.section {
     background: linear-gradient(to bottom, rgba(#000,0.5), rgba(#000,0.2));
   }
 }
+
+
 
 
 

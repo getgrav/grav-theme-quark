@@ -38,6 +38,12 @@ i.fa {
   font-size: 130%;
   vertical-align: middle;
   margin-top: -3px;
+
+  &.fa-heart, &.fa-heart-o {
+    &.pulse {
+      color: #920
+    }
+  }
 }
 
 // Font Weights
