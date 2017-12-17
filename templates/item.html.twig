@@ -1,31 +1,42 @@
 {% extends 'partials/base.html.twig' %}
 
+{% set blog = page.find('/blog') %}
+{% set show_breadcrumbs = blog.header.show_breadcrumbs|default(true) %}
+{% set show_sidebar = blog.header.show_sidebar|default(true) %}
+{% set show_pagination = blog.header.show_pagination|default(true) %}
+{% set hero_image = page.header.hero_image %}
+
 {% block hero %}
-    {% embed 'partials/hero.html.twig' %}
-        {% block hero_content %}
-            {% if theme.blog.title == 'hero' %}
-                <div class="content-title">
-                    {% include 'partials/blog/title.html.twig' with {title_level: 'h1'} %}
-                    {% if page.header.subtitle %}
-                        <h4>{{ page.header.subtitle }}</h4>
-                    {% endif %}
-                </div>
-            {% endif %}
-            {% if theme.blog.date == 'hero' %}
-                {% include 'partials/blog/date.html.twig' %}
-            {% endif %}
-            {% if theme.blog.taxonomy == 'hero' %}
-                {% include 'partials/blog/taxonomy.html.twig' %}
-            {% endif %}
-        {% endblock %}
-    {% endembed %}
+    {% if hero_image %}
+    {% set content %}
+        <h1>{{ page.title }}</h1>
+        <h2>{{ page.header.subtitlte }}</h2>
+    {% endset %}
+        {% include 'partials/blog/hero.html.twig' with {content: 'foo', blog_image: hero_image, page: blog} %}
+    {% else %}
+        {% set blog_image = blog.media.images[blog.header.hero_image] ?: blog.media.images|first %}
+        {% include 'partials/blog/hero.html.twig' with {content: blog.content, page: blog} %}
+    {% endif %}
 {% endblock %}
 
-{% block content %}
-    {% embed 'partials/blog/layout.html.twig' with {blog: page.parent} %}
-        {% block item %}
-            {% include 'partials/blog-item.html.twig' with {blog: page.parent} %}
-        {% endblock %}
-    {% endembed %}
+{% block body %}
+<section id="body-wrapper" class="section blog-listing">
+    <section class="container {{ grid_size }}">
+
+        {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+            {% include 'partials/breadcrumbs.html.twig' %}
+        {% endif %}
+
+        {% embed 'partials/layout.html.twig' %}
+            {% block item %}
+                {% include 'partials/blog-item.html.twig' %}
+            {% endblock %}
+            {% block sidebar %}
+                {% include 'partials/sidebar.html.twig' %}
+            {% endblock %}
+        {% endembed %}
+
+    </section>
+</section>
 {% endblock %}
 

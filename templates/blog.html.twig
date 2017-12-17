@@ -16,24 +16,19 @@
 {% endblock %}
 
 {% block hero %}
-    <section id="blog-hero" class="section hero {{ page.header.hero_classes }} {{ page.header.background.parallax ? 'parallax' : '' }} {{ page.header.background.parallax ? 'parallax' : '' }}" {% if blog_image %}style="background-image: url({{ blog_image.url }});"{% endif %}>
-        <div class="image-overlay"></div>
-        <section class="container {{ grid_size }}" style="text-align: {{ page.header.text_align|default('left') }}">
-            {{ content }}
-        </section>
-        <i id="to-start" class="fa fa-angle-down"></i>
-    </section>
+    {% include 'partials/blog/hero.html.twig' with {content: page.content} %}
 {% endblock %}
 
 {% block body %}
     <section id="body-wrapper" class="section blog-listing">
         <section class="container {{ grid_size }}">
+
+        {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+            {% include 'partials/breadcrumbs.html.twig' %}
+        {% endif %}
+
         {% embed 'partials/layout.html.twig' with {blog: page} %}
             {% block item %}
-
-                {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-                    {% include 'partials/breadcrumbs.html.twig' %}
-                {% endif %}
 
                 <div class="bricklayer">
                 {% for child in collection %}

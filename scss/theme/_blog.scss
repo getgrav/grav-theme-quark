@@ -2,14 +2,37 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50vh;
-  min-height: 500px;
+  height: 40vh;
+  min-height: 350px;
 
   #to-start {
     display: inline-block;
     position: absolute;
     bottom: 10px;
     font-size: 2rem;
+  }
+}
+
+#breadcrumbs {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+
+  i {
+    display: none;
+  }
+
+  span {
+    padding: 0 0.5rem;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  span:not(:first-child)::before {
+    color: #e7e9ed;
+    content: "/";
+    padding-right: 1rem;
   }
 }
 
@@ -43,5 +66,9 @@
 
   font-size: 12px;
   text-transform: uppercase;
+
+}
+
+#sidebar {
 
 }
