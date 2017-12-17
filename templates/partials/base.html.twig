@@ -1,5 +1,6 @@
 {% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
 {% set grid_size = theme_var('grid-size') %}
+{% set compress = theme_var('production_mode') ? '.min.css' : '.css' %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
 <head>
@@ -15,8 +16,8 @@
     <link rel="canonical" href="{{ page.url(true, true) }}" />
 
     {% block stylesheets %}
-        {% do assets.addCss('theme://css-compiled/spectre.css') %}
-        {% do assets.addCss('theme://css-compiled/theme.css') %}
+        {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
+        {% do assets.addCss('theme://css-compiled/theme'~compress) %}
         {% do assets.addCss('theme://css/custom.css') %}
         {% do assets.addCss('theme://css/line-awesome-font-awesome.min.css') %}
     {% endblock %}

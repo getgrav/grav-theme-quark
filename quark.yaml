@@ -1,4 +1,5 @@
 enabled: true
+production-mode: false
 grid-size: grid-lg
 header-fixed: true
 header-animated: true
