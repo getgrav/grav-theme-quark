@@ -6,3 +6,4 @@ header-animated: true
 header-dark: false
 header-transparent: false
 sticky-footer: true
+blog-page: '/blog'

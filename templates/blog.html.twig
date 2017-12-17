@@ -1,9 +1,9 @@
 {% extends 'partials/base.html.twig' %}
 {% set blog_image = page.media.images[page.header.hero_image] ?: page.media.images|first %}
 {% set collection = page.collection() %}
-{% set show_breadcrumbs = page.header.show_breadcrumbs|default(true) %}
-{% set show_sidebar = page.header.show_sidebar|default(true) %}
-{% set show_pagination = page.header.show_pagination|default(true) %}
+{% set show_breadcrumbs = header_var('show_sidebar', '/blog')|default(true) %}
+{% set show_sidebar = header_var('show_sidebar')|default(true) %}
+{% set show_pagination = header_var('show_sidebar')|default(true) %}
 
 {% block stylesheets %}
     {% do assets.addCss('theme://css/bricklayer.css') %}
@@ -16,7 +16,7 @@
 {% endblock %}
 
 {% block hero %}
-    {% include 'partials/blog/hero.html.twig' with {content: page.content} %}
+    {% include 'partials/hero.html.twig' with {id: 'blog-hero', content: page.content, hero_image: blog_image} %}
 {% endblock %}
 
 {% block body %}

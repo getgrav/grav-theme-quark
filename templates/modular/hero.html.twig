@@ -1,11 +1,13 @@
 {% set grid_size = theme_var('grid-size') %}
 {% set hero_image = page.media.images|first %}
 
-<section id="modular-hero" class="section hero {{ page.header.hero_classes }} {{ page.header.background.parallax ? 'parallax' : '' }} {{ page.header.background.parallax ? 'parallax' : '' }}" {% if hero_image %}style="background-image: url({{ hero_image.url }});"{% endif %}>
-    <div class="image-overlay"></div>
-    <section class="container {{ grid_size }}" style="text-align: {{ page.header.text_align|default('left') }}">
+{% include 'partials/hero.html.twig' with {id: 'modular-hero'} %}
 
-    {{ content }}
+{#<section id="modular-hero" class="section hero {{ page.header.hero_classes }} {{ page.header.background.parallax ? 'parallax' : '' }} {{ page.header.background.parallax ? 'parallax' : '' }}" {% if hero_image %}style="background-image: url({{ hero_image.url }});"{% endif %}>#}
+    {#<div class="image-overlay"></div>#}
+    {#<section class="container {{ grid_size }}" style="text-align: {{ page.header.text_align|default('left') }}">#}
 
-    </section>
-</section>
+    {#{{ content }}#}
+
+    {#</section>#}
+{#</section>#}

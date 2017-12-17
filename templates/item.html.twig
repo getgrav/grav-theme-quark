@@ -1,27 +1,30 @@
 {% extends 'partials/base.html.twig' %}
-
-{% set blog = page.find('/blog') %}
-{% set show_breadcrumbs = blog.header.show_breadcrumbs|default(true) %}
-{% set show_sidebar = blog.header.show_sidebar|default(true) %}
-{% set show_pagination = blog.header.show_pagination|default(true) %}
-{% set hero_image = page.header.hero_image %}
+{% set blog = page.find(theme_var('blog-page')|default('/blog')) %}
+{% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog]) %}
+{% set show_sidebar = header_var('show_sidebar', [page, blog])  %}
+{% set show_pagination = header_var('show_pagination', [page, blog]) %}
+{% set hero_image_name = page.header.hero_image %}
 
 {% block hero %}
-    {% if hero_image %}
-    {% set content %}
-        <h1>{{ page.title }}</h1>
-        <h2>{{ page.header.subtitlte }}</h2>
-    {% endset %}
-        {% include 'partials/blog/hero.html.twig' with {content: 'foo', blog_image: hero_image, page: blog} %}
+    {% if hero_image_name %}
+        {% set hero_image = page.media[hero_image_name] %}
+        {% set content %}
+            <h1>{{ page.title }}</h1>
+            <h2>{{ page.header.subtitle }}</h2>
+            {% include 'partials/blog/date.html.twig' %}
+        {% endset %}
+        {% include 'partials/hero.html.twig' with {id: 'blog-hero', page: blog} %}
     {% else %}
-        {% set blog_image = blog.media.images[blog.header.hero_image] ?: blog.media.images|first %}
-        {% include 'partials/blog/hero.html.twig' with {content: blog.content, page: blog} %}
+        {% set hero_image = blog.media.images[blog.header.hero_image] ?: blog.media.images|first %}
+        {% include 'partials/hero.html.twig' with {id: 'blog-hero', content: blog.content, page: blog} %}
     {% endif %}
 {% endblock %}
 
 {% block body %}
 <section id="body-wrapper" class="section blog-listing">
     <section class="container {{ grid_size }}">
+
+        {{ dump(show_sidebar) }}
 
         {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
             {% include 'partials/breadcrumbs.html.twig' %}

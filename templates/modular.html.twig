@@ -46,8 +46,15 @@
     {% endif %}
 {% endblock %}
 
+{% block hero %}
+    {% for module in page.collection() if module.template == 'modular/hero' %}
+        <div id="{{ _self.pageLinkName(module.menu) }}"></div>
+        {{ module.content }}
+    {% endfor %}
+{% endblock %}
+
 {% block body %}
-    {% for module in page.collection() %}
+    {% for module in page.collection() if module.template != 'modular/hero' %}
         <div id="{{ _self.pageLinkName(module.menu) }}"></div>
         {{ module.content }}
     {% endfor %}

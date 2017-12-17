@@ -14,7 +14,7 @@ html {
 }
 
 .header-fixed {
-  .hero + #body-wrapper {
+  .hero + #start > #body-wrapper {
     padding-top: 0;
   }
 }

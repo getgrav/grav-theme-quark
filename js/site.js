@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
 
     //Smooth scroll to start
     $('#to-start').click(function(){
-        var start_y = $('#body-wrapper').position().top;
+        var start_y = $('#start').position().top;
         var header_offset = 45;
         window.scroll({ top: start_y - header_offset, left: 0, behavior: 'smooth' });
         return false;
