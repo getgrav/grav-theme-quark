@@ -68,16 +68,18 @@
 
     {% block hero %}{% endblock %}
 
-    {% block body %}
-        <section id="body-wrapper" class="section">
-            <section class="container {{ grid_size }}">
-                {% block messages %}
-                    {% include 'partials/messages.html.twig' ignore missing %}
-                {% endblock %}
-                {% block content %}{% endblock %}
+        <section id="start">
+        {% block body %}
+            <section id="body-wrapper" class="section">
+                <section class="container {{ grid_size }}">
+                    {% block messages %}
+                        {% include 'partials/messages.html.twig' ignore missing %}
+                    {% endblock %}
+                    {% block content %}{% endblock %}
+                </section>
             </section>
+        {% endblock %}
         </section>
-    {% endblock %}
 
     </div>
 {% block footer %}
