@@ -33,8 +33,6 @@ legend {
 }
 
 // Form element: Input
-.form-input-wrapper input:not([type=checkbox]):not([type=range]),
-.form-textarea-wrapper textarea,
 .form-input {
   @include control-transition();
   appearance: none;
@@ -86,7 +84,6 @@ legend {
 }
 
 // Form element: Textarea
-.form-textarea-wrapper textarea,
 textarea.form-input {
   height: auto;
 }
@@ -109,7 +106,6 @@ textarea.form-input {
 }
 
 // Form element: Select
-.form-select-wrapper select,
 .form-select {
   appearance: none;
   border: $border-width solid $border-color-dark;
@@ -126,7 +122,7 @@ textarea.form-input {
   &[size],
   &[multiple] {
     height: auto;
-    
+
     option {
       padding: $unit-h $unit-1;
     }
@@ -193,9 +189,6 @@ textarea.form-input {
 }
 
 // Form element: Checkbox and Radio
-.form-input-wrapper input[type=checkbox],
-.checkboxes input,
-.radio input,
 .form-checkbox,
 .form-radio,
 .form-switch {
@@ -243,9 +236,6 @@ textarea.form-input {
   }
 }
 
-.form-input-wrapper input[type=checkbox]:not(.switch),
-.checkbox input,
-.radio input,
 .form-checkbox,
 .form-radio {
   .form-icon {
@@ -262,9 +252,6 @@ textarea.form-input {
     }
   }
 }
-
-.form-input-wrapper input[type=checkbox]:not(.switch),
-.checkboxes input,
 .form-checkbox {
   .form-icon {
     border-radius: $border-radius;
@@ -305,8 +292,6 @@ textarea.form-input {
     }
   }
 }
-
-.radio input,
 .form-radio {
   .form-icon {
     border-radius: 50%;
@@ -330,7 +315,6 @@ textarea.form-input {
 }
 
 // Form element: Switch
-.form-input-wrapper input.switch,
 .form-switch {
   padding-left: ($unit-8 + $control-padding-x);
 
@@ -393,8 +377,6 @@ textarea.form-input {
     }
   }
 
-  .form-input-wrapper input,
-  .form-select-wrapper select,
   .form-input,
   .form-select {
     flex: 1 1 auto;
@@ -404,8 +386,6 @@ textarea.form-input {
     z-index: $zindex-0;
   }
 
-  .form-input-wrapper input,
-  .form-select-wrapper select,
   .form-input,
   .form-select,
   .input-group-addon,
@@ -438,8 +418,6 @@ textarea.form-input {
 }
 
 // Form validation states
-.form-input-wrapper input,
-.form-select-wrapper select,
 .form-input,
 .form-select {
   .has-success &,
@@ -459,9 +437,6 @@ textarea.form-input {
   }
 }
 
-.form-input-wrapper input[type=checkbox],
-.checkboxes input,
-.radio input,
 .form-checkbox,
 .form-radio,
 .form-switch {
@@ -470,7 +445,7 @@ textarea.form-input {
     .form-icon {
       border-color: $error-color;
     }
-    
+
     input {
       &:checked + .form-icon {
         background: $error-color;
@@ -486,7 +461,6 @@ textarea.form-input {
 }
 
 // validation based on :placeholder-shown (Edge doesn't support it yet)
-.form-input-wrapper input,
 .form-input {
   &:not(:placeholder-shown) {
     &:invalid {
@@ -503,8 +477,6 @@ textarea.form-input {
 }
 
 // Form disabled and readonly
-.form-input-wrapper input,
-.form-select-wrapper select,
 .form-input,
 .form-select {
   &:disabled,
@@ -515,7 +487,6 @@ textarea.form-input {
   }
 }
 
-.form-input-wrapper input,
 .form-input {
   &[readonly] {
     background-color: $bg-color;
@@ -533,7 +504,6 @@ input {
   }
 }
 
-.form-input-wrapper input.switch,
 .form-switch {
   input {
     &:disabled,
