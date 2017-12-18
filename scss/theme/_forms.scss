@@ -1,0 +1,20 @@
+form {
+  .button-wrapper {
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  span.required {
+    color: $error-color;
+    font-weight: 700;
+    font-size: 150%;
+  }
+
+  .form-input[type=range] {
+    appearance: slider-horizontal;
+    &:focus {
+      box-shadow: none;
+      border: none;
+    }
+  }
+}
