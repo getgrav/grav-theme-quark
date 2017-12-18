@@ -35,10 +35,14 @@ class Quark extends Theme
             'form_button_classes' => 'btn',
             'form_errors_classes' => '',
             'form_field_outer_classes' => 'form-group',
-//            'form_field_outer_label_classes' => 'col-3',
+            'form_field_outer_label_classes' => 'form-label-wrapper',
             'form_field_label_classes' => 'form-label',
 //            'form_field_outer_data_classes' => 'col-9',
-            'form_field_data_classes' => '',
+            'form_field_input_classes' => 'form-input',
+            'form_field_textarea_classes' => 'form-input',
+            'form_field_select_classes' => 'form-select',
+            'form_field_radio_classes' => 'form-radio',
+            'form_field_checkbox_classes' => 'form-checkbox',
             'form_errors_classes' => '',
         ];
 
