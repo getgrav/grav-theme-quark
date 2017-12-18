@@ -30,14 +30,14 @@ class Quark extends Theme
         $twig = $this->grav['twig'];
 
         $form_class_variables = [
-            'form_outer_classes' => 'form-horizontal',
-            'form_button_outer_classes' => '',
+            'form_outer_classes' => 'form-vertical',
+            'form_button_outer_classes' => 'mt-2',
             'form_button_classes' => 'btn',
             'form_errors_classes' => '',
             'form_field_outer_classes' => 'form-group',
-            'form_field_outer_label_classes' => 'col-3',
+//            'form_field_outer_label_classes' => 'col-3',
             'form_field_label_classes' => 'form-label',
-            'form_field_outer_data_classes' => 'col-9',
+//            'form_field_outer_data_classes' => 'col-9',
             'form_field_data_classes' => '',
             'form_errors_classes' => '',
         ];
