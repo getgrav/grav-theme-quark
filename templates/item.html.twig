@@ -5,13 +5,6 @@
 {% set show_pagination = header_var('show_pagination', [page, blog]) %}
 {% set hero_image_name = page.header.hero_image %}
 
-{% block body_classes %}
-    {% if not hero_image_name %}
-        {% set body_classes = body_classes|replace({'header-dark':''}) %}
-    {% endif %}
-    {{ body_classes }}
-{% endblock %}
-
 {% block hero %}
     {% if hero_image_name %}
         {% set hero_image = page.media[hero_image_name] %}
