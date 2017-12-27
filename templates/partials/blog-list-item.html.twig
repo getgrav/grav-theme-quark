@@ -9,7 +9,9 @@
         <div class="card-subtitle text-gray">
             {% include 'partials/blog/date.html.twig' %}
     </div>
-        <div class="card-title h5"><a href="{{ page.url }}">{{ page.title }}</a></div>
+        <div class="card-title">
+        {% include 'partials/blog/title.html.twig' with {title_level: 'h5'} %}
+        </div>
     </div>
     <div class="card-body">
         {{ page.summary }}

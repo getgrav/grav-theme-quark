@@ -2,7 +2,7 @@
 {% set sidebar_col = show_sidebar ? 'col-3 col-md-12' : 'col-12' %}
 
 <div class="columns">
-    <div id="item" class="column {{ item_col }}">
+    <div id="item" class="column {{ item_col }} extra-spacing">
         {% block item %}{% endblock %}
     </div>
     {% if show_sidebar %}

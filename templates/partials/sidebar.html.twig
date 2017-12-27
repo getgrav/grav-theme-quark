@@ -19,8 +19,8 @@
 </div>
 {% endif %}
 <div class="sidebar-content">
-	<h4>{{ 'SIDEBAR.SOME_TEXT_WIDGET.HEADLINE'|t }}</h4>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+	<h4>{{ site.sidebar_widget.title }}</h4>
+	<p>{{ site.sidebar_widget.body|markdown }}</p>
 </div>
 {% if config.plugins.taxonomylist.enabled %}
 <div class="sidebar-content">
@@ -37,7 +37,7 @@
 {% if config.plugins.feed.enabled %}
 <div class="sidebar-content syndicate">
     <h4>{{ 'SIDEBAR.SYNDICATE.HEADLINE'|t }}</h4>
-    <a class="button" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
-    <a class="button" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
+    <a class="btn" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
+    <a class="btn" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
 </div>
 {% endif %}

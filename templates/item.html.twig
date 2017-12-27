@@ -24,8 +24,6 @@
 <section id="body-wrapper" class="section blog-listing">
     <section class="container {{ grid_size }}">
 
-        {{ dump(show_sidebar) }}
-
         {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
             {% include 'partials/breadcrumbs.html.twig' %}
         {% endif %}

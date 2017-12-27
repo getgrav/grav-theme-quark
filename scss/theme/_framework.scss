@@ -39,6 +39,26 @@ section.section {
   padding-bottom: 7rem;
   background-size: cover;
   background-position: center;
+
+  &.header-fullscreen {
+    height: 100vh;
+  }
+
+  &.header-large {
+    height: 500px;
+  }
+
+  &.header-medium {
+    height: 400px;
+  }
+
+  &.header-small {
+    height: 110px;
+  }
+
+  &.header-tiny {
+    height: 8rem;
+  }
   
   .header-fixed & {
     background-position: 50% 0;
@@ -50,16 +70,16 @@ section.section {
 
   h1 {
     color: $header-text-dark;
-    font-size: 4rem;
+    font-size: 4rem !important;
   }
 
   h2 {
     color: rgba($header-text-dark, 0.8);
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
   }
 
   h1 + h2 {
-    margin-top: -45px;
+    margin-top: -45px !important;
   }
 
   &.text-light {
