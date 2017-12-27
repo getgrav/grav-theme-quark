@@ -15,11 +15,11 @@
   }
 
   .logo svg path {
-    fill: darken($dark-color, 10%);;
+    fill: $header-color-dark;
   }
 
   .header-dark &:not(.scrolled) {
-    background: $dark-color;
+    background: $header-color-dark;
     color: $light-color;
     a {
       color: rgba($light-color, 0.7) !important;
