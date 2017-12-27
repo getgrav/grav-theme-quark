@@ -1,9 +1,4 @@
-#blog-hero {
-
-  height: 40vh;
-  min-height: 350px;
-}
-
+/** Extra columns spacing **/
 .extra-spacing:not(.col-12), :not(.col12) > .e-content {
   padding-right: 1rem;
 
@@ -12,10 +7,14 @@
   }
 }
 
+/** Breadcrumbs styling **/
 #breadcrumbs {
   padding-left: 0;
   display: flex;
   align-items: center;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+
 
   i {
     display: none;

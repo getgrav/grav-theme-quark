@@ -40,23 +40,23 @@ section.section {
   background-size: cover;
   background-position: center;
 
-  &.header-fullscreen {
+  &.hero-fullscreen {
     height: 100vh;
   }
 
-  &.header-large {
+  &.hero-large {
     height: 500px;
   }
 
-  &.header-medium {
+  &.hero-medium {
     height: 400px;
   }
 
-  &.header-small {
+  &.hero-small {
     height: 110px;
   }
 
-  &.header-tiny {
+  &.hero-tiny {
     height: 8rem;
   }
   

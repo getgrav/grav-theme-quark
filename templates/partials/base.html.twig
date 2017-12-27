@@ -32,7 +32,7 @@
 
 {% endblock head %}
 </head>
-<body id="top" class="{{ body_classes }}">
+<body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
     <div id="page-wrapper">
     {% block header %}
         <section id="header" class="section">
