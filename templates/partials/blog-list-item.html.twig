@@ -14,7 +14,11 @@
         </div>
     </div>
     <div class="card-body">
-        {{ page.summary }}
+        {% if page.summary != page.content %}
+            {{ page.summary }}
+        {% else %}
+            {{ page.content }}
+        {% endif %}
     </div>
     <div class="card-footer">
         {% include 'partials/blog/taxonomy.html.twig' %}
