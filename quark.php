@@ -43,7 +43,6 @@ class Quark extends Theme
             'form_field_select_classes' => 'form-select',
             'form_field_radio_classes' => 'form-radio',
             'form_field_checkbox_classes' => 'form-checkbox',
-            'form_errors_classes' => '',
         ];
 
         $twig->twig_vars = array_merge($twig->twig_vars, $form_class_variables);
