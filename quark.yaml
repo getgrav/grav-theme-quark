@@ -1,5 +1,5 @@
 enabled: true
-production-mode: false
+production-mode: true
 grid-size: grid-lg
 header-fixed: true
 header-animated: true
