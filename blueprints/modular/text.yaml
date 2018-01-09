@@ -7,7 +7,7 @@ form:
       fields:
         content:
           fields:
-            uploads:
+            header.media_order:
               label: Page Media (first one will be displayed next to your content)
             header.image_align:
               type: select
@@ -17,4 +17,3 @@ form:
               options:
                 'left': 'Left'
                 'right': 'Right'
-              type:
