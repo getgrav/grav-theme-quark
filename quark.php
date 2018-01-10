@@ -1,6 +1,7 @@
 <?php
 namespace Grav\Theme;
 
+use Grav\Common\Grav;
 use Grav\Common\Theme;
 
 class Quark extends Theme
@@ -22,7 +23,8 @@ class Quark extends Theme
     // Add images to twig template paths to allow inclusion of SVG files
     public function onTwigLoader()
     {
-        $this->grav['twig']->addPath(__DIR__ . '/images', 'images');
+        $theme_path = Grav::instance()['locator']->findResource('theme://');
+        $this->grav['twig']->addPath($theme_path . '/images', 'images');
     }
 
     public function onTwigInitialized()
