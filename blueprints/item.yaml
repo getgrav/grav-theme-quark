@@ -98,3 +98,7 @@ form:
               label: Summary delimiter
               classes: large
               placeholder: ===
+
+          import@:
+            type: partials/blog-bits
+            context: blueprints://pages
