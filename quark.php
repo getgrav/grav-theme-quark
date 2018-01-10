@@ -24,7 +24,7 @@ class Quark extends Theme
     public function onTwigLoader()
     {
         $theme_paths = Grav::instance()['locator']->findResources('theme://');
-        foreach($theme_paths as $theme_path) {
+        foreach(array_reverse($theme_paths) as $theme_path) {
             $images_path = $theme_path . '/images';
             if (file_exists($images_path)) {
                 $this->grav['twig']->addPath($images_path, 'images');
