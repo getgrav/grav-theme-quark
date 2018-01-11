@@ -23,12 +23,9 @@ class Quark extends Theme
     // Add images to twig template paths to allow inclusion of SVG files
     public function onTwigLoader()
     {
-        $theme_paths = Grav::instance()['locator']->findResources('theme://');
-        foreach(array_reverse($theme_paths) as $theme_path) {
-            $images_path = $theme_path . '/images';
-            if (file_exists($images_path)) {
-                $this->grav['twig']->addPath($images_path, 'images');
-            }
+        $theme_paths = Grav::instance()['locator']->findResources('theme://images');
+        foreach(array_reverse($theme_paths) as $images_path) {
+            $this->grav['twig']->addPath($images_path, 'images');
         }
     }
 
