@@ -1,3 +1,9 @@
+# v1.0.2
+## mm/dd/2018
+
+1. [](#new)
+    * Switched to a fork of LineAwesome icons compatible with FontAwesome 4.7.0
+
 # v1.0.1
 ##  01/22/2018
 
