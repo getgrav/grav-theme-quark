@@ -10,7 +10,7 @@ function scrollHeader() {
 }
 
 function parallaxBackground() {
-    $('.parallax').css('background-positionY', ($(window).scrollTop() * -0.3) + 'px');
+    $('.parallax').css('background-positionY', ($(window).scrollTop() * 0.3) + 'px');
 }
 
 jQuery(document).ready(function($){
@@ -55,4 +55,5 @@ jQuery(document).ready(function($){
 
     // Tree Menu
     $(".tree").treemenu({delay:300});
+
 });

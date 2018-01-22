@@ -2,7 +2,7 @@
 {% set grid_size = theme_var('grid-size') %}
 {% set compress = theme_var('production_mode') ? '.min.css' : '.css' %}
 <!DOCTYPE html>
-<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 <head>
 {% block head %}
     <meta charset="utf-8" />

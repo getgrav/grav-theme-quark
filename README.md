@@ -98,8 +98,6 @@ The `hero_classes` option allows a variety of hero classes to be set dynamically
 
 The `hero_image` should point to an image file in the current page folder.
 
-The `hero_align` option can control text alignment in the hero block (`left`, `right` or `center`).  If not provided it defaults to `center`.
-
 ## Features Modular Options
 
 The features modular template provides the ability to set a class on the features, as well as an array of feature items.  For example:

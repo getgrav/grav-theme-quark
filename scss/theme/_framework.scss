@@ -64,9 +64,9 @@ section.section {
     background-position: 50% 0;
   }
 
-  &.parallax {
-    background-attachment: fixed;
-  }
+  //&.parallax {
+  //  background-attachment: fixed;
+  //}
 
   h1 {
     color: $header-text-dark;
