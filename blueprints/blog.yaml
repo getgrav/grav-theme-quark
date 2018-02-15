@@ -35,6 +35,8 @@ form:
               yaml: true
               label: Items
               default: '@self.children'
+              validate:
+                type: yaml
 
             header.content.limit:
               type: text
