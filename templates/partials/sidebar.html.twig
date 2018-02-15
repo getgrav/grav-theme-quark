@@ -18,10 +18,9 @@
 	<a class="button" href="{{ base_url }}/random"><i class="fa fa-retweet"></i> {{ 'SIDEBAR.RANDOM_ARTICLE.FEELING_LUCKY'|t }}</a>
 </div>
 {% endif %}
-<div class="sidebar-content">
-	<h4>{{ site.sidebar_widget.title }}</h4>
-	<p>{{ site.sidebar_widget.body|markdown }}</p>
-</div>
+
+{{ page.find('/modules/sidebar').content }}
+
 {% if config.plugins.taxonomylist.enabled %}
 <div class="sidebar-content">
     <h4>{{ 'SIDEBAR.POPULAR_TAGS.HEADLINE'|t }}</h4>
