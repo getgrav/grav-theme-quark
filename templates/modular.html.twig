@@ -27,7 +27,7 @@
 
 {% block header_navigation %}
     {% if show_onpage_menu %}
-        <ul class="navigation">
+        <ul class="navigation{{ tree ? ' tree' : '' }}">
         {% for module in page.collection() %}
             {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
             <li><a class="{{ current_module }}" href="#{{ _self.pageLinkName(module.menu) }}">{{ module.menu }}</a></li>

@@ -96,7 +96,9 @@
                 {% include('@images/grav-logo.svg') %}
             </div>
             <nav class="overlay-menu">
-                {% include 'partials/navigation.html.twig' with {tree: true} %}
+                {% with {tree: true} %}
+                    {{ block('header_navigation') }}
+                {% endwith %}
             </nav>
         </div>
     </div>
