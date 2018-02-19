@@ -7,3 +7,6 @@ header-dark: false
 header-transparent: false
 sticky-footer: true
 blog-page: '/blog'
+spectre:
+  exp: false
+  icons: false
