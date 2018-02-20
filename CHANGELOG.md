@@ -1,5 +1,5 @@
 # v1.0.2
-## mm/dd/2018
+## 02/19/2018
 
 1. [](#new)
     * Added toggle options to enable Spectre.css _experimentals_ and _icons_ CSS files
