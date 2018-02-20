@@ -1,3 +1,14 @@
+# v1.0.2
+## 02/19/2018
+
+1. [](#new)
+    * Added toggle options to enable Spectre.css _experimentals_ and _icons_ CSS files
+    * Switched to a fork of LineAwesome icons compatible with FontAwesome 4.7.0
+1. [](#improved)
+    * Font tweaks
+1. [](#bugfix)
+    * Pagination fixes    
+    
 # v1.0.1
 ##  01/22/2018
 

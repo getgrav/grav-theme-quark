@@ -1,5 +1,5 @@
 name: Quark
-version: 1.0.1
+version: 1.0.2
 description: New Grav Default Theme
 icon:  microchip
 author:
@@ -123,3 +123,32 @@ form:
       help: The route to the blog page when working with blog sidebar
       size: medium
       default: '/blog'
+
+    spectre_section:
+      type: section
+      title: Spectre.css Options
+      underline: true
+
+    spectre.exp:
+      type: toggle
+      label: Experimentals CSS
+      help: When enabled, the `spectre-exp.css` file will be included
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    spectre.icons:
+      type: toggle
+      label: Icons CSS
+      help: When enabled, the `spectre-icons.css` file will be included
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool

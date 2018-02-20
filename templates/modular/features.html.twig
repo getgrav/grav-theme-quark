@@ -10,7 +10,7 @@
                 {% for feature in page.header.features %}
                    <div class="column {{ columns }}">
                        <div class="feature-icon">
-                           <i class="fa fa-fw fa-{{ feature.icon }}"></i>
+                           <i class="fa fa-fw {{ feature.icon }}"></i>
                            {% if feature.header %}
                                <h6>{{ feature.header }}</h6>
                            {% endif %}
