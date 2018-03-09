@@ -57,12 +57,10 @@ form:
                 min: 0
                 max: 5000
 
-
             summary:
               type: section
               title: Summary
               underline: true
-
 
             header.summary.enabled:
               type: toggle
@@ -101,4 +99,3 @@ form:
 
           import@:
             type: partials/blog-bits
-            context: blueprints://pages

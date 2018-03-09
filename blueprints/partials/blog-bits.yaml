@@ -1,5 +1,6 @@
 form:
   fields:
+
     hero_title:
       type: spacer
       title: Hero Section
