@@ -33,26 +33,20 @@ img {
 
 
 // Codeblocks
-pre:not(.phpdebugbar-widgets-code-block) {
-  code {
-    background: #f8f8f8;
-    display: block;
-    padding: 1rem !important;
-    line-height: 1.5;
-    color: inherit;
-    border-radius: 2px;
-    overflow-x: auto;
-  }
-}
-
-pre.xdebug-var-dump {
-  background: #f8f8f8;
+pre code, pre.xdebug-var-dump{
+  background: #fafafa;
   display: block;
   padding: 1rem !important;
   line-height: 1.5;
   color: inherit;
   border-radius: 2px;
   overflow-x: auto;
+}
+
+pre {
+  code:not(.hljs) {
+    background: #f8f8f8;
+  }
 }
 
 // Icon Tweaks

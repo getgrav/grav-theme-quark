@@ -1,3 +1,9 @@
+# v1.0.3
+## mm/dd/2018
+
+1. [](#bugfix)
+    * Fix for `highlight` plugin not changing background of code blocks 
+
 # v1.0.2
 ## 02/19/2018
 
