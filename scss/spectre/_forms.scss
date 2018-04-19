@@ -122,7 +122,7 @@ textarea.form-input {
   &[size],
   &[multiple] {
     height: auto;
-
+    
     option {
       padding: $unit-h $unit-1;
     }
@@ -165,6 +165,7 @@ textarea.form-input {
     top: 50%;
     transform: translateY(-50%);
     width: $control-icon-size;
+    z-index: $zindex-0 + 1;
   }
 }
 
@@ -445,7 +446,7 @@ textarea.form-input {
     .form-icon {
       border-color: $error-color;
     }
-
+    
     input {
       &:checked + .form-icon {
         background: $error-color;
@@ -521,5 +522,6 @@ input {
 
   .form-group {
     display: flex;
+    flex-wrap: wrap;
   }
 }
