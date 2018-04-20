@@ -10,9 +10,7 @@ h6 {
   font-weight: 500;
   line-height: 1.2;
   margin-bottom: .5em;
-  margin-top: 2rem;
-  font-family: $title-font-family;
-  color: darken($body-font-color, 10%);
+  margin-top: 0;
 }
 .h1,
 .h2,
@@ -24,11 +22,11 @@ h6 {
 }
 h1,
 .h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 h2,
 .h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 h3,
 .h3 {
@@ -45,7 +43,6 @@ h5,
 h6,
 .h6 {
   font-size: .8rem;
-  font-weight: 400;
 }
 
 // Paragraphs
@@ -92,12 +89,12 @@ blockquote {
 // Lists
 ul,
 ol {
-  margin: $unit-4 0 $unit-4 $unit-8;
+  margin: $unit-4 0 $unit-4 $unit-4;
   padding: 0;
 
   ul,
   ol {
-    margin: $unit-4 0 $unit-4 $unit-8;
+    margin: $unit-4 0 $unit-4 $unit-4;
   }
 
   li {
@@ -106,7 +103,7 @@ ol {
 }
 
 ul {
-  list-style: disc;
+  list-style: disc inside;
 
   ul {
     list-style-type: circle;
@@ -114,7 +111,7 @@ ul {
 }
 
 ol {
-  list-style: decimal;
+  list-style: decimal inside;
 
   ol {
     list-style-type: lower-alpha;
@@ -129,4 +126,3 @@ dl {
     margin: $unit-2 0 $unit-4 0;
   }
 }
-
