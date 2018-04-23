@@ -3,6 +3,7 @@
 
 1. [](#improved)
     * Updated Spectre.css to `0.5.1`
+    * Improved default login styling
 1. [](#bugfix)
     * Fix for `highlight` plugin not changing background of code blocks 
 
