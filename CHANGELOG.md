@@ -1,6 +1,8 @@
 # v1.0.3
 ## mm/dd/2018
 
+1. [](#improved)
+    * Updated Spectre.css to `0.5.1`
 1. [](#bugfix)
     * Fix for `highlight` plugin not changing background of code blocks 
 
