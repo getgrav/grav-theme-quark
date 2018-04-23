@@ -41,5 +41,8 @@ form {
       margin: 0;
       float: left;
     }
+    button[type="submit"] {
+      @include button-primary;
+    }
   }
 }
