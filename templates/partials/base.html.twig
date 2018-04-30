@@ -37,28 +37,27 @@
 <body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
     <div id="page-wrapper">
     {% block header %}
-        <section id="header" class="section">
-            <section class="container {{ grid_size }}">
-                <nav class="navbar">
-                    <section class="navbar-section logo">
-                        <a href="{{ home_url }}" class="navbar-brand mr-10">{% include('@images/grav-logo.svg') %}</a>
-                    </section>
-                    <section class="navbar-section">
-
-                        <nav class="dropmenu animated">
+        <div id="header" class="section">
+        <div class="container {{ grid_size }}">
+            <div class="navbar">
+             <header class="navbar-section logo" role="banner">
+               <a href="{{ home_url }}" class="navbar-brand mr-10">{% include('@images/grav-logo.svg') %}</a>
+             </header>
+             <nav class="navbar-section" role="navigation">
+                  <div class="dropmenu animated">
                             {% block header_navigation %}
                         {% include 'partials/navigation.html.twig' %}
                             {% endblock %}
-                        </nav>
+                   </div>
 
                         {% if config.plugins.login.enabled and grav.user.username %}
                             <span class="login-status-wrapper"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' %}</span>
                         {% endif %}
-
-                    </section>
                 </nav>
-            </section>
-        </section>
+            </div>
+        </div>
+    </div>
+
         <div class="mobile-menu">
             <div class="button_container" id="toggle">
                 <span class="top"></span>
@@ -70,7 +69,7 @@
 
     {% block hero %}{% endblock %}
 
-        <section id="start">
+        <main id="start" role="main">
         {% block body %}
             <section id="body-wrapper" class="section">
                 <section class="container {{ grid_size }}">
@@ -81,16 +80,16 @@
                 </section>
             </section>
         {% endblock %}
-        </section>
+        </main>
 
     </div>
 
 {% block footer %}
-    <section id="footer" class="section bg-gray">
+    <footer id="footer" class="section bg-gray" role="contentinfo">
         <section class="container {{ grid_size }}">
-            <p><a href="http://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart-o pulse "></i> by <a href="https://trilby.media">Trilby Media</a>.</p>
+            <p><a href="http://getgrav.org">Grav</a> was <span class="sr">coded</span> <i class="fa fa-code" aria-hidden="true"></i> with <i class="fa fa-heart-o pulse" aria-hidden="true"></i> <span class="sr">love</span> by <a href="https://trilby.media">Trilby Media</a>.</p>
         </section>
-    </section>
+    </footer>
 {% endblock %}
 
     
