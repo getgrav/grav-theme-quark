@@ -1,0 +1,5 @@
+/* visually hide text and make it still available to assistive technologies */
+.sr{
+ position:absolute;
+ top:-10000em;
+}
