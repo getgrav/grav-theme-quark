@@ -3,3 +3,14 @@
  position:absolute;
  top:-10000em;
 }
+
+/*** Headings structure patch ***/
+/* h5 style */
+h2.p-name{
+    font-size: 1rem;
+}
+
+/* H4 style */
+.sidebar-content h1{
+font-size: 1.2rem;
+}
