@@ -1,11 +1,17 @@
 # v1.0.3
-## mm/dd/2018
+## 05/11/2018
 
+1. [](#new)
+    * Added new primary button mixin
 1. [](#improved)
     * Updated Spectre.css to `0.5.1`
     * Improved default login styling
+    * Removed core Spectre.css override to make upgrading Spectre easier
+    * Added screenshot to README.md
+    * Override focus to prevent overzealous blue blurs
 1. [](#bugfix)
     * Fix for `highlight` plugin not changing background of code blocks 
+    * Removed extraneous `dump()` in Twig output
 
 # v1.0.2
 ## 02/19/2018
