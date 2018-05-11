@@ -26,10 +26,15 @@ a {
   outline: none;
   text-decoration: none;
 
+  &:focus {
+    @include control-shadow();
+  }
+
   &:focus,
   &:hover,
   &:active,
   &.active {
     color: $link-color-dark;
+    text-decoration: underline;
   }
 }

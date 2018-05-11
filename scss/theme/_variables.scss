@@ -2,6 +2,9 @@
 $horiz-padding: 1rem;
 $vert-padding: 2rem 0 2rem;
 
+// Fonts
+$title-font-family: $base-font-family, $fallback-font-family !default;
+
 // Header
 $header-height-large: 4rem;
 $header-height-small: 2.3rem;
