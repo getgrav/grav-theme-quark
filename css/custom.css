@@ -14,3 +14,9 @@ h2.p-name{
 .sidebar-content h1{
 font-size: 1.2rem;
 }
+
+/*** date ***/
+
+.blog-date{
+    margin:0;
+}
