@@ -1,10 +1,8 @@
-# v1.0.4
+# v1.1.0
 ## mm/dd/2018
 
 1. [](#new)
-
-1. [](#improved)
-
+    * Responsive font sizing [#28](https://github.com/getgrav/grav-theme-quark/issues/28)
 1. [](#bugfix)
     * Proper fix for sticky footer in IE10 and IE11 [#21](https://github.com/getgrav/grav-theme-quark/issues/21)
 

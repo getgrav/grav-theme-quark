@@ -40,24 +40,34 @@ section.section {
   background-size: cover;
   background-position: center;
 
+  h1 {
+    color: $header-text-dark;
+    font-size: 4rem;
+  }
+
+  h2 {
+    color: rgba($header-text-dark, 0.8);
+    font-size: 2.5rem;
+  }
+
   &.hero-fullscreen {
-    height: 100vh;
+    min-height: 100vh;
   }
 
   &.hero-large {
-    height: 500px;
+    min-height: 500px;
   }
 
   &.hero-medium {
-    height: 400px;
+    min-height: 400px;
   }
 
   &.hero-small {
-    height: 110px;
+    min-height: 110px;
   }
 
   &.hero-tiny {
-    height: 8rem;
+    min-height: 8rem;
   }
   
   .header-fixed & {
@@ -68,19 +78,24 @@ section.section {
   //  background-attachment: fixed;
   //}
 
-  h1 {
-    color: $header-text-dark;
-    font-size: 4rem !important;
+  @include breakpoint(md) {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+    }
   }
 
-  h2 {
-    color: rgba($header-text-dark, 0.8);
-    font-size: 2.5rem !important;
+  @include breakpoint(sm) {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+    }
   }
 
-  h1 + h2 {
-    margin-top: -45px !important;
-  }
 
   &.text-light {
     h1 {
@@ -92,7 +107,7 @@ section.section {
   }
 
   p {
-    font-size: 130%;
+    font-size: .9rem;
     font-weight: 300;
   }
 
