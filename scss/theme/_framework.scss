@@ -41,23 +41,23 @@ section.section {
   background-position: center;
 
   &.hero-fullscreen {
-    height: 100vh;
+    min-height: 100vh;
   }
 
   &.hero-large {
-    height: 500px;
+    min-height: 500px;
   }
 
   &.hero-medium {
-    height: 400px;
+    min-height: 400px;
   }
 
   &.hero-small {
-    height: 110px;
+    min-height: 110px;
   }
 
   &.hero-tiny {
-    height: 8rem;
+    min-height: 8rem;
   }
   
   .header-fixed & {
