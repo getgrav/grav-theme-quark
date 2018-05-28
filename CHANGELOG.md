@@ -1,3 +1,13 @@
+# v1.0.4
+## mm/dd/2018
+
+1. [](#new)
+
+1. [](#improved)
+
+1. [](#bugfix)
+    * Proper fix for sticky footer in IE10 and IE11 [#21](https://github.com/getgrav/grav-theme-quark/issues/21)
+
 # v1.0.3
 ## 05/11/2018
 
