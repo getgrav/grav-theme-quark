@@ -12,15 +12,15 @@ section.section { padding-left: 1rem; padding-right: 1rem; position: relative; }
 
 .hero { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: center; justify-content: center; padding-top: 6rem; padding-bottom: 7rem; background-size: cover; background-position: center; }
 
-.hero.hero-fullscreen { height: 100vh; }
+.hero.hero-fullscreen { min-height: 100vh; }
 
-.hero.hero-large { height: 500px; }
+.hero.hero-large { min-height: 500px; }
 
-.hero.hero-medium { height: 400px; }
+.hero.hero-medium { min-height: 400px; }
 
-.hero.hero-small { height: 110px; }
+.hero.hero-small { min-height: 110px; }
 
-.hero.hero-tiny { height: 8rem; }
+.hero.hero-tiny { min-height: 8rem; }
 
 .header-fixed .hero { background-position: 50% 0; }
 
