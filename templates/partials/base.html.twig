@@ -59,12 +59,23 @@
     </div>
 
         <div class="mobile-menu">
-            <button class="button_container" id="toggle">
+            <button class="button_container" id="toggle" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
                 <span class="top"></span>
                 <span class="middle"></span>
                 <span class="bottom"></span>
             </button>
         </div>
+        <div class="mobile-container">
+        <div class="overlay" id="overlay">
+            <div class="mobile-logo">
+                {% include('@images/grav-logo.svg') %}
+            </div>
+            <nav class="overlay-menu" id="mobile-menu">
+                {% include 'partials/navigation.html.twig' with {tree: true} %}
+            </nav>
+        </div>
+    </div>
+
     {% endblock %}
 
     {% block hero %}{% endblock %}
@@ -91,18 +102,6 @@
         </section>
     </footer>
 {% endblock %}
-
-    
-    <div class="mobile-container">
-        <div class="overlay" id="overlay">
-            <div class="mobile-logo">
-                {% include('@images/grav-logo.svg') %}
-            </div>
-            <nav class="overlay-menu">
-                {% include 'partials/navigation.html.twig' with {tree: true} %}
-            </nav>
-        </div>
-    </div>
 
 {% block bottom %}
     {{ assets.js('bottom') }}
