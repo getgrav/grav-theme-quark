@@ -1,11 +1,25 @@
-# v1.0.3
+# v1.1.0
 ## mm/dd/2018
 
+1. [](#new)
+    * Responsive font sizing [#28](https://github.com/getgrav/grav-theme-quark/issues/28)
+1. [](#bugfix)
+    * Proper fix for sticky footer in IE10 and IE11 [#21](https://github.com/getgrav/grav-theme-quark/issues/21)
+
+# v1.0.3
+## 05/11/2018
+
+1. [](#new)
+    * Added new primary button mixin
 1. [](#improved)
-    * Updated Spectre.css to `0.5.1`
+    * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.1` version
     * Improved default login styling
+    * Removed core Spectre.css override to make upgrading Spectre easier
+    * Added screenshot to README.md
+    * Override focus to prevent overzealous blue blurs
 1. [](#bugfix)
     * Fix for `highlight` plugin not changing background of code blocks 
+    * Removed extraneous `dump()` in Twig output
 
 # v1.0.2
 ## 02/19/2018
