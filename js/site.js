@@ -51,6 +51,10 @@ jQuery(document).ready(function($){
         $(this).toggleClass('active');
         $('#overlay').toggleClass('open');
         $('body').toggleClass('mobile-nav-open');
+        // accessible toggle
+        var menu = document.getElementById('toggle');
+        var state = menu.getAttribute('aria-expanded');
+        state == 'true' ? menu.setAttribute('aria-expanded','false') : menu.setAttribute('aria-expanded','true');
     });
 
     // Tree Menu
