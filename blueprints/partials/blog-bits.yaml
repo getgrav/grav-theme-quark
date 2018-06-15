@@ -25,7 +25,7 @@ form:
       type: text
       toggleable: true
       label: Blog Route
-      help: The route to this main blog page that contains this configuration
+      help: The route to the main blog page that contains the "Show ..." configuration
       default: '/blog'
       placeholder: '/blog'
       size: medium
