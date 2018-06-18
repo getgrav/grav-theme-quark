@@ -24,3 +24,7 @@ form:
                 .text:
                   type: text
                   label: Text
+                .url:
+                  type: text
+                  label: Link
+
