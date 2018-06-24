@@ -133,6 +133,25 @@ strong {
   }
 }
 
+// Lists
+ul,
+ol {
+  margin-left: $unit-8;
+
+  ul,
+  ol {
+    margin-left: $unit-8;
+  }
+}
+
+ul {
+  list-style: disc outside;
+}
+
+ol {
+  list-style: decimal outside;
+}
+
 // Notices
 .notices {
   margin: 1.5rem 0;
