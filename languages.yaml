@@ -254,3 +254,35 @@ hr:
   FORM_DATA:
     SUMMARY: "Ovo je sažetak onog što ste nam napisali:"
   ERROR: Greška
+
+nl:
+  TRANSLATION_TEST: Quark!
+  BLOG:
+    ITEM:
+      CONTINUE_READING: Lees Meer...
+      NEXT_POST: Volgende Bericht
+      PREV_POST: Vorige Bericht
+  SHOP:
+    ITEM:
+      BACK: Teru
+      NEXT_ITEM: Volgende Onderdeel
+      PREV_ITEM: Vorige Onderdeel
+  SIDEBAR:
+    SIMPLE_SEARCH:
+      HEADLINE: Zoek
+    RELATED_POSTS:
+      HEADLINE: Gerelateerde Berichten
+    RANDOM_ARTICLE:
+      HEADLINE: Willekeurig Artikel
+      FEELING_LUCKY: Ik Voel Me Gelukkig!
+    SOME_TEXT_WIDGET:
+      HEADLINE: Een Tekst Widget
+    POPULAR_TAGS:
+      HEADLINE: Populaire Labels
+    ARCHIVES:
+      HEADLINE: Archieven
+    SYNDICATE:
+      HEADLINE: Syndicatie
+  FORM_DATA:
+    SUMMARY: "Hier is de samenvatting van wat je aan ons schreef:"
+  ERROR: Fout
