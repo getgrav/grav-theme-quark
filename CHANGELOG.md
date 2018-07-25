@@ -15,6 +15,7 @@
     * Added blueprint option for `continue_link` [#45](https://github.com/getgrav/grav-theme-quark/issues/45)
     * Added blueprint option for Feature `class` [#14](https://github.com/getgrav/grav-theme-quark/issues/14)
     * Fixed `Duplicate ID` issues with modular sections.  Might break CSS on first load, need to refresh to pick up new CSS [#24](https://github.com/getgrav/grav-theme-quark/issues/24)
+    * Fixed Text feature alignment issue [#7](https://github.com/getgrav/grav-theme-quark/issues/4)
 
 # v1.0.3
 ## 05/11/2018
