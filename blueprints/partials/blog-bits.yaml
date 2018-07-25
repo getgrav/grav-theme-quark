@@ -23,17 +23,18 @@ form:
 
     header.blog_url:
       type: text
+      toggleable: true
       label: Blog Route
-      help: The route to this main blog page that contains this configuration
+      help: The route to the main blog page that contains the "Show ..." configuration
       default: '/blog'
       placeholder: '/blog'
       size: medium
 
     header.show_sidebar:
       type: toggle
+      toggleable: true
       label: Show Sidebar
       highlight: 1
-      default: 1
       options:
         1: PLUGIN_ADMIN.ENABLED
         0: PLUGIN_ADMIN.DISABLED
@@ -42,9 +43,9 @@ form:
 
     header.show_breadcrumbs:
       type: toggle
+      toggleable: true
       label: Show Breadcrumbs
       highlight: 1
-      default: 1
       options:
         1: PLUGIN_ADMIN.ENABLED
         0: PLUGIN_ADMIN.DISABLED
@@ -53,9 +54,9 @@ form:
 
     header.show_pagination:
       type: toggle
+      toggleable: true
       label: Show Pagination
       highlight: 1
-      default: 1
       options:
         1: PLUGIN_ADMIN.ENABLED
         0: PLUGIN_ADMIN.DISABLED
