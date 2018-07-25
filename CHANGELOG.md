@@ -5,10 +5,14 @@
     * Responsive font sizing [#28](https://github.com/getgrav/grav-theme-quark/issues/28)
 1. [](#improved)
     * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.3` version
+    * Make blog settings toggleable [#38](https://github.com/getgrav/grav-theme-quark/pull/38)
 1. [](#bugfix)
     * Proper fix for sticky footer in IE10 and IE11 [#21](https://github.com/getgrav/grav-theme-quark/issues/21)
     * Fix for lists wrapping weirdly due to `outside` attribute
     * Updated checkbox + radio to take into account `client_side_validation` form option
+    * Fixes for fallback values [#37](https://github.com/getgrav/grav-theme-quark/pull/37)
+    * Fix inheritance for images folder [#30](https://github.com/getgrav/grav-theme-quark/pull/30)
+    * Added blueprint option for `continue_link` [#45](https://github.com/getgrav/grav-theme-quark/issues/45)
 
 # v1.0.3
 ## 05/11/2018
