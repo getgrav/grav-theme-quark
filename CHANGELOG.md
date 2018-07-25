@@ -8,6 +8,7 @@
 1. [](#bugfix)
     * Proper fix for sticky footer in IE10 and IE11 [#21](https://github.com/getgrav/grav-theme-quark/issues/21)
     * Fix for lists wrapping weirdly due to `outside` attribute
+    * Updated checkbox + radio to take into account `client_side_validation` form option
 
 # v1.0.3
 ## 05/11/2018
