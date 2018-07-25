@@ -1,5 +1,5 @@
 # v1.1.0
-## mm/dd/2018
+## 07/25/2018
 
 1. [](#new)
     * Responsive font sizing [#28](https://github.com/getgrav/grav-theme-quark/issues/28)
