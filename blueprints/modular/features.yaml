@@ -9,6 +9,15 @@ form:
           type: tab
           title: Features
           fields:
+            class:
+              type: select
+              label: Layout
+              default: small
+              size: medium
+              options:
+                small: Small   = 4 / 3 / 2 columns
+                standard: Standard  = 3 / 2 / 1 columns
+
             header.features:
               name: features
               type: list

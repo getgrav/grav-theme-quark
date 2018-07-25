@@ -13,6 +13,7 @@
     * Fixes for fallback values [#37](https://github.com/getgrav/grav-theme-quark/pull/37)
     * Fix inheritance for images folder [#30](https://github.com/getgrav/grav-theme-quark/pull/30)
     * Added blueprint option for `continue_link` [#45](https://github.com/getgrav/grav-theme-quark/issues/45)
+    * Added blueprint option for Feature `class` [#14](https://github.com/getgrav/grav-theme-quark/issues/14)
 
 # v1.0.3
 ## 05/11/2018
