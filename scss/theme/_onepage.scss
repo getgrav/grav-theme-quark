@@ -1,10 +1,10 @@
-#modular-hero {
+.modular-hero {
   #to-start {
     bottom: 3.5rem;
   }
 }
 
-#modular-features {
+.modular-features {
   text-align: center;
 
   &.offset-box {
@@ -112,7 +112,11 @@
   }
 }
 
-#modular-text {
+.modular-text {
   padding-top: 4rem;
   padding-bottom: 4rem;
+
+  .columns.left {
+    flex-direction: row-reverse;
+  }
 }

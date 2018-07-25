@@ -47,6 +47,10 @@
   .navbar-section {
     height: $header-height-large;
     @extend .default-animation;
+
+    @include breakpoint(md) {
+      margin-right: 2rem;
+    }
   }
 
   .logo svg {
@@ -85,8 +89,4 @@ body.header-fixed.header-animated {
 
 .login-status-wrapper {
   white-space: nowrap;
-
-  .icon {
-    font-size: 120%;
-  }
 }

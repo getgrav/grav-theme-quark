@@ -11,7 +11,7 @@
 .mobile-logo {
   svg {
     max-width: 150px;
-    margin-top: 1rem;
+    margin-top: .7rem;
     margin-left: 1.4rem;
 
     path {
@@ -39,13 +39,15 @@
 
   .button_container {
     position: absolute;
-    top: 1rem;
+    top: 1.3rem;
     right: $horiz-padding;
     height: $mobile-button-height;
     width: $mobile-button-width;
     cursor: pointer;
     z-index: 100;
     transition: opacity .25s ease, top 0.5s ease;
+
+    $bar-offset: $mobile-button-height / 3;
 
     &:hover {
       opacity: .7;
@@ -55,7 +57,7 @@
       position: fixed;
 
       .top {
-        transform: translateY(11px) translateX(0) rotate(45deg);
+        transform: translateY($bar-offset) translateX(0) rotate(45deg);
         background: $mobile-color-active;
       }
       .middle {
@@ -64,7 +66,7 @@
       }
 
       .bottom {
-        transform: translateY(-11px) translateX(0) rotate(-45deg);
+        transform: translateY(-($bar-offset)) translateX(0) rotate(-45deg);
         background: $mobile-color-active;
       }
     }
@@ -72,7 +74,7 @@
     span {
       background: $mobile-color-main;
       border: none;
-      height: 5px;
+      height: 4px;
       width: 100%;
       position: absolute;
       top: 0;
@@ -81,11 +83,11 @@
       cursor: pointer;
 
       &:nth-of-type(2) {
-        top: 11px;
+        top: $bar-offset;
       }
 
       &:nth-of-type(3) {
-        top: 22px;
+        top: $bar-offset * 2;
       }
     }
   }

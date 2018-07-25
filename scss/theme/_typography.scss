@@ -1,3 +1,7 @@
+html {
+  @include fluid-type($size-xs, $size-xl, $min-responsive-font-size, $html-font-size);
+}
+
 // Header Overrides
 h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
@@ -26,9 +30,16 @@ h6, .h6 {
 .title-h1h2 {
   h1  {
     font-weight: 100;
+    margin-bottom: 0;
+    line-height: 1.1;
+
     strong, bold {
-    font-weight: 400;
+      font-weight: 400;
+    }
   }
+  h1 + h2 {
+    line-height: 1.1;
+    margin-top: 0;
   }
 
 }
@@ -36,7 +47,6 @@ h6, .h6 {
 // Typography Hints
 .title-h1h2, .title-center {
   h1 + h2 {
-    margin-top: -35px;
     margin-bottom: 50px;
     font-weight: 700;
   }
@@ -119,8 +129,27 @@ strong {
   margin-bottom: 1rem;
 
   .icon {
-    font-size: 120%;
+    font-size: 1rem;
   }
+}
+
+// Lists
+ul,
+ol {
+  margin-left: $unit-8;
+
+  ul,
+  ol {
+    margin-left: $unit-8;
+  }
+}
+
+ul {
+  list-style: disc outside;
+}
+
+ol {
+  list-style: decimal outside;
 }
 
 // Notices

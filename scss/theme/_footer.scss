@@ -1,11 +1,12 @@
 // Sticky Footer solution
 body.sticky-footer {
-  min-height: 100%;
+  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 
   #page-wrapper {
-    flex: 1;
+    flex: 1 0 auto;
   }
 }
 
