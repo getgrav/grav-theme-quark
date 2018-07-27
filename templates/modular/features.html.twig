@@ -9,14 +9,14 @@
                 <div class="columns">
                 {% for feature in page.header.features %}
                    <div class="column {{ columns }}">
-                      <a href="{{feature.url}}">
+                   {% if feature.url %}<a href="{{feature.url}}">{% endif %}
                        <div class="feature-icon">
                            <i class="fa fa-fw {{ feature.icon }}"></i>
                            {% if feature.header %}
                                <h6>{{ feature.header }}</h6>
                            {% endif %}
                        </div>
-                        </a>
+                        {% if feature.url %}</a>{% endif %}
                        <div class="feature-content">
                            {% if feature.text %}
                             <p>{{ feature.text }}</p>
