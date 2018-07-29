@@ -38,5 +38,6 @@
     <h4>{{ 'SIDEBAR.SYNDICATE.HEADLINE'|t }}</h4>
     <a class="btn" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
     <a class="btn" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
+    {% if config.plugins.feed.enable_json_feed %}<a class="btn" href="{{ feed_url }}.json"><i class="fa fa-rss-square"></i> JSON</a>{% endif %}
 </div>
 {% endif %}
