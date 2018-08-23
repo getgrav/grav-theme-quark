@@ -1,3 +1,11 @@
+# v1.2.0
+## 08/23/2018
+
+1. [](#new)
+    * Added new "custom logo" support [#3](https://github.com/getgrav/grav-theme-quark/issues/3)
+    * Added option JSON feed syndication support in sidebar [#47](https://github.com/getgrav/grav-theme-quark/pull/47)
+    * Added basic form field `array` styling
+
 # v1.1.0
 ## 07/25/2018
 

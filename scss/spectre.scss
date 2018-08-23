@@ -48,11 +48,4 @@
 @import "spectre/utilities";
 
 // Extras
-.search-input {
-  @extend .form-input;
-}
-
-.button {
-  @extend .btn;
-}
-
+@import "theme/extensions";
