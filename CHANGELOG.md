@@ -1,3 +1,9 @@
+# v1.2.1
+## 08/23/2018
+
+1. [](#improved)
+    * Added additional "mobile custom logo" support
+
 # v1.2.0
 ## 08/23/2018
 

@@ -58,6 +58,15 @@ form:
       accept:
         - image/*
 
+    custom_logo_mobile:
+      type: file
+      label: Mobile Custom Logo
+      size: large
+      destination: 'theme://images/logo'
+      multiple: false
+      accept:
+        - image/*
+
     header-fixed:
       type: toggle
       label: Fixed header
