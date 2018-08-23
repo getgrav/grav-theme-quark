@@ -53,11 +53,12 @@
     }
   }
 
-  .logo svg {
-    width: 150px;
-    display: inherit;
-
-    @extend .default-animation;
+  .logo {
+    svg, img {
+      height: 42px;
+      display: inherit;
+      @extend .default-animation;
+    }
   }
 
   // Fixed Header solution
@@ -77,8 +78,10 @@ body.header-fixed.header-animated {
       height: $header-height-small;
     }
 
-    .logo svg {
-      width: 100px;
+    .logo {
+      svg, img {
+        height: 28px;
+      }
     }
 
     ~ .mobile-menu .button_container {
