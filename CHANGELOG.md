@@ -3,7 +3,9 @@
 
 1. [](#improved)
     * Added additional "mobile custom logo" support
-
+1. [](#bugfix)
+    * Addressed some CSS issues by forcing logo height
+    
 # v1.2.0
 ## 08/23/2018
 
