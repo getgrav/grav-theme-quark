@@ -20,7 +20,9 @@
     {% endfor %}
 {% endmacro %}
 
+{% import _self as macro %}
+
 <ul {{ tree ? 'class="tree"' : '' }}>
-    {{ _self.nav_loop(pages) }}
+    {{ macro.nav_loop(pages) }}
 </ul>
 
