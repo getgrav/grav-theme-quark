@@ -61,11 +61,26 @@ header-dark: false            # Inverts the text/logo to work better on dark bac
 header-transparent: false     # Allows the fixed header to be transparent over the page
 sticky-footer: true           # Causes the footer to be sticky at the bottom of the page
 blog-page: '/blog'            # The route to the blog listing page, useful for a blog style layout with sidebar
+custom_logo:                  # A custom logo rather than the default (see below)  
+custom_logo_mobile:           # A custom logo to use for mobile navigation
 ```
 
 To make modifications, you can copy the `user/themes/quark/quark.yaml` file to `user/config/themes/` folder and modify, or you can use the admin plugin.
 
 > NOTE: Do not modify the `user/themes/quark/quark.yaml` file directly or your changes will be lost with any updates
+
+## Custom Logos
+
+To add a custom logo, you should put the log into the `user/themes/quark/images/logo` folder.  Standard image formats are support (`.png`,`.jpg`, `.gif`, `.svg`, etc.).  Then reference the logo via the YAML like so:
+
+```yaml
+custom_logo:
+    - name: 'my-logo.png'
+custom_logo_mobile:
+    - name: 'my-mobile-logo.png'    
+```
+
+Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Quark theme options.
 
 ## Page Overrides
 

@@ -1,5 +1,5 @@
 name: Quark
-version: 1.1.0
+version: 1.2.1
 description: New Grav Default Theme
 icon:  microchip
 author:
@@ -46,6 +46,26 @@ form:
       type: section
       title: Header Defaults
       underline: true
+
+    custom_logo:
+      type: file
+      label: Custom Logo
+      size: large
+      destination: 'theme://images/logo'
+      multiple: false
+      markdown: true
+      description: Will be used instead of default logo `theme://images/grav-logo.svg`
+      accept:
+        - image/*
+
+    custom_logo_mobile:
+      type: file
+      label: Mobile Custom Logo
+      size: large
+      destination: 'theme://images/logo'
+      multiple: false
+      accept:
+        - image/*
 
     header-fixed:
       type: toggle

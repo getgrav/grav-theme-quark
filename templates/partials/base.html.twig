@@ -41,7 +41,7 @@
             <section class="container {{ grid_size }}">
                 <nav class="navbar">
                     <section class="navbar-section logo">
-                        <a href="{{ home_url }}" class="navbar-brand mr-10">{% include('@images/grav-logo.svg') %}</a>
+                        {% include 'partials/logo.html.twig' %}
                     </section>
                     <section class="navbar-section">
 
@@ -97,7 +97,7 @@
     <div class="mobile-container">
         <div class="overlay" id="overlay">
             <div class="mobile-logo">
-                {% include('@images/grav-logo.svg') %}
+                {% include 'partials/logo.html.twig' with {mobile: true} %}
             </div>
             <nav class="overlay-menu">
                 {% include 'partials/navigation.html.twig' with {tree: true} %}
