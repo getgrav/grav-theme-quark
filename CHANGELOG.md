@@ -1,3 +1,9 @@
+# v1.2.2
+## mm/dd/2018
+
+1. [](#improved)
+    * Changed nav macro to format supported by Twig 2.0
+
 # v1.2.1
 ## 08/23/2018
 
