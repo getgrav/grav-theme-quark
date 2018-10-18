@@ -5,7 +5,7 @@
 		<div>
 			<h1>{{ 'ERROR'|t }} {{ page.header.http_response_code }}</h1>
 			<p>
-				{{ page.content }}
+				{{ page.content|raw }}
 			</p>
 		</div>
 	</div>

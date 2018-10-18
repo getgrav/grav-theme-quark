@@ -3,6 +3,8 @@
 
 1. [](#improved)
     * Changed nav macro to format supported by Twig 2.0
+1. [](#bugfix)
+    * Make the theme to work with Twig auto-escaping turned on
 
 # v1.2.1
 ## 08/23/2018
