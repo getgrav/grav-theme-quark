@@ -14,10 +14,10 @@
 {% endif %}
 
     <div class="e-content">
-        {{ page.content }}
+        {{ page.content|raw }}
     </div>
 
-    {% if page.header.continue_link is sameas(true) and config.plugins.comments.enabled %}
+    {% if page.header.continue_link is same as(true) and config.plugins.comments.enabled %}
         {% include 'partials/comments.html.twig' %}
     {% endif %}
 

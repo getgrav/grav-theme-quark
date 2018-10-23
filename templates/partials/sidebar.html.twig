@@ -19,7 +19,7 @@
 </div>
 {% endif %}
 
-{{ page.find('/modules/sidebar').content }}
+{{ page.find('/modules/sidebar').content|raw }}
 
 {% if config.plugins.taxonomylist.enabled %}
 <div class="sidebar-content">
