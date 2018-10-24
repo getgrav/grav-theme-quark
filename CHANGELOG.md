@@ -1,3 +1,14 @@
+# v2.0.0-beta.1
+## mm/dd/2018
+
+1. [](#new)
+    * Use new `deferred` Twig blocks
+1. [](#improved)
+    * Updated to use new `GRAV` core language prefix
+1. [](#bugfix)
+    * Make the theme to work with Twig auto-escaping turned on
+    * Moved language strings under `THEME_QUARK`
+
 # v1.2.2
 ## mm/dd/2018
 
