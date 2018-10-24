@@ -1,3 +1,13 @@
+# v1.2.2
+## 10/24/2018
+
+1. [](#improved)
+    * Changed nav macro to format supported by Twig 2.0
+    * Updated `partials/form-messages.html.twig` to be more inline with latest Forms plugin
+1. [](#bugfix)
+    * Make the theme to work with Twig auto-escaping turned on
+    * Moved language strings under `THEME_QUARK`
+
 # v1.2.1
 ## 08/23/2018
 

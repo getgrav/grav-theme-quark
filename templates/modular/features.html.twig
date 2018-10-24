@@ -4,7 +4,7 @@
         <section class="container {{ grid_size }}">
             <div class="frame-box">
 
-                {{ content }}
+                {{ content|raw }}
 
                 <div class="columns">
                 {% for feature in page.header.features %}
