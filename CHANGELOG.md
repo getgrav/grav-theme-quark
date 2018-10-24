@@ -1,5 +1,5 @@
 # v2.0.0-beta.1
-## mm/dd/2018
+## 10/24/2018
 
 1. [](#new)
     * Use new `deferred` Twig blocks
