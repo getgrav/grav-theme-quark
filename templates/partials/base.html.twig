@@ -1,6 +1,6 @@
 {% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
 {% set grid_size = theme_var('grid-size') %}
-{% set compress = theme_var('production_mode') ? '.min.css' : '.css' %}
+{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 <head>
