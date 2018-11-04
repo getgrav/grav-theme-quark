@@ -46,9 +46,9 @@
                     <section class="navbar-section">
 
                         <nav class="dropmenu animated">
-                            {% block header_navigation %}
-                        {% include 'partials/navigation.html.twig' %}
-                            {% endblock %}
+                        {% block header_navigation %}
+                            {% include 'partials/navigation.html.twig' %}
+                        {% endblock %}
                         </nav>
 
                         {% if config.plugins.login.enabled and grav.user.username %}
@@ -86,7 +86,7 @@
     </div>
 
     {% block footer %}
-    {% include 'partials/footer.html.twig' %}
+        {% include 'partials/footer.html.twig' %}
     {% endblock
     
     <div class="mobile-container">
