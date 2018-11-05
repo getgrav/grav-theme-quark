@@ -1,13 +1,18 @@
+# v2.0.0-beta.2
+## 11/05/2018
+
+1. [](#improved)
+    * Updated to include latest `v1.2.3` improvements
+1. [](#bugfix)
+    * Fixed a Twig 2.0 issue with assets rendering
+
 # v2.0.0-beta.1
 ## 10/24/2018
 
 1. [](#new)
-    * Use new `deferred` Twig blocks
+    * Use new `deferred` Twig blocks (requires Grav 1.6+)
 1. [](#improved)
     * Updated to use new `GRAV` core language prefix
-1. [](#bugfix)
-    * Make the theme to work with Twig auto-escaping turned on
-    * Moved language strings under `THEME_QUARK`
 
 # v1.2.3
 ## 11/05/2018
