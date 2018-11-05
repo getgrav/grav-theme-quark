@@ -1,6 +1,6 @@
 {% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
 {% set grid_size = theme_var('grid-size') %}
-{% set compress = theme_var('production_mode') ? '.min.css' : '.css' %}
+{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 <head>
@@ -46,9 +46,9 @@
                     <section class="navbar-section">
 
                         <nav class="dropmenu animated">
-                            {% block header_navigation %}
-                        {% include 'partials/navigation.html.twig' %}
-                            {% endblock %}
+                        {% block header_navigation %}
+                            {% include 'partials/navigation.html.twig' %}
+                        {% endblock %}
                         </nav>
 
                         {% if config.plugins.login.enabled and grav.user.username %}
@@ -85,14 +85,9 @@
 
     </div>
 
-{% block footer %}
-    <section id="footer" class="section bg-gray">
-        <section class="container {{ grid_size }}">
-            <p><a href="http://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart-o pulse "></i> by <a href="https://trilby.media">Trilby Media</a>.</p>
-        </section>
-    </section>
-{% endblock %}
-
+    {% block footer %}
+        {% include 'partials/footer.html.twig' %}
+    {% endblock %}
     
     <div class="mobile-container">
         <div class="overlay" id="overlay">
