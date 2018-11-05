@@ -9,6 +9,17 @@
     * Make the theme to work with Twig auto-escaping turned on
     * Moved language strings under `THEME_QUARK`
 
+# v1.2.3
+## 11/05/2018
+
+1. [](#improved)
+    * Moved footer into standalone twig to allow for easier extensibility [#63](https://github.com/getgrav/grav-theme-quark/pull/63)
+1. [](#bugfix)
+    * Fix variable name for prouction mode [#61](https://github.com/getgrav/grav-theme-quark/pull/61)
+    * Fix layout size in features blueprint [#67](https://github.com/getgrav/grav-theme-quark/pull/67)
+    * Fix active page logic in `nav` so there's no empty class attributes [#68](https://github.com/getgrav/grav-theme-quark/pull/68)
+    * Fix for features blueprint because `class` didn't work [#69](https://github.com/getgrav/grav-theme-quark/pull/69)
+
 # v1.2.2
 ## 10/24/2018
 
@@ -26,7 +37,7 @@
     * Added additional "mobile custom logo" support
 1. [](#bugfix)
     * Addressed some CSS issues by forcing logo height
-    
+
 # v1.2.0
 ## 08/23/2018
 
@@ -67,7 +78,7 @@
     * Added screenshot to README.md
     * Override focus to prevent overzealous blue blurs
 1. [](#bugfix)
-    * Fix for `highlight` plugin not changing background of code blocks 
+    * Fix for `highlight` plugin not changing background of code blocks
     * Removed extraneous `dump()` in Twig output
 
 # v1.0.2
@@ -79,8 +90,8 @@
 1. [](#improved)
     * Font tweaks
 1. [](#bugfix)
-    * Pagination fixes    
-    
+    * Pagination fixes
+
 # v1.0.1
 ##  01/22/2018
 
