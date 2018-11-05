@@ -32,8 +32,8 @@
 {% endblock %}
 
 {% block assets deferred %}
-    {{ assets.css() }}
-    {{ assets.js() }}
+    {{ assets.css()|raw }}
+    {{ assets.js()|raw }}
 {% endblock %}
 </head>
 <body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
@@ -90,7 +90,7 @@
     {% block footer %}
         {% include 'partials/footer.html.twig' %}
     {% endblock %}
-    
+
     <div class="mobile-container">
         <div class="overlay" id="overlay">
             <div class="mobile-logo">
