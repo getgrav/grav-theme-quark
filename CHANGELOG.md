@@ -1,3 +1,9 @@
+# v1.2.4
+## mm/dd/2018
+
+1. [](#improved)
+    * Remove desktop menu when in mobile mode [#59](https://github.com/getgrav/grav-theme-quark/pull/59/)
+
 # v1.2.3
 ## 11/05/2018
 
