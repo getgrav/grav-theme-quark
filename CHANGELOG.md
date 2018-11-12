@@ -5,6 +5,7 @@
     * Added link support to modular `features` [#39](https://github.com/getgrav/grav-theme-quark/pull/39/)
     * Remove desktop menu when in mobile mode [#59](https://github.com/getgrav/grav-theme-quark/pull/59/)
     * Support modular `text` full-width if no image [#70](https://github.com/getgrav/grav-theme-quark/issues/70)
+    * Shim for IE support of BrickLayer.js [#64](https://github.com/getgrav/grav-theme-quark/issues/64)
 1. [](#bugfix)
     * Fixed `continue_link:` showing up as toggled [#65](https://github.com/getgrav/grav-theme-quark/issues/65)
     * Fixed issue with modular pages not hidden in on-page menu with `visible: false` [#71](https://github.com/getgrav/grav-theme-quark/issues/71)
