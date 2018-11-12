@@ -1,3 +1,9 @@
+# v2.0.0-beta.3
+## mm/dd/2018
+
+1. [](#bugfix)
+    * More Twig 2.0 compatibility fixes
+
 # v2.0.0-beta.2
 ## 11/05/2018
 
