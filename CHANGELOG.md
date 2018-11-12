@@ -2,6 +2,7 @@
 ## mm/dd/2018
 
 1. [](#improved)
+    * Added link support to modular `features` [#39](https://github.com/getgrav/grav-theme-quark/pull/39/)
     * Remove desktop menu when in mobile mode [#59](https://github.com/getgrav/grav-theme-quark/pull/59/)
 
 # v1.2.3
