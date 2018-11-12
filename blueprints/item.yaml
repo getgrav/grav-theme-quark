@@ -22,7 +22,6 @@ form:
               label: DF Style Link
               help: Daring Fireball style title link
               highlight: 1
-              default: 1
               options:
                 1: PLUGIN_ADMIN.ENABLED
                 0: PLUGIN_ADMIN.DISABLED
