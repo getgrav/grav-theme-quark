@@ -4,6 +4,8 @@
 1. [](#improved)
     * Added link support to modular `features` [#39](https://github.com/getgrav/grav-theme-quark/pull/39/)
     * Remove desktop menu when in mobile mode [#59](https://github.com/getgrav/grav-theme-quark/pull/59/)
+1. [](#bugfix)
+    * Fixed issue with modular pages not hidden in on-page menu with `visible: false` [#71](https://github.com/getgrav/grav-theme-quark/issues/71)
 
 # v1.2.3
 ## 11/05/2018
