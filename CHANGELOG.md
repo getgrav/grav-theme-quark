@@ -1,3 +1,16 @@
+# v1.2.4
+## 11/12/2018
+
+1. [](#improved)
+    * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.5` version
+    * Added link support to modular `features` [#39](https://github.com/getgrav/grav-theme-quark/pull/39/)
+    * Remove desktop menu when in mobile mode [#59](https://github.com/getgrav/grav-theme-quark/pull/59/)
+    * Support modular `text` full-width if no image [#70](https://github.com/getgrav/grav-theme-quark/issues/70)
+    * Shim for IE support of BrickLayer.js [#64](https://github.com/getgrav/grav-theme-quark/issues/64)
+1. [](#bugfix)
+    * Fixed `continue_link:` showing up as toggled [#65](https://github.com/getgrav/grav-theme-quark/issues/65)
+    * Fixed issue with modular pages not hidden in on-page menu with `visible: false` [#71](https://github.com/getgrav/grav-theme-quark/issues/71)
+
 # v1.2.3
 ## 11/05/2018
 

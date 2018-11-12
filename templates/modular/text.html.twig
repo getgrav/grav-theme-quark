@@ -4,6 +4,7 @@
 <section class="section modular-text {{ page.header.class}} bg-gray">
     <section class="container {{ grid_size }}">
         <div class="columns {{ page.header.image_align|default('align-right') }}">
+            {% if image %}
             <div class="column col-6 col-md-12">
                 {{ content|raw }}
             </div>
@@ -12,6 +13,11 @@
                     {{ image.html|raw }}
                 {% endif %}
             </div>
+            {% else %}
+            <div class="column col-12">
+                {{ content|raw }}
+            </div>
+            {% endif %}
         </div>
     </section>
 </section>
