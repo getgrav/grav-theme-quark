@@ -1,5 +1,5 @@
 # v2.0.0-beta.3
-## mm/dd/2018
+## 11/12/2018
 
 1. [](#improved)
     * Updated to include latest `v1.2.4` improvements
