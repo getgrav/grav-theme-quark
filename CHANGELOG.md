@@ -1,5 +1,5 @@
 # v1.2.4
-## mm/dd/2018
+## 11/12/2018
 
 1. [](#improved)
     * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.5` version
