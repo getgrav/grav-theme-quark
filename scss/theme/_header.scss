@@ -53,6 +53,12 @@
     }
   }
 
+  .navbar-section.desktop-menu {
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+
   .logo {
     svg, img {
       height: 42px;

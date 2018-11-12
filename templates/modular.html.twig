@@ -31,7 +31,7 @@
 {% block header_navigation %}
     {% if show_onpage_menu %}
         <ul class="navigation">
-        {% for module in page.collection() %}
+        {% for module in page.collection() if module.header.visible is not same as(false) %}
             {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
             <li><a class="{{ current_module }}" href="#{{ macro.pageLinkName(module.menu) }}">{{ module.menu }}</a></li>
         {% endfor %}

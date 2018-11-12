@@ -14,6 +14,7 @@
 {% block javascripts %}
     {{ parent() }}
     {% do assets.add('theme://js/bricklayer.min.js') %}
+    {% do assets.add('theme://js/scopedQuerySelectorShim.min.js') %}
 {% endblock %}
 
 
