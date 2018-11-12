@@ -1,8 +1,8 @@
 <div class="p-summary e-content">
     {% if page.summary != page.content %}
-        {{ page.summary }}
+        {{ page.summary|raw }}
     {% else %}
-        {{ page.content }}
+        {{ page.content|raw }}
     {% endif %}
 </div>
 
