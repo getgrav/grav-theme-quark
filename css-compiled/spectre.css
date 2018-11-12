@@ -315,10 +315,6 @@ legend { font-size: 0.9rem; font-weight: 500; margin-bottom: 0.8rem; }
 
 .form-input:focus, .search-input:focus, [data-grav-field="array"] input:focus, [data-grav-field="array"] textarea:focus { box-shadow: 0 0 0 0.1rem rgba(48, 133, 238, 0.2); border-color: #3085EE; }
 
-.form-input::-webkit-input-placeholder, .search-input::-webkit-input-placeholder, [data-grav-field="array"] input::-webkit-input-placeholder, [data-grav-field="array"] textarea::-webkit-input-placeholder { color: #acb3c2; }
-
-.form-input:-ms-input-placeholder, .search-input:-ms-input-placeholder, [data-grav-field="array"] input:-ms-input-placeholder, [data-grav-field="array"] textarea:-ms-input-placeholder { color: #acb3c2; }
-
 .form-input::-ms-input-placeholder, .search-input::-ms-input-placeholder, [data-grav-field="array"] input::-ms-input-placeholder, [data-grav-field="array"] textarea::-ms-input-placeholder { color: #acb3c2; }
 
 .form-input::placeholder, .search-input::placeholder, [data-grav-field="array"] input::placeholder, [data-grav-field="array"] textarea::placeholder { color: #acb3c2; }
