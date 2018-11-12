@@ -118,19 +118,7 @@ textarea.form-input {
   padding: $control-padding-y $control-padding-x;
   vertical-align: middle;
   width: 100%;
-
-  &[size],
-  &[multiple] {
-    height: auto;
-    
-    option {
-      padding: $unit-h $unit-1;
-    }
-  }
-  &:not([multiple]):not([size]) {
-    background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center/.4rem .5rem;
-    padding-right: $control-icon-size + $control-padding-x;
-  }
+  background: $bg-color-light; 
   &:focus {
     @include control-shadow();
     border-color: $primary-color;
@@ -150,6 +138,21 @@ textarea.form-input {
     font-size: $font-size-lg;
     height: $control-size-lg;
     padding: $control-padding-y-lg ($control-icon-size + $control-padding-x-lg) $control-padding-y-lg $control-padding-x-lg;
+  }
+
+  // Multiple select
+  &[size],
+  &[multiple] {
+    height: auto;
+    padding: $control-padding-y $control-padding-x;
+
+    option {
+      padding: $unit-h $unit-1;
+    }
+  }
+  &:not([multiple]):not([size]) {
+    background: $bg-color-light url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center / .4rem .5rem;
+    padding-right: $control-icon-size + $control-padding-x;
   }
 }
 
@@ -266,14 +269,14 @@ textarea.form-input {
         border-left-width: 0;
         border-top-width: 0;
         content: "";
-        height: 12px;
+        height: 9px;
         left: 50%;
-        margin-left: -4px;
-        margin-top: -8px;
+        margin-left: -3px;
+        margin-top: -6px;
         position: absolute;
         top: 50%;
         transform: rotate(45deg);
-        width: 8px;
+        width: 6px;
       }
     }
     &:indeterminate + .form-icon {
@@ -304,12 +307,12 @@ textarea.form-input {
         background: $bg-color-light;
         border-radius: 50%;
         content: "";
-        height: 4px;
+        height: 6px;
         left: 50%;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 4px;
+        width: 6px;
       }
     }
   }
@@ -320,7 +323,7 @@ textarea.form-input {
   padding-left: ($unit-8 + $control-padding-x);
 
   .form-icon {
-    background: $gray-color-light;
+    background: $gray-color;
     background-clip: padding-box;
     border-radius: $unit-2 + $border-width;
     height: $unit-4 + $border-width * 2;
@@ -424,6 +427,7 @@ textarea.form-input {
 .form-select {
   .has-success &,
   &.is-success {
+    background: lighten($success-color, 53%);
     border-color: $success-color;
     &:focus {
       @include control-shadow($success-color);
@@ -432,6 +436,7 @@ textarea.form-input {
 
   .has-error &,
   &.is-error {
+    background: lighten($error-color, 53%);
     border-color: $error-color;
     &:focus {
       @include control-shadow($error-color);
@@ -447,7 +452,7 @@ textarea.form-input {
     .form-icon {
       border-color: $error-color;
     }
-    
+
     input {
       &:checked + .form-icon {
         background: $error-color;
@@ -481,6 +486,7 @@ textarea.form-input {
       border-color: $error-color;
       &:focus {
         @include control-shadow($error-color);
+        background: lighten($error-color, 10%);
       }
 
       & + .form-input-hint {

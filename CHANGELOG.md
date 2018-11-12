@@ -2,6 +2,7 @@
 ## mm/dd/2018
 
 1. [](#improved)
+    * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.5` version
     * Added link support to modular `features` [#39](https://github.com/getgrav/grav-theme-quark/pull/39/)
     * Remove desktop menu when in mobile mode [#59](https://github.com/getgrav/grav-theme-quark/pull/59/)
     * Support modular `text` full-width if no image [#70](https://github.com/getgrav/grav-theme-quark/issues/70)
