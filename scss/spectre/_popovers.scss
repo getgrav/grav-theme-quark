@@ -10,7 +10,7 @@
     position: absolute;
     top: 0;
     transform: translate(-50%, -50%) scale(0);
-    transition: transform .2s ease;
+    transition: transform .2s;
     width: $control-width-sm;
     z-index: $zindex-3;
   }

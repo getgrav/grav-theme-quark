@@ -34,7 +34,6 @@ legend {
 
 // Form element: Input
 .form-input {
-  @include control-transition();
   appearance: none;
   background: $bg-color-light;
   background-image: none;
@@ -49,6 +48,7 @@ legend {
   outline: none;
   padding: $control-padding-y $control-padding-x;
   position: relative;
+  transition: background .2s, border .2s, box-shadow .2s, color .2s;
   width: 100%;
   &:focus {
     @include control-shadow();
@@ -85,7 +85,11 @@ legend {
 
 // Form element: Textarea
 textarea.form-input {
-  height: auto;
+  &,
+  &.input-lg,
+  &.input-sm {
+    height: auto;
+  }
 }
 
 // Form element: Input hint
@@ -221,11 +225,11 @@ textarea.form-input {
   }
 
   .form-icon {
-    @include control-transition();
     border: $border-width solid $border-color-dark;
     cursor: pointer;
     display: inline-block;
     position: absolute;
+    transition: background .2s, border .2s, box-shadow .2s, color .2s;
   }
 
   // Input checkbox, radio and switch sizes
@@ -331,7 +335,6 @@ textarea.form-input {
     top: ($control-size-sm - $unit-4) / 2 - $border-width;
     width: $unit-8;
     &::before {
-      @include control-transition();
       background: $bg-color-light;
       border-radius: 50%;
       content: "";
@@ -340,6 +343,7 @@ textarea.form-input {
       left: 0;
       position: absolute;
       top: 0;
+      transition: background .2s, border .2s, box-shadow .2s, color .2s, left .2s;
       width: $unit-4;
     }
   }
@@ -486,7 +490,7 @@ textarea.form-input {
       border-color: $error-color;
       &:focus {
         @include control-shadow($error-color);
-        background: lighten($error-color, 10%);
+        background: lighten($error-color, 53%);
       }
 
       & + .form-input-hint {
