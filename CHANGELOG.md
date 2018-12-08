@@ -1,3 +1,11 @@
+# v1.2.5
+## 12/07/2018
+
+1. [](#improved)
+    * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.7` version
+1. [](#bugfix)
+    * Fixed missing `</html>` close tag in bae template [#76](https://github.com/getgrav/grav-theme-quark/pull/)
+
 # v1.2.4
 ## 11/12/2018
 
