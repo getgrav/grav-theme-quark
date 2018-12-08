@@ -1,3 +1,9 @@
+# v2.0.0-beta.4
+## 12/07/2018
+
+1. [](#improved)
+    * Updated to include latest `v1.2.5` improvements
+
 # v2.0.0-beta.3
 ## 11/12/2018
 
@@ -21,6 +27,14 @@
     * Use new `deferred` Twig blocks (requires Grav 1.6+)
 1. [](#improved)
     * Updated to use new `GRAV` core language prefix
+    
+# v1.2.5
+## 12/07/2018
+
+1. [](#improved)
+    * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.7` version
+1. [](#bugfix)
+    * Fixed missing `</html>` close tag in bae template [#76](https://github.com/getgrav/grav-theme-quark/pull/)    
 
 # v1.2.4
 ## 11/12/2018
