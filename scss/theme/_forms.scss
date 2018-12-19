@@ -19,19 +19,22 @@ form {
   }
 
   /** Reset some defaults for Quark Theme **/
-  .checkboxes {
-    display: inherit;
-
-    label {
+  .form-group:not(.form-field-toggleable) {
+    .checkboxes {
       display: inherit;
-      padding: (($control-size-sm - $line-height) / 2) $control-padding-x (($control-size-sm - $line-height) / 2) ($control-icon-size + $control-padding-x);
-      margin: inherit;
 
-      &:before {
-        display: none;
+      label {
+        display: inherit;
+        padding: (($control-size-sm - $line-height) / 2) $control-padding-x (($control-size-sm - $line-height) / 2) ($control-icon-size + $control-padding-x);
+        margin: inherit;
+
+        &:before {
+          display: none;
+        }
       }
     }
   }
+
 }
 
 #grav-login {
