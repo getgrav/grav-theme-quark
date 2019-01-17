@@ -1,10 +1,8 @@
 <div class="card">
     {% set image = page.media.images|first %}
-    {% if image %}
     <div class="card-image">
         <a href="{{ page.url }}">{{ image.cropZoom(800,400).html }}</a>
     </div>
-    {% endif %}
     <div class="card-header">
         <div class="card-subtitle text-gray">
             {% include 'partials/blog/date.html.twig' %}
@@ -19,6 +17,7 @@
         {% else %}
             {{ page.content|raw }}
         {% endif %}
+<!-- {{ page.media.images|first }} -->
     </div>
     <div class="card-footer">
         {% include 'partials/blog/taxonomy.html.twig' %}
