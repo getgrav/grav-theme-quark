@@ -1,0 +1,18 @@
+{% set grid_size = theme_var('grid-size') %}
+<section class="section modular-features {{ page.header.class }}">
+        <section class="container {{ grid_size }}">
+            <div class="frame-box">
+
+                {{ content|raw }}
+
+                <div class="columns">
+		    {{ instagram_feed() }}
+		    {% for post in feed|slice(0, count)  %}
+                        <div class="column col-3 col-md-4 col-sm-6">
+                            <a href="{{ post.link }}" target="_blank"><img src="{{ post.image }}" alt=""></a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+</section>

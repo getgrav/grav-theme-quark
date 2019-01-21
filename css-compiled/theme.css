@@ -381,6 +381,10 @@ ul.pagination { -ms-flex-pack: center; justify-content: center; }
 
 .modular-features .feature-content { color: #acb3c2; }
 
+.modular-instagram img { border-width:8%; }
+
+.modular-instagram .feature-content { color: #acb3c2; }
+
 .modular-text { padding-top: 4rem; padding-bottom: 4rem; }
 
 .modular-text .columns.left { -ms-flex-direction: row-reverse; flex-direction: row-reverse; }
