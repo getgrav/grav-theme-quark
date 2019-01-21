@@ -6,14 +6,15 @@ author:
   name: Team Grav
   email: devs@getgrav.org
   url: http://getgrav.org
-homepage: https://github.com/getgrav/grav-theme-quark
+homepage: https://github.com/mrholshi/grav-theme-quark
 demo: https://demo.getgrav.org/onepage-skeleton
 keywords: quark, spectre, theme, core, modern, fast, responsive, html5, css3
-bugs: https://github.com/getgrav/grav-theme-quark/issues
+bugs: https://github.com/mrholshi/grav-theme-quark/issues
 license: MIT
 
 dependencies:
     - { name: grav, version: '>=1.5.0' }
+    - { name: instagram, version: '>=1.3.0' }
 
 form:
   validation: loose
