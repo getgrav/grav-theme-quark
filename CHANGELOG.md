@@ -1,3 +1,9 @@
+# v2.0.0-rc.1
+## mm/dd/2019
+
+1. [](#improved)
+    * Support for 2FA panel styling
+
 # v2.0.0-beta.4
 ## 12/07/2018
 

@@ -59,8 +59,19 @@ form {
       margin: 0;
       float: left;
     }
+  }
+
+  .login-form {
     button[type="submit"] {
       @include button-primary;
+    }
+  }
+
+  .twofa-form {
+    button[type="submit"]:first-child {
+      @include button-primary;
+      float: right;
+      margin-left: 4px;
     }
   }
 }
