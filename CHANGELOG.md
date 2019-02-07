@@ -1,9 +1,12 @@
 # v2.0.0-rc.1
-## mm/dd/2019
+## 02/07/2019
 
 1. [](#improved)
     * Support for 2FA panel styling
-
+    * Updated to Yarn 4.0 syntax
+1. [](#bugfix)
+    * Some checkboxes fixes for Forms 3.0
+    
 # v2.0.0-beta.4
 ## 12/07/2018
 
