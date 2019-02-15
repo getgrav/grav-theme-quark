@@ -238,3 +238,27 @@ nl:
         HEADLINE: Archieven
       SYNDICATE:
         HEADLINE: Syndicatie
+
+en:
+  THEME_QUARK:
+    BLOG:
+      ITEM:
+        CONTINUE_READING: 继续阅读…
+        NEXT_POST: 下一篇
+        PREV_POST: 上一篇
+    SIDEBAR:
+      SIMPLE_SEARCH:
+        HEADLINE: 搜索
+      RELATED_POSTS:
+        HEADLINE: 相关内容
+      RANDOM_ARTICLE:
+        HEADLINE: 随机文章
+        FEELING_LUCKY: 手气不错！
+      SOME_TEXT_WIDGET:
+        HEADLINE: 一个文本小挂件
+      POPULAR_TAGS:
+        HEADLINE: 热门标签
+      ARCHIVES:
+        HEADLINE: 归档
+      SYNDICATE:
+        HEADLINE: Syndicate
