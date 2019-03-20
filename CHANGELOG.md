@@ -1,5 +1,5 @@
 # v2.0.0-rc.2
-## mm/dd/2019
+## 03/20/2019
 
 1. [](#improved)
     * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.8` version
