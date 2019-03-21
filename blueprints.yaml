@@ -1,5 +1,5 @@
 name: Quark
-version: 1.2.5
+version: 1.2.6
 description: New Grav Default Theme
 icon:  microchip
 author:
@@ -13,7 +13,7 @@ bugs: https://github.com/getgrav/grav-theme-quark/issues
 license: MIT
 
 dependencies:
-    - { name: grav, version: '>=1.5.0' }
+    - { name: grav, version: '>=1.5.10' }
 
 form:
   validation: loose
