@@ -23,14 +23,17 @@
         {% do assets.addCss('theme://css/custom.css') %}
         {% do assets.addCss('theme://css/line-awesome.min.css') %}
     {% endblock %}
-    {{ assets.css()|raw }}
 
     {% block javascripts %}
         {% do assets.addJs('jquery', 101) %}
         {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
         {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
     {% endblock %}
-    {{ assets.js()|raw }}
+
+    {% block assets deferred %}
+        {{ assets.css()|raw }}
+        {{ assets.js()|raw }}
+    {% endblock %}
 
 {% endblock head %}
 </head>
