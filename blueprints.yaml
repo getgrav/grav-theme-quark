@@ -1,11 +1,11 @@
-name: Quark
+name: main-theme
 version: 1.2.6
-description: New Grav Default Theme
+description: mrholshi.com Main Theme
 icon:  microchip
 author:
-  name: Team Grav
-  email: devs@getgrav.org
-  url: http://getgrav.org
+  name: Grant Hoelscher
+  email: mrholshi@gmail.com
+  url: https://mrholshi.com
 homepage: https://github.com/mrholshi/grav-theme-quark
 demo: https://demo.getgrav.org/onepage-skeleton
 keywords: quark, spectre, theme, core, modern, fast, responsive, html5, css3
