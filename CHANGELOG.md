@@ -3,6 +3,7 @@
 
 1. [](#improved)
     * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.8` version
+    * Restructured SCSS to ensure easier Spectre updates in future
 
 # v2.0.0-rc.1
 ## 02/07/2019
