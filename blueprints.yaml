@@ -14,7 +14,11 @@ bugs: https://github.com/getgrav/grav-theme-quark/issues
 license: MIT
 
 dependencies:
+<<<<<<< HEAD
   - { name: grav, version: '>=1.6.0-rc.2' }
+=======
+    - { name: grav, version: '>=1.5.10' }
+>>>>>>> develop
 
 form:
   validation: loose
