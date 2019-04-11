@@ -1,48 +1,16 @@
-# v2.0.0-rc.2
-## 03/20/2019
+# v2.0.0
+## 04/11/2019
 
-1. [](#improved)
-    * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.8` version
-    * Restructured SCSS to ensure easier Spectre updates in future
-
-# v2.0.0-rc.1
-## 02/07/2019
-
-1. [](#improved)
-    * Support for 2FA panel styling
-    * Updated to Yarn 4.0 syntax
-1. [](#bugfix)
-    * Some checkboxes fixes for Forms 3.0
-    
-# v2.0.0-beta.4
-## 12/07/2018
-
-1. [](#improved)
-    * Updated to include latest `v1.2.5` improvements
-
-# v2.0.0-beta.3
-## 11/12/2018
-
-1. [](#improved)
-    * Updated to include latest `v1.2.4` improvements
-1. [](#bugfix)
-    * More Twig 2.0 compatibility fixes
-
-# v2.0.0-beta.2
-## 11/05/2018
-
-1. [](#improved)
-    * Updated to include latest `v1.2.3` improvements
-1. [](#bugfix)
-    * Fixed a Twig 2.0 issue with assets rendering
-
-# v2.0.0-beta.1
-## 10/24/2018
-
-1. [](#new)
-    * Use new `deferred` Twig blocks (requires Grav 1.6+)
 1. [](#improved)
     * Updated to use new `GRAV` core language prefix
+    * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.8` version
+    * Support for 2FA panel styling
+    * Updated to Yarn 4.0 syntax
+    * Restructured SCSS to ensure easier Spectre updates in future
+1. [](#bugfix)
+    * Some checkboxes fixes for Forms 3.0
+    * More Twig 2.0 compatibility fixes
+    * Fixed a Twig 2.0 issue with assets rendering
     
 # v1.2.6
 ## 03/21/2019
