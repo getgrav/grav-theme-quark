@@ -4,9 +4,9 @@
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 <head>
-{% block head %}
+{% block head deferred %}
     <meta charset="utf-8" />
-    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    <title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,32 +14,31 @@
 
     <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
     <link rel="canonical" href="{{ page.url(true, true) }}" />
-
-    {% block stylesheets %}
-        {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
-        {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress)  %}{% endif %}
-        {% if theme_var('spectre.icons') %}{%  do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
-        {% do assets.addCss('theme://css-compiled/theme'~compress) %}
-        {% do assets.addCss('theme://css/custom.css') %}
-        {% do assets.addCss('theme://css/line-awesome.min.css') %}
-    {% endblock %}
-
-    {% block javascripts %}
-        {% do assets.addJs('jquery', 101) %}
-        {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
-        {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
-    {% endblock %}
-
-    {% block assets deferred %}
-        {{ assets.css()|raw }}
-        {{ assets.js()|raw }}
-    {% endblock %}
-
 {% endblock head %}
+
+{% block stylesheets %}
+    {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
+    {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress)  %}{% endif %}
+    {% if theme_var('spectre.icons') %}{%  do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
+    {% do assets.addCss('theme://css-compiled/theme'~compress) %}
+    {% do assets.addCss('theme://css/custom.css') %}
+    {% do assets.addCss('theme://css/line-awesome.min.css') %}
+{% endblock %}
+
+{% block javascripts %}
+    {% do assets.addJs('jquery', 101) %}
+    {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
+{% endblock %}
+
+{% block assets deferred %}
+    {{ assets.css()|raw }}
+    {{ assets.js()|raw }}
+{% endblock %}
 </head>
 <body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
     <div id="page-wrapper">
-    {% block header %}
+    {% block header deferred %}
         <section id="header" class="section">
             <section class="container {{ grid_size }}">
                 <nav class="navbar">
@@ -91,7 +90,7 @@
     {% block footer %}
         {% include 'partials/footer.html.twig' %}
     {% endblock %}
-    
+
     <div class="mobile-container">
         <div class="overlay" id="overlay">
             <div class="mobile-logo">

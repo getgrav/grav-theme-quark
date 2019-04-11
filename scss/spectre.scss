@@ -1,4 +1,5 @@
 // Variables and mixins
+@import "theme/variables";
 @import "spectre/variables";
 @import "spectre/mixins";
 
@@ -19,6 +20,7 @@
 
 // Layout
 @import "spectre/layout";
+@import "spectre/hero";
 @import "spectre/navbar";
 
 // Components

@@ -1,3 +1,17 @@
+# v2.0.0
+## 04/11/2019
+
+1. [](#improved)
+    * Updated to use new `GRAV` core language prefix
+    * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.8` version
+    * Support for 2FA panel styling
+    * Updated to Yarn 4.0 syntax
+    * Restructured SCSS to ensure easier Spectre updates in future
+1. [](#bugfix)
+    * Some checkboxes fixes for Forms 3.0
+    * More Twig 2.0 compatibility fixes
+    * Fixed a Twig 2.0 issue with assets rendering
+    
 # v1.2.6
 ## 03/21/2019
 
@@ -11,7 +25,7 @@
 1. [](#improved)
     * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.7` version
 1. [](#bugfix)
-    * Fixed missing `</html>` close tag in bae template [#76](https://github.com/getgrav/grav-theme-quark/pull/)
+    * Fixed missing `</html>` close tag in bae template [#76](https://github.com/getgrav/grav-theme-quark/pull/)    
 
 # v1.2.4
 ## 11/12/2018
@@ -25,6 +39,7 @@
 1. [](#bugfix)
     * Fixed `continue_link:` showing up as toggled [#65](https://github.com/getgrav/grav-theme-quark/issues/65)
     * Fixed issue with modular pages not hidden in on-page menu with `visible: false` [#71](https://github.com/getgrav/grav-theme-quark/issues/71)
+
 
 # v1.2.3
 ## 11/05/2018

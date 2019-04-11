@@ -17,6 +17,24 @@ form {
       border: none;
     }
   }
+
+  /** Reset some defaults for Quark Theme **/
+  .form-group:not(.form-field-toggleable) {
+    .checkboxes {
+      display: inherit;
+
+      label {
+        display: inherit;
+        padding: (($control-size-sm - $line-height) / 2) $control-padding-x (($control-size-sm - $line-height) / 2) ($control-icon-size + $control-padding-x);
+        margin: inherit;
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
 }
 
 #grav-login {
@@ -41,8 +59,19 @@ form {
       margin: 0;
       float: left;
     }
+  }
+
+  .login-form {
     button[type="submit"] {
       @include button-primary;
+    }
+  }
+
+  .twofa-form {
+    button[type="submit"]:first-child {
+      @include button-primary;
+      float: right;
+      margin-left: 4px;
     }
   }
 }

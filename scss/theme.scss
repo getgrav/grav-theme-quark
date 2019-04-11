@@ -1,8 +1,9 @@
 // Core variables and mixins
+@import 'theme/variables';
 @import 'spectre/variables';
 @import 'spectre/mixins';
 
-@import 'theme/variables';
+@import 'theme/fonts';
 @import 'theme/mixins';
 @import 'theme/framework';
 @import 'theme/typography';
