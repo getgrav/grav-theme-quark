@@ -89,7 +89,7 @@ form:
               label: Format
               classes: fancy
               options:
-                'short': 'Use the first occurence of delimter or size'
+                'short': 'Use the first occurence of delimiter or size'
                 'long': 'Summary delimiter will be ignored'
 
             header.summary.size:
