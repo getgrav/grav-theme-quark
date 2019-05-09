@@ -24,7 +24,7 @@
     "url": "https://github.com/picturepan2/spectre/issues"
   },
   "devDependencies": {
-    "gulp": "latest",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "latest",
     "gulp-clean-css": "^3.9.4",
     "gulp-csscomb": "^3.0.8",
@@ -39,6 +39,10 @@
     "last 4 Opera versions",
     "Explorer >= 10"
   ],
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp build"
+  },
   "dependencies": {
     "gulp-sourcemaps": "^2.6.4"
   }
