@@ -92,6 +92,7 @@ ul.pagination {
   ul.related-pages {
     box-shadow: none;
     padding: 0;
+    z-index: 1;
 
     li {
       border-bottom: 1px solid $border-color;

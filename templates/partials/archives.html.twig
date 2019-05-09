@@ -6,7 +6,7 @@
         {% if archives_show_count %}
         <span class="label label-rounded label-primary">{{ items|length }}</span>
         {% endif %}
-        <span class="archive_date">{{ month }}</span>
+          <span class="archive_date">{{ month|date(config.plugins.archives.date_display_format) }} </span>
         </a>
     </li>
 {% endfor %}

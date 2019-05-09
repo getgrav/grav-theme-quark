@@ -1,3 +1,17 @@
+# v2.0.1
+## 05/09/2019
+
+1. [](#improved)
+    * Typo in blueprints [#109](https://github.com/getgrav/grav-theme-quark/pull/109)
+    * Added convenience scripts to `package.json` [#110](https://github.com/getgrav/grav-theme-quark/pull/110)
+    * Added Czech translation [#106](https://github.com/getgrav/grav-theme-quark/pull/106)
+    * Added Chinese translation [#114](https://github.com/getgrav/grav-theme-quark/pull/114)
+    * Removed redundant code [#104](https://github.com/getgrav/grav-theme-quark/pull/104)
+    * Updated to match Archives plugin translation output
+1. [](#bugfix)
+    * Bugfix to class in macro [#105](https://github.com/getgrav/grav-theme-quark/pull/105)
+    * Bugfix a z-index issue [#75](https://github.com/getgrav/grav-theme-quark/pull/75)
+
 # v2.0.0
 ## 04/11/2019
 
@@ -25,7 +39,7 @@
 1. [](#improved)
     * Updated [Spectre.css](https://picturepan2.github.io/spectre/) to latest `0.5.7` version
 1. [](#bugfix)
-    * Fixed missing `</html>` close tag in bae template [#76](https://github.com/getgrav/grav-theme-quark/pull/)    
+    * Fixed missing `</html>` close tag in bae template [#76](https://github.com/getgrav/grav-theme-quark/pull/76)    
 
 # v1.2.4
 ## 11/12/2018
