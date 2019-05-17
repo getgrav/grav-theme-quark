@@ -1,3 +1,9 @@
+# v2.0.2
+## mm/dd/2019
+
+1. [](#bugfix)
+    * Fixed issue with Prism Highlight [prism-highlight#1](https://github.com/trilbymedia/grav-plugin-prism-highlight/issues/1)
+
 # v2.0.1
 ## 05/09/2019
 
