@@ -1,9 +1,5 @@
 {% extends 'partials/base.html.twig' %}
 
-{% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
-
-{% import _self as macro %}
-
 {% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
 
 {% block javascripts %}
@@ -33,7 +29,7 @@
         <ul class="navigation">
         {% for module in page.collection() if module.header.visible is not same as(false) %}
             {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
-            <li><a class="{{ current_module }}" href="#{{ macro.pageLinkName(module.menu) }}">{{ module.menu }}</a></li>
+            <li><a class="{{ current_module }}" href="#{{ module.menu|hyphenize }}">{{ module.menu }}</a></li>
         {% endfor %}
         {% for mitem in site.menu %}
             <li>
@@ -51,14 +47,14 @@
 
 {% block hero %}
     {% for module in page.collection() if module.template == 'modular/hero' %}
-        <div id="{{ macro.pageLinkName(module.menu) }}"></div>
+        <div id="{{ module.menu|hyphenize }}"></div>
         {{ module.content|raw }}
     {% endfor %}
 {% endblock %}
 
 {% block body %}
     {% for module in page.collection() if module.template != 'modular/hero' %}
-        <div id="{{ macro.pageLinkName(module.menu) }}"></div>
+        <div id="{{ module.menu|hyphenize }}"></div>
         {{ module.content|raw }}
     {% endfor %}
 {% endblock %}
