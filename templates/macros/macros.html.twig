@@ -1,22 +1,15 @@
-{% macro nav_loop(page) %}
+{% macro nav_loop(links) %}
   {% import _self as macros %}
-  {% for p in page.children.visible %}
-    {% set active_page = (p.active or p.activeChild) ? 'active' : '' %}
-    {% if p.children.visible.count > 0 %}
-      <li>
-        <a href="{{ p.url }}" class="{{ active_page }}">
-          {{ p.menu }}
-        </a>
+  {% for l in links %}
+    <li>
+      <a href="{{ l.href }}" class="{{ l.id }} level-{{ l.level }}{{ l.active ? ' active' }}">
+        {{ l.text }}
+      </a>
+      {% if l.links|length > 0 %}
         <ul>
-          {{ macros.nav_loop(p) }}
+          {{ macros.nav_loop(l.links) }}
         </ul>
-      </li>
-    {% else %}
-      <li>
-        <a href="{{ p.url }}" class="{{ active_page }}">
-          {{ p.menu }}
-        </a>
-      </li>
-    {% endif %}
+      {% endif %}
+    </li>
   {% endfor %}
 {% endmacro %}

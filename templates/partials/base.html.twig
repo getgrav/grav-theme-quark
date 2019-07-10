@@ -1,6 +1,12 @@
 {% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
 {% set grid_size = theme_var('grid-size') %}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+{% set primary_menu = process_primary_menu() %}
+{% set secondary_menu = process_secondary_menu() %}
+{% set content_columns = 12 %}
+
+{{ dump(primary_menu, secondary_menu) }}
+
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 <head>
@@ -38,7 +44,7 @@
 </head>
 <body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
     <div id="page-wrapper">
-    {% block header deferred %}
+    {% block header %}
         <section id="header" class="section">
             <section class="container {{ grid_size }}">
                 <nav class="navbar">
@@ -79,7 +85,20 @@
                     {% block messages %}
                         {% include 'partials/messages.html.twig' ignore missing %}
                     {% endblock %}
-                    {% block content %}{% endblock %}
+                    <div class="columns">
+                    {% if secondary_menu %}
+                        <div class="column col-3 col-md-12">
+                            {% import 'macros/macros.html.twig' as macros %}
+                            <h3>Sub Menu</h3>
+                            <ul class="sidebar-menu">
+                                {{ macros.nav_loop(secondary_menu) }}
+                            </ul>
+                        </div>
+                        {% set content_columns = 9 %}
+                    {% endif %}
+                    <div class="column col-{{ content_columns }} col-md-12">
+                        {% block content %}{% endblock %}
+                    </div>
                 </section>
             </section>
         {% endblock %}
@@ -91,6 +110,7 @@
         {% include 'partials/footer.html.twig' %}
     {% endblock %}
 
+    {% block mobile %}
     <div class="mobile-container">
         <div class="overlay" id="overlay">
             <div class="mobile-logo">
@@ -101,6 +121,7 @@
             </nav>
         </div>
     </div>
+    {% endblock %}
 
 {% block bottom %}
     {{ assets.js('bottom')|raw }}
