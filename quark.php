@@ -8,8 +8,7 @@ use Grav\Common\Utils;
 
 class Quark extends Theme
 {
-    protected $primary_menu;
-    protected $secondary_menu;
+
     protected $secondary_root;
 
     public static function getSubscribedEvents()
@@ -69,47 +68,32 @@ class Quark extends Theme
 
     public function getPrimaryMenu()
     {
-        $links = $this->primary_menu;
+        /** @var Pages $pages */
+        $pages = $this->grav['pages'];
 
-        // Check if we've done this before
-        if (!isset($links)) {
-            /** @var Pages $pages */
-            $pages = $this->grav['pages'];
+        /** @var PageInterface $root */
+        $root = $pages->root()->children()->visible();
 
-            /** @var PageInterface $root */
-            $root = $pages->root()->children()->visible();
-
-            // Loop through top-level menu items
-            $links = [];
-            foreach ($root as $page) {
-                $links[] = $this->buildLinkNode($page, 1, 10, 'primary');
-            }
-
-            $this->primary_menu = $links;
+        // Loop through top-level menu items
+        $links = [];
+        foreach ($root as $page) {
+            $links[] = $this->buildLinkNode($page, 1, 10, 'primary');
         }
 
         return $links;
-
     }
 
     public function getSecondaryMenu()
     {
-        $links = $this->secondary_menu;
+        /** @var PageInterface $nav */
+        $nav = $this->secondary_root;
 
-        // Check if we've done this before
-        if (!isset($links)) {
-            /** @var PageInterface $nav */
-            $nav = $this->secondary_root;
+        $links = [];
+        if ($nav) {
 
-            $links = [];
-            if ($nav) {
-
-                foreach ($nav->children()->visible() as $child) {
-                    $links[] = $this->buildLinkNode($child, 1, 4, 'secondary');
-                }
+            foreach ($nav->children()->visible() as $child) {
+                $links[] = $this->buildLinkNode($child, 1, 4, 'secondary');
             }
-
-            $this->secondary_menu = $links;
         }
 
         return $links;
