@@ -2,7 +2,7 @@
   {% import _self as macros %}
   {% for l in links %}
     <li>
-      <a href="{{ l.href }}" class="{{ l.id }} level-{{ l.level }}{{ l.active ? ' active' }}">
+      <a href="{{ l.href }}" class="id-{{ l.id }} level-{{ l.level }}{{ l.active ? ' active' }}">
         {{ l.text }}
       </a>
       {% if l.links|length > 0 %}
