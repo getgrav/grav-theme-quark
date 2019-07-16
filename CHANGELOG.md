@@ -1,6 +1,8 @@
 # v2.0.2
 ## mm/dd/2019
 
+1. [](#improved)
+    * Allow for overriding of `{% block content %}{% endblock %}`
 1. [](#bugfix)
     * Fixed issue with Prism Highlight [prism-highlight#1](https://github.com/trilbymedia/grav-plugin-prism-highlight/issues/1)
     * Use slug for onpage links [#115](https://github.com/getgrav/grav-theme-quark/issues/115)
