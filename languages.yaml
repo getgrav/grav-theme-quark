@@ -286,3 +286,27 @@ zh:
         HEADLINE: 归档
       SYNDICATE:
         HEADLINE: 订阅流
+
+tr:
+  THEME_QUARK:
+    BLOG:
+      ITEM:
+        CONTINUE_READING: Devamını oku...
+        NEXT_POST: Sonraki Makale
+        PREV_POST: Önceki Makale
+    SIDEBAR:
+      SIMPLE_SEARCH:
+        HEADLINE: Ara
+      RELATED_POSTS:
+        HEADLINE: İlgili Makaleler
+      RANDOM_ARTICLE:
+        HEADLINE: Rastgele Makale
+        FEELING_LUCKY: Kendimi Şanslı Hissediyorum
+      SOME_TEXT_WIDGET:
+        HEADLINE: Bir Yazı Aracı
+      POPULAR_TAGS:
+        HEADLINE: Popüler Etiketler
+      ARCHIVES:
+        HEADLINE: Arşiv
+      SYNDICATE:
+        HEADLINE: Beslemeler
