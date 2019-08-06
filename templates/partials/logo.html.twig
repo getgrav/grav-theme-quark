@@ -4,6 +4,6 @@
   {% set logo_file = (logo|first).name %}
   <img src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt="{{ site.name }}" />
 {% else %}
-  {% include('@images/grav-logo.svg') %}
+  {% include('@images/logo.svg') %}
 {% endif %}
 </a>
