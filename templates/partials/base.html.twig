@@ -1,6 +1,7 @@
 {% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
 {% set grid_size = theme_var('grid-size') %}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+{% use 'blocks/base.html.twig' %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 <head>
@@ -38,7 +39,7 @@
 </head>
 <body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
     <div id="page-wrapper">
-    {% block header deferred %}
+    {% block header %}
         <section id="header" class="section">
             <section class="container {{ grid_size }}">
                 <nav class="navbar">
@@ -79,7 +80,7 @@
                     {% block messages %}
                         {% include 'partials/messages.html.twig' ignore missing %}
                     {% endblock %}
-                    {% block content %}{% endblock %}
+                    {{ block('content_surround') }}
                 </section>
             </section>
         {% endblock %}
@@ -91,6 +92,7 @@
         {% include 'partials/footer.html.twig' %}
     {% endblock %}
 
+    {% block mobile %}
     <div class="mobile-container">
         <div class="overlay" id="overlay">
             <div class="mobile-logo">
@@ -101,6 +103,7 @@
             </nav>
         </div>
     </div>
+    {% endblock %}
 
 {% block bottom %}
     {{ assets.js('bottom')|raw }}

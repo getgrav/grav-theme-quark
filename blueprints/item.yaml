@@ -43,7 +43,7 @@ form:
               toggleable: true
               label: Image File
               help: image filename that exists in the page folder. If not provided, will use the first image found.
-              placeholder: For example: myimage.jpg
+              placeholder: "For example: myimage.jpg"
 
             header.header_image_width:
               type: text

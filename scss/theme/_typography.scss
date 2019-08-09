@@ -61,6 +61,13 @@ img {
   max-width: 100%;
 }
 
+// Tables
+.table > table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
 
 // Codeblocks
 pre code, pre.xdebug-var-dump{
@@ -73,8 +80,16 @@ pre code, pre.xdebug-var-dump{
   overflow-x: auto;
 }
 
+pre[class*="language-"] {
+  code {
+    border-radius: inherit;
+    padding: 0 !important;
+    overflow-x: initial;
+  }
+}
+
 pre {
-  code:not(.hljs) {
+  code:not(.hljs):not([class*="language-"]) {
     background: #f8f8f8;
   }
 }
@@ -159,4 +174,5 @@ ol {
     margin: 1rem 0;
   }
 }
+
 

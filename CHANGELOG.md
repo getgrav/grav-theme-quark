@@ -1,3 +1,14 @@
+# v2.0.2
+## 08/09/2019
+
+1. [](#improved)
+    * Allow for overriding of `{% block content %}{% endblock %}`
+    * Improved default `.table` styling
+1. [](#bugfix)
+    * Fixed issue with Prism Highlight [prism-highlight#1](https://github.com/trilbymedia/grav-plugin-prism-highlight/issues/1)
+    * Use slug for onpage links [#115](https://github.com/getgrav/grav-theme-quark/issues/115)
+    * Fixed 2 minor YAML linting issues
+
 # v2.0.1
 ## 05/09/2019
 
