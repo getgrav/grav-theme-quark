@@ -1,5 +1,5 @@
 # v2.0.2
-## mm/dd/2019
+## 08/09/2019
 
 1. [](#improved)
     * Allow for overriding of `{% block content %}{% endblock %}`
