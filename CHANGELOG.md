@@ -4,6 +4,7 @@
 1. [](#improved)
     * Allow for overriding of `{% block content %}{% endblock %}`
     * Improved default `.table` styling
+    * Simplified navigation macro
 1. [](#bugfix)
     * Fixed issue with Prism Highlight [prism-highlight#1](https://github.com/trilbymedia/grav-plugin-prism-highlight/issues/1)
     * Use slug for onpage links [#115](https://github.com/getgrav/grav-theme-quark/issues/115)
