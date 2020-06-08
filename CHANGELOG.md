@@ -1,5 +1,5 @@
 # v2.0.3
-## mm/dd/2019
+## 06/08/2020
 
 1. [](#improved)
     * Updated some JS libraries
