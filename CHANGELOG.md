@@ -1,3 +1,11 @@
+# v2.0.3
+## mm/dd/2019
+
+1. [](#improved)
+    * Updated some JS libraries
+    * Simplified navigation macro
+    * Use `site.title` in logo alt text [#139](https://github.com/getgrav/grav-theme-quark/pull/109)
+
 # v2.0.2
 ## 08/09/2019
 
