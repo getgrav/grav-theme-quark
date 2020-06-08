@@ -1,5 +1,7 @@
 name: Quark
-version: 2.0.2
+slug: quark
+type: theme
+version: 2.0.3
 description: New Grav Default Theme
 icon:  microchip
 author:
