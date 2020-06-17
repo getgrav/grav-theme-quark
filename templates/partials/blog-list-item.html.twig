@@ -16,6 +16,7 @@
     <div class="card-body">
         {% if page.summary != page.content %}
             {{ page.summary|raw }}
+            <p><a href="{{ page.url }}">{{ 'THEME_QUARK.BLOG.ITEM.CONTINUE_READING'|t }}</a></p>
         {% else %}
             {{ page.content|raw }}
         {% endif %}
