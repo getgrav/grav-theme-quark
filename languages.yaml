@@ -286,3 +286,27 @@ zh:
         HEADLINE: 归档
       SYNDICATE:
         HEADLINE: 订阅流
+
+ja:
+  THEME_QUARK:
+    BLOG:
+      ITEM:
+        CONTINUE_READING: 続きを読む...
+        NEXT_POST: 次の記事 
+        PREV_POST: 前の記事 
+    SIDEBAR:
+      SIMPLE_SEARCH:
+        HEADLINE: 検索
+      RELATED_POSTS:
+        HEADLINE: 関連した記事 
+      RANDOM_ARTICLE:
+        HEADLINE: 任意の記事 
+        FEELING_LUCKY: I'm feeling Lucky
+      SOME_TEXT_WIDGET:
+        HEADLINE: Some Text Widget
+      POPULAR_TAGS:
+        HEADLINE: 人気のタグ 
+      ARCHIVES:
+        HEADLINE: アーカイブ
+      SYNDICATE:
+        HEADLINE: RSS配信 
