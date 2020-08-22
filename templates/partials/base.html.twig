@@ -7,13 +7,7 @@
 <head>
 {% block head deferred %}
     <meta charset="utf-8" />
-    <title>
-      {% autoescape 'html' %}
-        {% block title deferred %}
-          {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
-        {% endblock title %}
-      {% endautoescape %}
-    </title>
+    <title>{% if title_override is defined %}{{ title_override }}{% else %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endif %}</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
