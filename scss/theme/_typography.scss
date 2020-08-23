@@ -90,7 +90,7 @@ pre[class*="language-"] {
 
 pre {
   code:not(.hljs):not([class*="language-"]) {
-    background: #f8f8f8;
+    background: darken($light-color, 3%);
   }
 }
 
