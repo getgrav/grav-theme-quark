@@ -55,6 +55,7 @@ Quark comes with a few default options that can be set site-wide.  These options
 enabled: true                 # Enable the theme
 production-mode: true         # In production mode, only minified CSS is used. When disabled, nested CSS with sourcemaps are enabled
 grid-size: grid-lg            # The max-width of the theme, options include: `grid-xl`, `grid-lg`, and `grid-md`
+noindex_url_params: false     # When enabled, block search indexing for Grav URL parameters
 header-fixed: true            # Cause the header to be fixed at the top of the browser
 header-animated: true         # Allows the fixed header to resize to a smaller header when scrolled
 header-dark: false            # Inverts the text/logo to work better on dark backgrounds
@@ -68,6 +69,17 @@ custom_logo_mobile:           # A custom logo to use for mobile navigation
 To make modifications, you can copy the `user/themes/quark/quark.yaml` file to `user/config/themes/` folder and modify, or you can use the admin plugin.
 
 > NOTE: Do not modify the `user/themes/quark/quark.yaml` file directly or your changes will be lost with any updates
+
+## Block search indexing for Grav URL parameters
+
+When enabled, a `noindex` `<meta>` tag will be added to pages with Grav URL parameters (e.g. `/blog/foo:bar`).
+This is particularly useful to avoid page duplicates being indexed by search engines when there are filter links reachable from the main collection page (e.g. sidebar with Taxonomy List or Archives plugins).
+
+The theme-level setting can also be overridden at the page-level via YAML front matter:
+
+```yaml
+noindex_url_params: true
+```
 
 ## Custom Logos
 

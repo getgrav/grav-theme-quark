@@ -1,6 +1,7 @@
 enabled: true
 production-mode: true
 grid-size: grid-lg
+noindex_url_params: false
 header-fixed: true
 header-animated: true
 header-dark: false

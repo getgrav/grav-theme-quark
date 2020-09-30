@@ -13,3 +13,17 @@ form:
                     header.body_classes:
                       markdown: true
                       description: "Available classes in Quark Theme (space separated):<br />`header-fixed`, `header-animated`, `header-dark`, `header-transparent`, `sticky-footer`"
+                    header.noindex_url_params:
+                      type: toggle
+                      toggleable: true
+                      label: Block search indexing for Grav URL parameters
+                      help: |
+                        When enabled, a 'noindex' <meta> tag will be added to pages with Grav URL parameters (e.g. '/blog/foo:bar').
+                        This is particularly useful to avoid page duplicates being indexed by search engines when there are filter links reachable from the main collection page (e.g. sidebar with Taxonomy List or Archives plugins).
+                      highlight: 0
+                      default: 0
+                      options:
+                        1: PLUGIN_ADMIN.ENABLED
+                        0: PLUGIN_ADMIN.DISABLED
+                      validate:
+                        type: bool
