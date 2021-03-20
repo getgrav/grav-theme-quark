@@ -684,7 +684,7 @@ video.video-responsive::before { content: none; }
 
 .accordion .accordion-body { margin-bottom: 0.4rem; max-height: 0; overflow: hidden; transition: max-height .25s; }
 
-summary.accordion-header::-webkit-details-marker { display: none; }
+summary.accordion-header::marker { display: none; }
 
 .avatar { font-size: 0.8rem; height: 1.6rem; width: 1.6rem; background: #3085EE; border-radius: 50%; color: rgba(255, 255, 255, 0.85); display: inline-block; font-weight: 300; line-height: 1.25; margin: 0; position: relative; vertical-align: middle; }
 
