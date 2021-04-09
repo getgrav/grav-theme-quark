@@ -15,6 +15,7 @@
     {{ parent() }}
     {% do assets.add('theme://js/bricklayer.min.js') %}
     {% do assets.add('theme://js/scopedQuerySelectorShim.min.js') %}
+    {% do assets.add('theme://js/bricklayer.loader.js', {group:'bottom-bl'}) %}
 {% endblock %}
 
 
@@ -53,10 +54,7 @@
         {% endembed %}
         </section>
     </section>
-    <script>
-        //Bricklayer
-        var bricklayer = new Bricklayer(document.querySelector('.bricklayer'))
-    </script>
+    {% do assets.add('theme://js/bricklayer.loader.js', {group:'bottom-bl'}) %}
 {% endblock %}
 
 
