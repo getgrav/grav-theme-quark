@@ -1,5 +1,7 @@
 en:
   THEME_QUARK:
+    ADMIN:
+      GRID_SIZE: Grid size
     BLOG:
       ITEM:
         CONTINUE_READING: Continue reading...
