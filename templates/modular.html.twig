@@ -5,6 +5,7 @@
 {% block javascripts %}
     {% if show_onpage_menu %}
         {% do assets.add('theme://js/singlepagenav.min.js') %}
+        {% do assets.add('theme://js/singlepagenav.loader.js', {group:'singlepage'}) %}
     {% endif %}
     {{ parent() }}
 {% endblock %}
@@ -12,15 +13,7 @@
 {% block bottom %}
     {{ parent() }}
     {% if show_onpage_menu %}
-        <script>
-        // singlePageNav initialization & configuration
-        $('ul.navigation').singlePageNav({
-            offset: $('#header').outerHeight(),
-            filter: ':not(.external)',
-            updateHash: true,
-            currentClass: 'active'
-        });
-        </script>
+        {{ assets.js('singlepage', {'loading': 'defer'})|raw }}
     {% endif %}
 {% endblock %}
 
