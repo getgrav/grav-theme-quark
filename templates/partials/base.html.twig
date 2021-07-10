@@ -12,6 +12,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% include 'partials/metadata.html.twig' %}
+    {% if header_var('noindex_url_params')|defined(theme_var('noindex_url_params'))|defined(false) and uri.params is not empty -%}
+    <meta name="robots" content="noindex">
+    {% endif %}
 
     <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
     <link rel="canonical" href="{{ page.url(true, true) }}" />
