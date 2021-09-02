@@ -1,3 +1,9 @@
+# v2.0.4
+## mm/dd/2021
+
+1. [](#bugfix)
+    * Fixed `radio` form field error when admin isn't installed
+
 # v2.0.3
 ## 06/08/2020
 
