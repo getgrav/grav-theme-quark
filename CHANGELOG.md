@@ -1,3 +1,12 @@
+# v2.0.4
+## 09/29/2021
+
+1. [](#new)
+   * Added simple gallery modular page for `lightbox-gallery` plugin
+2. [](#bugfix)
+    * Fixed `radio` form field error when admin isn't installed
+    * Translate `grid size` text
+
 # v2.0.3
 ## 06/08/2020
 
