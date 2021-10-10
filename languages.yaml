@@ -24,6 +24,30 @@ en:
       SYNDICATE:
         HEADLINE: Syndicate
 
+da:
+  THEME_QUARK:
+    BLOG:
+      ITEM:
+        CONTINUE_READING: Læs videre...
+        NEXT_POST: Næste
+        PREV_POST: Forrige
+    SIDEBAR:
+      SIMPLE_SEARCH:
+        HEADLINE: Søg
+      RELATED_POSTS:
+        HEADLINE: Beslægtede artikler
+      RANDOM_ARTICLE:
+        HEADLINE: Tilfældig artikel
+        FEELING_LUCKY: Jeg føler mig heldig!
+      SOME_TEXT_WIDGET:
+        HEADLINE: En tekstwidget
+      POPULAR_TAGS:
+        HEADLINE: Populære tags
+      ARCHIVES:
+        HEADLINE: Arkiver
+      SYNDICATE:
+        HEADLINE: Abonnementer
+
 de:
   THEME_QUARK:
     BLOG:
