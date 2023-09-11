@@ -69,6 +69,18 @@ form:
       accept:
         - image/*
 
+    custom_favicon:
+      type: file
+      label: Custom Favicon
+      size: large
+      destination: 'theme://images/logo'
+      multiple: false
+      markdown: true
+      description: Will be used instead of default favicon `theme://images/favicon.png`. See <a href="https://en.wikipedia.org/wiki/Favicon" target="_blank">Favicon</a> for more details.
+      accept:
+        - image/*
+        - application/octet-stream
+
     header-fixed:
       type: toggle
       label: Fixed header
