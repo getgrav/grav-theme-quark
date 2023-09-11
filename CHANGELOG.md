@@ -1,3 +1,9 @@
+# v2.0.5
+## 09/11/2023
+
+1. [](#improved)
+   * Added `login-status.html.twig` if available
+
 # v2.0.4
 ## 09/29/2021
 
