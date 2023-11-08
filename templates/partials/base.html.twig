@@ -37,7 +37,7 @@
     {{ assets.js()|raw }}
 {% endblock %}
 </head>
-<body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}"{% if config.plugins.prism-highlight.enabled %} data-prismjs-copy="{{ 'PLUGIN_PRISM_HIGHLIGHT.COPY'|t }}" data-prismjs-copy-error="{{ 'PLUGIN_PRISM_HIGHLIGHT.COPY_ERROR'|t }}" data-prismjs-copy-success="{{ 'PLUGIN_PRISM_HIGHLIGHT.COPY_SUCCESS'|t }}"{% endif %}>
+<body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}"{% if config.plugins['prism-highlight'].enabled %} data-prismjs-copy="{{ 'PLUGIN_PRISM_HIGHLIGHT.COPY'|t }}" data-prismjs-copy-error="{{ 'PLUGIN_PRISM_HIGHLIGHT.COPY_ERROR'|t }}" data-prismjs-copy-success="{{ 'PLUGIN_PRISM_HIGHLIGHT.COPY_SUCCESS'|t }}"{% endif %}>
     <div id="page-wrapper">
     {% block header %}
         <section id="header" class="section">
