@@ -1,6 +1,7 @@
 enabled: true
 production-mode: true
 grid-size: grid-lg
+enable-logo: true
 header-fixed: true
 header-animated: true
 header-dark: false
