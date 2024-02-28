@@ -49,6 +49,18 @@ form:
       title: Header Defaults
       underline: true
 
+    enable-logo:
+      type: toggle
+      label: Enable logo
+      help: When enabled either a default logo or custom logo will be used.
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
     custom_logo:
       type: file
       label: Custom Logo
