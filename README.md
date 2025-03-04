@@ -24,6 +24,7 @@
   * Features Modular view template `features.md`
   * Hero Modular view template `hero.md`
   * Text Modular view template `text.md`
+  * Note: Gallery Modular view template `gallery.md` only works in concert with premium plugin [Lightbox Gallery](https://getgrav.org/premium/lightbox-gallery/docs)
 
 # Installation
 
