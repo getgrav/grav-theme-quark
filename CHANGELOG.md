@@ -1,8 +1,12 @@
 # v2.0.5
-## 09/11/2023
+## 03/05/2025
 
 1. [](#improved)
    * Added `login-status.html.twig` if available
+   * Updated `partials/taxonomylist.html.twig` to support latest updates in that plugin
+   * Added `children_only: true` to sidebar template
+   * Fixed `label-primary` class in relatedpages template
+   * Updated README.md [#PR208](https://github.com/getgrav/grav-theme-quark/pull/208)
 
 # v2.0.4
 ## 09/29/2021
