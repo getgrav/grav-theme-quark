@@ -7,6 +7,7 @@
    * Added `children_only: true` to sidebar template
    * Fixed `label-primary` class in relatedpages template
    * Updated README.md [#PR208](https://github.com/getgrav/grav-theme-quark/pull/208)
+   * Applied taxonomy value date format setting in Archives template [#PR165](https://github.com/getgrav/grav-theme-quark/pull/165)
 
 # v2.0.4
 ## 09/29/2021
