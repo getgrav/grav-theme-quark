@@ -147,6 +147,31 @@ it:
       SYNDICATE:
         HEADLINE: Feed
 
+pl:
+  THEME_QUARK:
+    BLOG:
+      ITEM:
+        CONTINUE_READING: Czytaj dalej...
+        NEXT_POST: Następny
+        PREV_POST: Poprzedni
+    SIDEBAR:
+      SIMPLE_SEARCH:
+        HEADLINE: Szukaj
+      RELATED_POSTS:
+        HEADLINE: Powiązane
+      RANDOM_ARTICLE:
+        HEADLINE: Losowy Artykuł
+        FEELING_LUCKY: Szczęśliwy traf
+      SOME_TEXT_WIDGET:
+        HEADLINE: Jakiś Blok Tekstowy
+      POPULAR_TAGS:
+        HEADLINE: Popularne tagi
+      ARCHIVES:
+        HEADLINE: Archiwum
+      SYNDICATE:
+        HEADLINE: Śledzenie
+
+
 ro:
   THEME_QUARK:
     BLOG:
