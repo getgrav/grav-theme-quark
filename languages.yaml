@@ -149,28 +149,29 @@ it:
 
 pl:
   THEME_QUARK:
+    ADMIN:
+      GRID_SIZE: Rozmiar siatki
     BLOG:
       ITEM:
-        CONTINUE_READING: Czytaj dalej...
-        NEXT_POST: Następny
-        PREV_POST: Poprzedni
+        CONTINUE_READING: Kontynuuj czytanie...
+        NEXT_POST: Następny wpis
+        PREV_POST: Poprzedni wpis
     SIDEBAR:
       SIMPLE_SEARCH:
         HEADLINE: Szukaj
       RELATED_POSTS:
-        HEADLINE: Powiązane
+        HEADLINE: Powiązane wpisy
       RANDOM_ARTICLE:
-        HEADLINE: Losowy Artykuł
-        FEELING_LUCKY: Szczęśliwy traf
+        HEADLINE: Losowy artykuł
+        FEELING_LUCKY: Mam szczęście!
       SOME_TEXT_WIDGET:
-        HEADLINE: Jakiś Blok Tekstowy
+        HEADLINE: Jakiś widżet tekstowy
       POPULAR_TAGS:
         HEADLINE: Popularne tagi
       ARCHIVES:
-        HEADLINE: Archiwum
+        HEADLINE: Archiwa
       SYNDICATE:
-        HEADLINE: Śledzenie
-
+        HEADLINE: Syndykacja
 
 ro:
   THEME_QUARK:
