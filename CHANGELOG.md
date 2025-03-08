@@ -1,3 +1,11 @@
+# v2.1.0
+## 03/08/2025
+
+1. [](#new)
+   * Added Estonian translation [PR#205](https://github.com/getgrav/grav-theme-quark/pull/205)
+   * Added Japanese translation [PR#126](https://github.com/getgrav/grav-theme-quark/pull/126)
+   * Added Polish translation [PR#173](https://github.com/getgrav/grav-theme-quark/pull/173)
+
 # v2.0.5
 ## 03/05/2025
 
