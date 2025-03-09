@@ -1,7 +1,42 @@
 en:
   THEME_QUARK:
     ADMIN:
-      GRID_SIZE: Grid size
+      PRODUCTION_MODE: "Production Mode"
+      PRODUCTION_MODE_HELP: "When enabled, Quark will render with minified CSS"
+      GRID_SIZE: "Grid Size"
+      GRID_SIZE_HELP: "The maximum width of the theme"
+      GRID_SIZE_NONE: "None (full width)"
+      GRID_SIZE_EXTRA_LARGE: "Extra Large"
+      GRID_SIZE_LARGE: "Large"
+      GRID_SIZE_MEDIUM: "Medium"
+      HEADER_DEFAULTS: "Header Defaults"
+      CUSTOM_LOGO: "Custom Logo"
+      CUSTOM_LOGO_DESCRIPTION: "Will be used instead of the default logo `theme://images/grav-logo.svg`"
+      CUSTOM_LOGO_MOBILE: "Mobile Custom Logo"
+      HEADER_FIXED: "Fixed Header"
+      HEADER_FIXED_HELP: "When enabled, the header will be fixed at the top of the browser"
+      HEADER_ANIMATED: "Animated"
+      HEADER_ANIMATED_HELP: "When enabled, the header will animate to a smaller size when scrolling"
+      HEADER_DARK: "Dark Style"
+      HEADER_DARK_HELP: "When enabled, a dark-friendly style will be used"
+      HEADER_TRANSPARENT: "Transparent"
+      HEADER_TRANSPARENT_HELP: "When enabled, a transparent style will be used"
+      FOOTER_DEFAULTS: "Footer Defaults"
+      STICKY_FOOTER: "Sticky Footer"
+      STICKY_FOOTER_HELP: "When enabled, the footer will be sticky at the bottom of the browser"
+      BLOG_DEFAULTS: "Blog Defaults"
+      BLOG_PAGE: "Blog Page"
+      BLOG_PAGE_HELP: "The route to the blog page when working with the blog sidebar"
+      SPECTRE_OPTIONS: "Spectre.css Options"
+      SPECTRE_EXP: "Experimental CSS"
+      SPECTRE_EXP_HELP: "When enabled, the `spectre-exp.css` file will be included"
+      SPECTRE_ICONS: "Icons CSS"
+      SPECTRE_ICONS_HELP: "When enabled, the `spectre-icons.css` file will be included"
+
+      MODULAR:
+        COMMON:
+          SHOW_ONPAGE_MENU: Show navigation on one-page sites
+          SHOW_ONPAGE_MENU_HELP: On single-page sites, it adds smooth scrolling on click navigation and automatically selects the correct navigation elements as you scroll through different sections.
     BLOG:
       ITEM:
         CONTINUE_READING: Continue reading...
@@ -50,6 +85,43 @@ de:
 
 es:
   THEME_QUARK:
+    ADMIN:
+      PRODUCTION_MODE: "Modo de producción"
+      PRODUCTION_MODE_HELP: "Cuando está habilitado, Quark renderizará con CSS minificado"
+      GRID_SIZE: "Tamaño de la cuadrícula"
+      GRID_SIZE_HELP: "El ancho máximo del tema"
+      GRID_SIZE_NONE: "Ninguno (ancho completo)"
+      GRID_SIZE_EXTRA_LARGE: "Extra Grande"
+      GRID_SIZE_LARGE: "Grande"
+      GRID_SIZE_MEDIUM: "Mediano"
+      HEADER_DEFAULTS: "Configuración predeterminada del encabezado"
+      CUSTOM_LOGO: "Logo personalizado"
+      CUSTOM_LOGO_DESCRIPTION: "Se utilizará en lugar del logo predeterminado `theme://images/grav-logo.svg`"
+      CUSTOM_LOGO_MOBILE: "Logo personalizado para móviles"
+      HEADER_FIXED: "Encabezado fijo"
+      HEADER_FIXED_HELP: "Cuando está habilitado, el encabezado se fijará en la parte superior del navegador"
+      HEADER_ANIMATED: "Animado"
+      HEADER_ANIMATED_HELP: "Cuando está habilitado, el encabezado se animará a un encabezado más pequeño al desplazarse"
+      HEADER_DARK: "Estilo oscuro"
+      HEADER_DARK_HELP: "Cuando está habilitado, se utilizará un estilo compatible con el modo oscuro"
+      HEADER_TRANSPARENT: "Transparente"
+      HEADER_TRANSPARENT_HELP: "Cuando está habilitado, se utilizará un estilo transparente"
+      FOOTER_DEFAULTS: "Configuración predeterminada del pie de página"
+      STICKY_FOOTER: "Pie de página fijo"
+      STICKY_FOOTER_HELP: "Cuando está habilitado, el pie de página se fijará en la parte inferior del navegador"
+      BLOG_DEFAULTS: "Configuración predeterminada del blog"
+      BLOG_PAGE: "Página del blog"
+      BLOG_PAGE_HELP: "La ruta a la página del blog cuando se trabaja con la barra lateral del blog"
+      SPECTRE_OPTIONS: "Opciones de Spectre.css"
+      SPECTRE_EXP: "CSS experimental"
+      SPECTRE_EXP_HELP: "Cuando está habilitado, se incluirá el archivo `spectre-exp.css`"
+      SPECTRE_ICONS: "CSS de iconos"
+      SPECTRE_ICONS_HELP: "Cuando está habilitado, se incluirá el archivo `spectre-icons.css`"
+    
+      MODULAR:
+        COMMON:
+          SHOW_ONPAGE_MENU: Mostrar navegación en sitios de una página
+          SHOW_ONPAGE_MENU_HELP: En sitios de una sola página, añade desplazamiento suave al hacer clic en la navegación y selecciona automáticamente los elementos de navegación correctos a medida que te desplazas por las diferentes secciones.
     BLOG:
       ITEM:
         CONTINUE_READING: Continuar leyendo...
