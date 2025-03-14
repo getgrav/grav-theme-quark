@@ -1,7 +1,5 @@
 {% import 'macros/macros.html.twig' as macros %}
 
-{% include 'partials/login-status.html.twig' ignore missing %}
-
 <ul {{ tree ? 'class="tree"' : '' }}>
     {{ macros.nav_loop(pages) }}
 </ul>

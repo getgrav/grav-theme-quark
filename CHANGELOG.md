@@ -1,3 +1,13 @@
+# v2.1.1
+## 03/14/2025
+
+1. [](#new)
+    * Added modular template
+    * Added multilingual support for the theme options in the admin panel. Initial translations include English and Spanish. 
+    * Added a new toggle option in the admin panel for modular pages to enable or disable the `onepage_menu` functionality directly from the page settings.
+1. [](#bugfix)
+    * Removed double `login-status.html.twig` reference, and added `ignore missing` on include in `base.html.twig`
+
 # v2.1.0
 ## 03/08/2025
 
