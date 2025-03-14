@@ -55,7 +55,7 @@
                         </nav>
 
                         {% if config.plugins.login.enabled and grav.user.username %}
-                            <span class="login-status-wrapper"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' %}</span>
+                            <span class="login-status-wrapper"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' ignore missing %}</span>
                         {% endif %}
 
                     </section>
