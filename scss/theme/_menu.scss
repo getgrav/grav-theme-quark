@@ -39,9 +39,16 @@
             content: '';
           }
         }
+        &:focus + ul {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
       }
 
-      &:hover {
+      &:hover, &:focus-within {
         & > ul {
           display: block;
           visibility: visible;
