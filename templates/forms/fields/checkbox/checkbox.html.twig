@@ -24,7 +24,7 @@
                 {% if field.novalidate in ['on', 'true', 1] %}novalidate="novalidate"{% endif %}
                 {% if required %}required="required"{% endif %}
             {% endblock %}
-            />
+            >
             <i class="form-icon"></i>
             {{ field.label|t|e }} {{ field.validate.required in ['on', 'true', 1] ? '<span class="required">*</span>' }}
         </label>

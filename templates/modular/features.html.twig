@@ -1,7 +1,7 @@
 {% set grid_size = theme_var('grid-size') %}
 {% set columns = page.header.class == 'small' ? 'col-3 col-md-4 col-sm-6' : 'col-4 col-md-6 col-sm-12'  %}
-<section class="section modular-features {{ page.header.class}}">
-        <section class="container {{ grid_size }}">
+<div class="section modular-features {{ page.header.class}}">
+        <div class="container {{ grid_size }}">
             <div class="frame-box">
 
                 {{ content|raw }}
@@ -26,5 +26,5 @@
                 {% endfor %}
                 </div>
             </div>
-        </section>
-</section>
+        </div>
+</div>
