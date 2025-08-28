@@ -40,7 +40,7 @@
 <body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
     <div id="page-wrapper">
     {% block header %}
-        <div id="header" class="section">
+        <header id="header" class="section">
             <div class="container {{ grid_size }}">
                 <nav class="navbar">
                     <div class="navbar-section logo">
@@ -55,15 +55,18 @@
                         </nav>
 
                         {% if config.plugins.login.enabled and grav.user.username %}
-                            <span class="login-status-wrapper"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' ignore missing %}</span>
+                            <div class="login-status-wrapper"><i class="fa fa-user" aria-hidden="true"></i> {% include 'partials/login-status.html.twig' ignore missing %}</div>
                         {% endif %}
 
                     </div>
                 </nav>
             </div>
-        </div>
+        </header>
         <div class="mobile-menu">
-            <div class="button_container" id="toggle">
+            <div class="button_container" id="toggle" role="button" tabindex="0"
+                aria-label="{{ 'THEME_QUARK.ARIA_LABELS.OPEN_MOBILE_MENU'|t }}"
+                aria-expanded="false"
+                aria-controls="overlay">
                 <span class="top"></span>
                 <span class="middle"></span>
                 <span class="bottom"></span>
@@ -73,7 +76,7 @@
 
     {% block hero %}{% endblock %}
 
-        <div id="start">
+        <main id="start">
         {% block body %}
             <div id="body-wrapper" class="section">
                 <div class="container {{ grid_size }}">
@@ -84,7 +87,7 @@
                 </div>
             </div>
         {% endblock %}
-        </div>
+        </main>
 
     </div>
 

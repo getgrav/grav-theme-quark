@@ -58,7 +58,37 @@ en:
         HEADLINE: Archives
       SYNDICATE:
         HEADLINE: Syndicate
-
+    ARIA_LABELS:
+      OPEN_MOBILE_MENU: "Open mobile menu"
+      BREADCRUMB_NAVIGATION: "Breadcrumb navigation"
+      MONTHLY_ARCHIVES: "Monthly archives"
+      BLOG_ARTICLES_LIST: "Blog articles list"
+      BLOG_POST_CARD: "Blog post card"
+      BLOG_READ_FULL_ARTICLE: "Read full article: "
+      BLOG_POST: "Blog post"
+      BLOG_POST_SUMMARY: "Post summary"
+      BLOG_POST_CONTENT: "Post content"
+      BLOG_POST_NAVIGATION: "Post navigation"
+      BLOG_POST_PREVIOUS: "Previous post: "
+      BLOG_POST_NEXT: "Next post: "
+      BLOG_POST_CONTINUE_READING: "Continue reading "
+      PAGINATION_NAVIGATION: "Page navigation"
+      PAGE_SECTIONS_NAVIGATION: "Page sections navigation"
+      MAIN_CONTENT: "Main content"
+      SIDEBAR: "Sidebar"
+      MAIN_CONTENT_AND_SIDEBAR: "Main content and sidebar"
+      MAIN_BLOG_CONTENT: "Main blog content"
+      RELATED_PAGES: "Related pages"
+      RELATED_ARTICLE: "Related article: "
+      RELEVANCE_SCORE: "Relevance score: "
+      MAIN_NAVIGATION: "Main navigation"
+      SUBMENU_FOR: "Submenu for "
+      SYSTEM_MESSAGES: "System messages"
+      MESSAGES:
+        INFO: "Information message"
+        ERROR: "Error message" 
+        WARNING: "Warning message"
+        SUCCESS: "Success message"
 de:
   THEME_QUARK:
     BLOG:
@@ -143,6 +173,37 @@ es:
         HEADLINE: Archivos
       SYNDICATE:
         HEADLINE: Distribuir
+    ARIA_LABELS:
+      OPEN_MOBILE_MENU: "Abrir menú móvil"
+      BREADCRUMB_NAVIGATION: "Navegación de migas de pan"
+      MONTHLY_ARCHIVES: "Archivos mensuales"
+      BLOG_ARTICLES_LIST: "Lista de artículos del blog"
+      BLOG_POST_CARD: "Tarjeta de artículo del blog"
+      BLOG_READ_FULL_ARTICLE: "Leer artículo completo: "
+      BLOG_POST: "Artículo del blog"
+      BLOG_POST_SUMMARY: "Resumen del artículo"
+      BLOG_POST_CONTENT: "Contenido del artículo"
+      BLOG_POST_NAVIGATION: "Navegación entre artículos"
+      BLOG_POST_PREVIOUS: "Artículo anterior: "
+      BLOG_POST_NEXT: "Artículo siguiente: "
+      BLOG_POST_CONTINUE_READING: "Continuar leyendo "
+      PAGINATION_NAVIGATION: "Navegación de páginas"
+      PAGE_SECTIONS_NAVIGATION: "Navegación de secciones de página"
+      MAIN_CONTENT: "Contenido principal"
+      SIDEBAR: "Barra lateral"
+      MAIN_CONTENT_AND_SIDEBAR: "Contenido principal y barra lateral"
+      MAIN_BLOG_CONTENT: "Contenido principal del blog"
+      RELATED_PAGES: "Páginas relacionadas"
+      RELATED_ARTICLE: "Artículo relacionado: "
+      RELEVANCE_SCORE: "Puntuación de relevancia: "
+      MAIN_NAVIGATION: "Navegación principal"
+      SUBMENU_FOR: "Submenú para "
+      SYSTEM_MESSAGES: "Mensajes del sistema"
+    MESSAGES:
+      INFO: "Mensaje informativo"
+      ERROR: "Mensaje de error"
+      WARNING: "Mensaje de advertencia"
+      SUCCESS: "Mensaje de éxito"
 
 et:
   THEME_QUARK:

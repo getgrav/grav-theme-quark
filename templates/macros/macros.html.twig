@@ -2,12 +2,20 @@
   {% import _self as macros %}
   {% for p in page.children.visible %}
     {% set active_page = (p.active or p.activeChild) ? 'active' : '' %}
-    <li>
-      <a href="{{ p.url }}" class="{{ active_page }}">
+    {% set has_children = p.children.visible.count > 0 %}
+    
+    <li role="none">
+      <a href="{{ p.url }}" 
+         class="{{ active_page }}"
+         role="menuitem"
+         aria-haspopup="{{ has_children ? 'true' : 'false' }}"
+         aria-expanded="{{ has_children and p.active ? 'true' : 'false' }}"
+         {% if p.active %}aria-current="page"{% endif %}>
         {{ p.menu }}
       </a>
-      {% if p.children.visible.count > 0 %}
-      <ul>
+      
+      {% if has_children %}
+      <ul role="menu" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.SUBMENU_FOR'|t }}{{ p.menu }}">
         {{ macros.nav_loop(p) }}
       </ul>
       {% endif %}

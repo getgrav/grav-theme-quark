@@ -3,7 +3,7 @@
 {% set collection = page.collection() %}
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog])|defined(true) %}
-{% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
+{% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true) %}
 {% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
 
 {% block stylesheets %}
@@ -17,47 +17,51 @@
     {% do assets.add('theme://js/scopedQuerySelectorShim.min.js') %}
 {% endblock %}
 
-
 {% block hero %}
     {% include 'partials/hero.html.twig' with {id: 'blog-hero', content: page.content, hero_image: blog_image} %}
 {% endblock %}
 
 {% block body %}
-    <div id="body-wrapper" class="section blog-listing">
-        <div class="container {{ grid_size }}">
-
+<div id="body-wrapper" class="section blog-listing">
+    <div class="container {{ grid_size }}">
         {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-            {% include 'partials/breadcrumbs.html.twig' %}
+            <nav aria-label="{{ 'THEME_QUARK.ARIA_LABELS.BREADCRUMB_NAVIGATION'|t }}">
+                {% include 'partials/breadcrumbs.html.twig' %}
+            </nav>
         {% endif %}
-
+        
         {% embed 'partials/layout.html.twig' with {blog: page} %}
             {% block item %}
-
-                <div class="bricklayer">
-                {% for child in collection %}
-                    {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
-                {% endfor %}
+                <div class="bricklayer" role="main" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.BLOG_ARTICLES_LIST'|t }}">
+                    {% for child in collection %}
+                        {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
+                    {% endfor %}
                 </div>
-
+                
                 {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
-                    <div id="listing-footer">
+                    <nav id="listing-footer" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.PAGINATION_NAVIGATION'|t }}">
                         {% include 'partials/pagination.html.twig' with {base_url: page.url, pagination: collection.params.pagination} %}
-                    </div>
+                    </nav>
                 {% endif %}
-
             {% endblock %}
-
+            
             {% block sidebar %}
                 {% include 'partials/sidebar.html.twig' %}
             {% endblock %}
         {% endembed %}
-        </div>
     </div>
-    <script>
-        //Bricklayer
-        var bricklayer = new Bricklayer(document.querySelector('.bricklayer'))
-    </script>
+</div>
 {% endblock %}
 
-
-
+{% block bottom %}
+    {{ parent() }}
+    <script>
+        // Bricklayer initialization with verification
+        document.addEventListener('DOMContentLoaded', function() {
+            var bricklayerElement = document.querySelector('.bricklayer');
+            if (bricklayerElement && typeof Bricklayer !== 'undefined') {
+                var bricklayer = new Bricklayer(bricklayerElement);
+            }
+        });
+    </script>
+{% endblock %}

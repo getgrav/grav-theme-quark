@@ -14,7 +14,7 @@ html {
   padding-top: 0;
 }
 
-div.section {
+section.section {
   padding-left: 1rem;
   padding-right: 1rem;
   position: relative;
@@ -152,7 +152,7 @@ h6, .h6 {
 
 .title-h1h2 h1 {
   font-weight: 100;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   line-height: 1.1;
 }
 .title-h1h2 h1 strong, .title-h1h2 h1 bold {

@@ -1,14 +1,14 @@
 {% set item_col = show_sidebar ? 'col-9 col-md-12' : 'col-12' %}
 {% set sidebar_col = show_sidebar ? 'col-3 col-md-12' : 'col-12' %}
 
-<div class="columns">
-    <div id="item" class="column {{ item_col }} extra-spacing">
+<div class="columns" role="main" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.MAIN_CONTENT_AND_SIDEBAR'|t }}">
+    <main id="item" class="column {{ item_col }} extra-spacing" role="main" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.MAIN_CONTENT'|t }}">
         {% block item %}{% endblock %}
-    </div>
+    </main>
+    
     {% if show_sidebar %}
-    <div id="sidebar" class="column {{ sidebar_col }}">
+    <aside id="sidebar" class="column {{ sidebar_col }}" role="complementary" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.SIDEBAR'|t }}">
         {% block sidebar %}{% endblock %}
-    </div>
+    </aside>
     {% endif %}
 </div>
-
