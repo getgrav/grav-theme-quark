@@ -1,12 +1,12 @@
-<ul class="archives">
-
+<ul class="archives" role="list" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.MONTHLY_ARCHIVES'|t }}">
 {% for month,items in archives_data %}
-    <li>
-    	<a href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date(config.plugins.archives.taxonomy_values.month)|lower|e('url') }}">
-        {% if archives_show_count %}
-        <span class="label label-rounded label-primary">{{ items|length }}</span>
-        {% endif %}
-          <span class="archive_date">{{ month|date(config.plugins.archives.date_display_format) }} </span>
+    <li role="listitem">
+        <a href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date(config.plugins.archives.taxonomy_values.month)|lower|e('url') }}"
+           arial-label="{{ ('THEME_QUARK.ARIA_LABELS.POSTS_FROM'|t) ~ month|date(config.plugins.archives.date_display_format) }} ({{ items|length }} {{ items|length == 1 ? 'post' : 'posts' }})">
+            {% if archives_show_count %}
+            <span class="label label-rounded label-primary" aria-hidden="true">{{ items|length }}</span>
+            {% endif %}
+            <span class="archive_date">{{ month|date(config.plugins.archives.date_display_format) }}</span>
         </a>
     </li>
 {% endfor %}

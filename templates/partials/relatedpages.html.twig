@@ -1,14 +1,18 @@
-<ul class="related-pages menu">
+<ul class="related-pages menu" role="list" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.RELATED_PAGES'|t }}">
     {% for related_path, score in related_pages %}
         {% set related = grav['pages'].get(related_path) %}
         {% if related %}
-            <li class="menu-item">
+            <li class="menu-item" role="listitem">
                 {% if config.plugins.relatedpages.show_score %}
-                    <div class="menu-badge">
+                    <div class="menu-badge" aria-hidden="true">
                         <span class="label label-primary">{{ score }}</span>
                     </div>
                 {% endif %}
-                <a href="{{ related.url }}" title="{{ related.title }}">{{ related.title }}</a>
+                <a href="{{ related.url }}" 
+                   title="{{ related.title }}"
+                   aria-label="{{ 'THEME_QUARK.ARIA_LABELS.RELATED_POST'|t }} {{ related.title }}{% if config.plugins.relatedpages.show_score %} ({{ 'THEME_QUARK.ARIA_LABELS.RELEVANCE_SCORE'|t }}{{ score }}){% endif %}">
+                    {{ related.title }}
+                </a>
             </li>
         {% endif %}
     {% endfor %}

@@ -1,7 +1,12 @@
 {% if page.taxonomy.tag %}
-<span class="tags">
+<span class="tags" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.POST_TAGS'|t }}">
     {% for tag in page.taxonomy.tag %}
-    <a class="label label-rounded {{ label_style ?: 'label-secondary' }} p-category" href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}#body-wrapper">{{ tag }}</a>
+    <a class="label label-rounded {{ label_style ?: 'label-secondary' }} p-category" 
+       href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}#body-wrapper"
+       rel="tag"
+       aria-label="{{ 'THEME_QUARK.ARIA_LABELS.VIEW_ALL_POSTS_TAGGED'|t }}{{ tag }}">
+        {{ tag }}
+    </a>
     {% endfor %}
 </span>
 {% endif %}

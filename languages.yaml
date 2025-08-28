@@ -58,7 +58,41 @@ en:
         HEADLINE: Archives
       SYNDICATE:
         HEADLINE: Syndicate
-
+    ARIA_LABELS:
+      OPEN_MOBILE_MENU: "Open mobile menu"
+      BREADCRUMB_NAVIGATION: "Breadcrumb navigation"
+      MONTHLY_ARCHIVES: "Monthly archives"
+      POSTS_FROM: "Posts from "
+      POST_TAGS: "Post tags"
+      VIEW_ALL_POSTS_TAGGED: "View all posts tagged with "
+      BLOG_POSTS_LIST: "Blog posts list"
+      BLOG_POST_CARD: "Blog post card"
+      BLOG_READ_FULL_POST: "Read full post: "
+      BLOG_POST: "Blog post"
+      BLOG_POST_SUMMARY: "Post summary"
+      BLOG_POST_CONTENT: "Post content"
+      BLOG_POST_NAVIGATION: "Post navigation"
+      BLOG_POST_PREVIOUS: "Previous post: "
+      BLOG_POST_NEXT: "Next post: "
+      BLOG_POST_CONTINUE_READING: "Continue reading "
+      BLOG_POST_PUBLISHED_DATE: "Published date"
+      PAGINATION_NAVIGATION: "Page navigation"
+      PAGE_SECTIONS_NAVIGATION: "Page sections navigation"
+      MAIN_CONTENT: "Main content"
+      SIDEBAR: "Sidebar"
+      MAIN_CONTENT_AND_SIDEBAR: "Main content and sidebar"
+      MAIN_BLOG_CONTENT: "Main blog content"
+      RELATED_PAGES: "Related pages"
+      RELATED_POST: "Related post: "
+      RELEVANCE_SCORE: "Relevance score: "
+      MAIN_NAVIGATION: "Main navigation"
+      SUBMENU_FOR: "Submenu for "
+      SYSTEM_MESSAGES: "System messages"
+      MESSAGES:
+        INFO: "Information message"
+        ERROR: "Error message" 
+        WARNING: "Warning message"
+        SUCCESS: "Success message"
 de:
   THEME_QUARK:
     BLOG:
@@ -143,6 +177,41 @@ es:
         HEADLINE: Archivos
       SYNDICATE:
         HEADLINE: Distribuir
+    ARIA_LABELS:
+      OPEN_MOBILE_MENU: "Abrir menú móvil"
+      BREADCRUMB_NAVIGATION: "Navegación por migas de pan"
+      MONTHLY_ARCHIVES: "Archivos mensuales"
+      POSTS_FROM: "Entradas de "
+      POST_TAGS: "Etiquetas de la entrada"
+      VIEW_ALL_POSTS_TAGGED: "Ver todas las entradas etiquetadas con "
+      BLOG_POSTS_LIST: "Lista de entradas del blog"
+      BLOG_POST_CARD: "Tarjeta de entrada del blog"
+      BLOG_READ_FULL_POST: "Leer la entrada completa: "
+      BLOG_POST: "Entrada del blog"
+      BLOG_POST_SUMMARY: "Resumen de la entrada"
+      BLOG_POST_CONTENT: "Contenido de la entrada"
+      BLOG_POST_NAVIGATION: "Navegación de entradas"
+      BLOG_POST_PREVIOUS: "Entrada anterior: "
+      BLOG_POST_NEXT: "Entrada siguiente: "
+      BLOG_POST_CONTINUE_READING: "Seguir leyendo "
+      BLOG_POST_PUBLISHED_DATE: "Fecha de publicación"
+      PAGINATION_NAVIGATION: "Navegación de páginas"
+      PAGE_SECTIONS_NAVIGATION: "Navegación por secciones de la página"
+      MAIN_CONTENT: "Contenido principal"
+      SIDEBAR: "Barra lateral"
+      MAIN_CONTENT_AND_SIDEBAR: "Contenido principal y barra lateral"
+      MAIN_BLOG_CONTENT: "Contenido principal del blog"
+      RELATED_PAGES: "Páginas relacionadas"
+      RELATED_POST: "Entrada relacionada: "
+      RELEVANCE_SCORE: "Puntuación de relevancia: "
+      MAIN_NAVIGATION: "Navegación principal"
+      SUBMENU_FOR: "Submenú de "
+      SYSTEM_MESSAGES: "Mensajes del sistema"
+      MESSAGES:
+        INFO: "Mensaje informativo"
+        ERROR: "Mensaje de error"
+        WARNING: "Mensaje de advertencia"
+        SUCCESS: "Mensaje de éxito"
 
 et:
   THEME_QUARK:

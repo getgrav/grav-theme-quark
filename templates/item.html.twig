@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog])|defined(true) %}
-{% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
+{% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true) %}
 {% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
 {% set hero_image_name = page.header.hero_image %}
 
@@ -10,32 +10,42 @@
         {% set hero_image = page.media[hero_image_name] %}
         {% set content %}
             <h1>{{ page.title }}</h1>
-            <h2>{{ page.header.subtitle }}</h2>
+            {% if page.header.subtitle %}
+                <h2>{{ page.header.subtitle }}</h2>
+            {% endif %}
             {% include 'partials/blog/date.html.twig' %}
             {% include 'partials/blog/taxonomy.html.twig' %}
         {% endset %}
         {% include 'partials/hero.html.twig' with {id: 'blog-hero'} %}
-
     {% endif %}
 {% endblock %}
 
 {% block body %}
-<section id="body-wrapper" class="section blog-listing">
-    <section class="container {{ grid_size }}">
+<section id="body-wrapper" class="section blog-listing" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.MAIN_BLOG_CONTENT'|t }}">
+    <div class="container {{ grid_size }}">
 
         {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-            {% include 'partials/breadcrumbs.html.twig' %}
+            <nav aria-label="{{ 'THEME_QUARK.ARIA_LABELS.BREADCRUMB_NAVIGATION'|t }}">
+                {% include 'partials/breadcrumbs.html.twig' %}
+            </nav>
         {% endif %}
 
         {% embed 'partials/layout.html.twig' %}
             {% block item %}
                 {% include 'partials/blog-item.html.twig' %}
+
+                {% if show_pagination and config.plugins.pagination.enabled %}
+                    <nav aria-label="{{ 'THEME_QUARK.ARIA_LABELS.PAGINATION_NAVIGATION'|t }}">
+                        {% include 'partials/pagination.html.twig' %}
+                    </nav>
+                {% endif %}
             {% endblock %}
+            
             {% block sidebar %}
                 {% include 'partials/sidebar.html.twig' %}
             {% endblock %}
         {% endembed %}
 
-    </section>
+    </div>
 </section>
 {% endblock %}

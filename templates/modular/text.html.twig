@@ -1,21 +1,26 @@
 {% set grid_size = theme_var('grid-size') %}
 {% set image = page.media.images|first %}
 
-<section class="section modular-text {{ page.header.class}} bg-gray">
-    <section class="container {{ grid_size }}">
-        <div class="columns {{ page.header.image_align|default('align-right') }}">
+<section class="section modular-text {{ page.header.class }} bg-gray" aria-label="Text content section">
+    <div class="container {{ grid_size }}">
+        <div class="columns {{ page.header.image_align|default('align-right') }}" role="region">
             {% if image %}
-            <div class="column col-6 col-md-12">
+            <div class="column col-6 col-md-12" role="article">
                 {{ content|raw }}
             </div>
-            <div class="column col-6 col-md-12">
-                {{ image.html|raw }}
+            <div class="column col-6 col-md-12" role="complementary">
+                <figure>
+                    {{ image.html|raw }}
+                    {% if image.meta.alt %}
+                        <figcaption class="visually-hidden">{{ image.meta.alt }}</figcaption>
+                    {% endif %}
+                </figure>
             </div>
             {% else %}
-            <div class="column col-12">
+            <div class="column col-12" role="article">
                 {{ content|raw }}
             </div>
             {% endif %}
         </div>
-    </section>
+    </div>
 </section>

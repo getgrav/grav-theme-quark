@@ -1,8 +1,7 @@
-<div class="p-summary e-content">
+<div class="p-summary e-content" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.BLOG_POST_SUMMARY'|t }}">
     {% if page.summary != page.content %}
         {{ page.summary|raw }}
     {% else %}
         {{ page.content|raw }}
     {% endif %}
 </div>
-

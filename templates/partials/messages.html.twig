@@ -1,16 +1,24 @@
 {% set type_mapping = {'info':'success', 'error': 'error', 'warning': 'warning'} %}
 {% set icon_mapping = {'info':'checkmark', 'error':'wrong', 'warning':'information'} %}
+{% set role_mapping = {'info':'status', 'error': 'alert', 'warning': 'alert'} %}
+{% set aria_live_mapping = {'info':'polite', 'error': 'assertive', 'warning': 'assertive'} %}
 
 {% if grav.messages.all %}
-    <div id="messages">
+    <div id="messages" role="region" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.SYSTEM_MESSAGES'|t }}">
     {% for message in grav.messages.fetch %}
 
         {% set scope = message.scope|e %}
         {% set type = type_mapping[scope] %}
         {% set icon = icon_mapping[scope] %}
+        {% set role = role_mapping[scope] %}
+        {% set aria_live = aria_live_mapping[scope] %}
 
-        <div class="toast toast-{{ type }} {{ scope }}">
-            <i class="icon dripicons-{{ icon }}"></i> {{ message.message|raw }}
+        <div class="toast toast-{{ type }} {{ scope }}" 
+             role="{{ role }}" 
+             aria-live="{{ aria_live }}"
+             aria-label="{{ ('THEME_QUARK.ARIA_LABELS.MESSAGES.' ~ scope|upper)|t }}"
+            <i class="icon dripicons-{{ icon }}" aria-hidden="true"></i> 
+            <span class="message-content">{{ message.message|raw }}</span>
         </div>
     {% endfor %}
     </div>

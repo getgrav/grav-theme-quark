@@ -1,6 +1,6 @@
 {% import 'macros/macros.html.twig' as macros %}
 
-<ul {{ tree ? 'class="tree"' : '' }}>
+<ul {{ tree ? 'class="tree"' : '' }} role="menu" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.MAIN_NAVIGATION'|t }}">
     {{ macros.nav_loop(pages) }}
 </ul>
 

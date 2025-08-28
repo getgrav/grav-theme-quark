@@ -2,10 +2,14 @@
 {% if page.header.link %}
     <{{ title_level }} class="p-name mt-1">
         {% if page.header.continue_link is not same as(false) %}
-        <a href="{{ page.url }}"><i class="fa fa-angle-double-right u-url"></i></a>
+        <a href="{{ page.url }}" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.BLOG_POST_CONTINUE_READING'|t }}{{ page.title }}">
+            <i class="fa fa-angle-double-right u-url" aria-hidden="true"></i>
+        </a>
         {% endif %}
-        <a href="{{ page.header.link }}" class="u-url">{{ page.title }}</a>
+        <a href="{{ page.header.link }}" class="u-url" rel="bookmark">{{ page.title }}</a>
     </{{ title_level }}>
 {% else %}
-    <{{ title_level }} class="p-name mt-1"><a href="{{ page.url }}" class="u-url">{{ page.title }}</a></{{ title_level }}>
+    <{{ title_level }} class="p-name mt-1">
+        <a href="{{ page.url }}" class="u-url" rel="bookmark">{{ page.title }}</a>
+    </{{ title_level }}>
 {% endif %}

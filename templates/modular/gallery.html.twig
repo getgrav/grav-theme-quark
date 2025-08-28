@@ -40,8 +40,16 @@
   }
 }
 
-.lightbox-gallery .hidden {
-  display: none;
+.lightbox-gallery .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 {% endset %}
 
@@ -52,32 +60,44 @@
   {% set thumb_width = data.thumb.width|default(600) %}
   {% set thumb_height = data.thumb.height|default(450) %}
 
-  <div class="lightbox-gallery">
-    <div class="lightbox-gallery__columns">
+  <section class="lightbox-gallery" aria-labelledby="gallery-heading">
+    <h2 id="gallery-heading" class="visually-hidden">{{ page.title }} Gallery</h2>
+    
+    <div class="lightbox-gallery__columns" role="list" aria-label="Gallery images">
       {% set gallery = md5(page.url) %}
       {% for item in data.items %}
-        <div class="lightbox-gallery__column">
+        <div class="lightbox-gallery__column" role="listitem">
           {% set item_image = page.media[item.image] %}
-          {% if item.title %}
-            {% set title = item.title %}
-          {% endif %}
-          {% if item.desc %}
-            {% set desc = ".desc-" ~ md5(item.desc) %}
-          {% endif %}
-          {% set content = item_image.cropZoom(thumb_width,thumb_height).html(title, title) %}
-          {% set image =  item_image.url %}
-          {% include "partials/lightbox.html.twig" %}
+          {% set title = item.title|default('Image ' ~ loop.index) %}
+          {% set alt_text = item.alt|default('Gallery image ' ~ loop.index ~ ' - ' ~ page.title) %}
+          
+          <figure>
+            {% include "partials/lightbox.html.twig" with {
+              'title': title,
+              'alt_text': alt_text,
+              'desc': item.desc,
+              'item_image': item_image,
+              'thumb_width': thumb_width,
+              'thumb_height': thumb_height,
+              'gallery': gallery
+            } %}
+            
+            {% if item.title %}
+              <figcaption class="visually-hidden">{{ item.title }}</figcaption>
+            {% endif %}
+          </figure>
         </div>
       {% endfor %}
     </div>
-    <div class="hidden">
+    
+    <div class="visually-hidden" aria-hidden="true">
       {% for item in data.items %}
         {% if item.desc %}
-          <div class="glightbox-desc desc-{{ md5(item.desc) }}">
-            <p>{{ item.desc|markdown(false) }}</p>
+          <div id="desc-{{ md5(item.desc) }}">
+            {{ item.desc|markdown(false) }}
           </div>
         {% endif %}
       {% endfor %}
     </div>
-  </div>
+  </section>
 {% endblock %}

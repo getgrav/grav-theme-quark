@@ -1,27 +1,31 @@
-<div class="card">
+<article class="card" role="article" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.BLOG_POST_CARD'|t }}">
     {% set image = page.media.images|first %}
     {% if image %}
     <div class="card-image">
-        <a href="{{ page.url }}">{{ image.cropZoom(800,400).html|raw }}</a>
+        <a href="{{ page.url }}" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.BLOG_READ_FULL_POST'|t }}{{ page.title }}">
+            {{ image.cropZoom(800,400).html(page.title, page.title)|raw }}
+        </a>
     </div>
     {% endif %}
+    
     <div class="card-header">
         <div class="card-subtitle text-gray">
             {% include 'partials/blog/date.html.twig' %}
-    </div>
+        </div>
         <div class="card-title">
-        {% include 'partials/blog/title.html.twig' with {title_level: 'h5'} %}
+            {% include 'partials/blog/title.html.twig' with {title_level: 'h5'} %}
         </div>
     </div>
-    <div class="card-body">
+    
+    <div class="card-body" aria-label="{{ 'THEME_QUARK.ARIA_LABELS.BLOG_POST_SUMMARY'|t }}">
         {% if page.summary != page.content %}
             {{ page.summary|raw }}
         {% else %}
             {{ page.content|raw }}
         {% endif %}
     </div>
+    
     <div class="card-footer">
         {% include 'partials/blog/taxonomy.html.twig' %}
     </div>
-</div>
-
+</article>

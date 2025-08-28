@@ -1,9 +1,11 @@
 {% set logo = theme_var(mobile ? 'custom_logo_mobile' : 'custom_logo') %}
-<a href="{{ home_url }}" class="navbar-brand mr-10">
+<a href="{{ home_url }}" class="navbar-brand mr-10" aria-label="Go to the home page">
 {% if logo %}
-  {% set logo_file = (logo|first).name %}
-  <img src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt="{{ site.title }}" />
+    {% set logo_file = (logo|first).name %}
+    <img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title }}" width="auto" height="auto">
 {% else %}
-  {% include('@images/grav-logo.svg') %}
+    <div class="default-logo" aria-label="{{ site.title }}">
+        {% include('@images/grav-logo.svg') %}
+    </div>
 {% endif %}
 </a>
