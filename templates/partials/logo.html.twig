@@ -2,7 +2,13 @@
 <a href="{{ home_url }}" class="navbar-brand mr-10">
 {% if logo %}
   {% set logo_file = (logo|first).name %}
-  <img src="{{ url('theme://images/logo/' ~ logo_file)  }}" alt="{{ site.title }}" />
+        {% set extension = logo_file|split('.')|last %}
+        
+        {% if extension == 'svg' %}
+            {% include('@images/logo/' ~ logo_file) %}
+        {% else %}
+            <img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title }}" width="auto" height="auto">
+        {% endif %}
 {% else %}
   {% include('@images/grav-logo.svg') %}
 {% endif %}
