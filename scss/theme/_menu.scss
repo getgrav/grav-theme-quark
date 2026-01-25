@@ -18,7 +18,7 @@
         padding: $dropmenu-vert-padding ($dropmenu-horiz-padding + $dropmenu-child-padding) $dropmenu-vert-padding $dropmenu-horiz-padding;
         display: block;
 
-        &:hover, &:focus, &.active {
+        &:hover, &.active {
           color: $dropmenu-hover-text !important;
         }
 
