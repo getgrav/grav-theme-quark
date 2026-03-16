@@ -315,8 +315,6 @@ legend { font-size: 0.9rem; font-weight: 500; margin-bottom: 0.8rem; }
 
 .form-input:focus, .search-input:focus, [data-grav-field="array"] input:focus, [data-grav-field="array"] textarea:focus { box-shadow: 0 0 0 0.1rem rgba(48, 133, 238, 0.2); border-color: #3085EE; }
 
-.form-input::-webkit-input-placeholder, .search-input::-webkit-input-placeholder, [data-grav-field="array"] input::-webkit-input-placeholder, [data-grav-field="array"] textarea::-webkit-input-placeholder { color: #acb3c2; }
-
 .form-input:-ms-input-placeholder, .search-input:-ms-input-placeholder, [data-grav-field="array"] input:-ms-input-placeholder, [data-grav-field="array"] textarea:-ms-input-placeholder { color: #acb3c2; }
 
 .form-input::-ms-input-placeholder, .search-input::-ms-input-placeholder, [data-grav-field="array"] input::-ms-input-placeholder, [data-grav-field="array"] textarea::-ms-input-placeholder { color: #acb3c2; }
@@ -447,9 +445,15 @@ textarea.form-input, textarea.search-input, [data-grav-field="array"] textarea, 
 
 .has-error .form-checkbox input:indeterminate + .form-icon, .form-checkbox.is-error input:indeterminate + .form-icon { background: #e85600; border-color: #e85600; }
 
+.form-input:not(:-ms-input-placeholder):invalid, .search-input:not(:-ms-input-placeholder):invalid, [data-grav-field="array"] input:not(:-ms-input-placeholder):invalid, [data-grav-field="array"] textarea:not(:-ms-input-placeholder):invalid { border-color: #e85600; }
+
 .form-input:not(:placeholder-shown):invalid, .search-input:not(:placeholder-shown):invalid, [data-grav-field="array"] input:not(:placeholder-shown):invalid, [data-grav-field="array"] textarea:not(:placeholder-shown):invalid { border-color: #e85600; }
 
+.form-input:not(:-ms-input-placeholder):invalid:focus, .search-input:not(:-ms-input-placeholder):invalid:focus, [data-grav-field="array"] input:not(:-ms-input-placeholder):invalid:focus, [data-grav-field="array"] textarea:not(:-ms-input-placeholder):invalid:focus { box-shadow: 0 0 0 0.1rem rgba(232, 86, 0, 0.2); background: #fffaf7; }
+
 .form-input:not(:placeholder-shown):invalid:focus, .search-input:not(:placeholder-shown):invalid:focus, [data-grav-field="array"] input:not(:placeholder-shown):invalid:focus, [data-grav-field="array"] textarea:not(:placeholder-shown):invalid:focus { box-shadow: 0 0 0 0.1rem rgba(232, 86, 0, 0.2); background: #fffaf7; }
+
+.form-input:not(:-ms-input-placeholder):invalid + .form-input-hint, .search-input:not(:-ms-input-placeholder):invalid + .form-input-hint, [data-grav-field="array"] input:not(:-ms-input-placeholder):invalid + .form-input-hint, [data-grav-field="array"] textarea:not(:-ms-input-placeholder):invalid + .form-input-hint { color: #e85600; }
 
 .form-input:not(:placeholder-shown):invalid + .form-input-hint, .search-input:not(:placeholder-shown):invalid + .form-input-hint, [data-grav-field="array"] input:not(:placeholder-shown):invalid + .form-input-hint, [data-grav-field="array"] textarea:not(:placeholder-shown):invalid + .form-input-hint { color: #e85600; }
 
