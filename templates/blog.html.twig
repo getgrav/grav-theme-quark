@@ -6,24 +6,12 @@
 {% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
 {% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
 
-{% block stylesheets %}
-    {% do assets.addCss('theme://css/bricklayer.css') %}
-    {{ parent() }}
-{% endblock %}
-
-{% block javascripts %}
-    {{ parent() }}
-    {% do assets.add('theme://js/bricklayer.min.js') %}
-    {% do assets.add('theme://js/scopedQuerySelectorShim.min.js') %}
-{% endblock %}
-
-
 {% block hero %}
     {% include 'partials/hero.html.twig' with {id: 'blog-hero', content: page.content, hero_image: blog_image} %}
 {% endblock %}
 
 {% block body %}
-    <section id="body-wrapper" class="section blog-listing">
+    <section id="body-wrapper" class="section">
         <section class="container {{ grid_size }}">
 
         {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
@@ -33,10 +21,21 @@
         {% embed 'partials/layout.html.twig' with {blog: page} %}
             {% block item %}
 
-                <div class="bricklayer">
-                {% for child in collection %}
-                    {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
-                {% endfor %}
+                <div class="blog-listing columns">
+                    <div class="column col-6 col-lg-12">
+                        {% for child in collection %}
+                            {% if loop.index0 % 2 == 0 %}
+                                {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    <div class="column col-6 col-lg-12">
+                        {% for child in collection %}
+                            {% if loop.index0 % 2 == 1 %}
+                                {% include 'partials/blog-list-item.html.twig' with {blog: page, page: child} %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
                 </div>
 
                 {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
@@ -53,11 +52,4 @@
         {% endembed %}
         </section>
     </section>
-    <script>
-        //Bricklayer
-        var bricklayer = new Bricklayer(document.querySelector('.bricklayer'))
-    </script>
 {% endblock %}
-
-
-
