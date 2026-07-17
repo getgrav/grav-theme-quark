@@ -1,8 +1,9 @@
 {% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags(of_page, children_only) : taxonomylist.get() %}
 
-{% if taxlist %}
+{% if taxlist and taxlist[taxonomy] is defined %}
+{% set tags = filterend is defined ? taxlist[taxonomy]|slice(0, filterend, true) : taxlist[taxonomy] %}
 <span class="tags">
-    {% for tax,value in taxlist[taxonomy] %}
+    {% for tax,value in tags %}
         {% set label_class = uri.param(taxonomy) == tax ? 'label-primary' : 'label-secondary' %}
         <a class="label label-rounded {{ label_class }}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
     {% endfor %}
