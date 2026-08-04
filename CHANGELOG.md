@@ -1,3 +1,9 @@
+# v2.1.5
+## 08/04/2026
+
+1. [](#bugfix)
+    * The theme no longer ships a rule that kept custom logos out of your site's git repository
+
 # v2.1.4
 ## 07/17/2026
 
