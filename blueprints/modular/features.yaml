@@ -9,7 +9,7 @@ form:
           type: tab
           title: Features
           fields:
-            header.class:
+            header.layout:
               type: select
               label: Layout
               default: small
@@ -17,6 +17,14 @@ form:
               options:
                 small: Small   = 4 / 3 / 2 columns
                 standard: Standard  = 3 / 2 / 1 columns
+            header.class:
+              type: select
+              label: Classes
+              default: small
+              size: medium
+              options:
+                small: Small
+                offset-box: Offset-Box
 
             header.features:
               name: features
