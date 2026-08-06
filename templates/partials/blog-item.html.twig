@@ -1,6 +1,6 @@
 <div class="content-item h-entry">
 
-{% if not hero_image_name %}
+{% if not hero_image_name or hero_enabled == false %}
     <div class="content-title text-center">
         {% include 'partials/blog/title.html.twig' with {title_level: 'h2'} %}
         {% if page.header.subtitle %}
