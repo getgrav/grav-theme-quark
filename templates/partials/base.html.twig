@@ -13,7 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% include 'partials/metadata.html.twig' %}
 
-    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+    {% set favicon = theme_var('custom_favicon') %}
+    <link rel="icon" type="{% if favicon %}{{ (favicon|first).type }}{% else %}image/png{% endif %}" href="{% if favicon %}{{ url('theme://images/logo/' ~ (favicon|first).name) }}{% else %}{{ url('theme://images/favicon.png') }}{% endif %}" />
     <link rel="canonical" href="{{ page.url(true, true) }}" />
 {% endblock head %}
 
