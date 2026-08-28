@@ -81,3 +81,91 @@
     </div>
   </div>
 {% endblock %}
+
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <section class="pricing-header">
+        <div class="container">
+            <h1>{{ page.header.title ?? 'Simple Pricing' }}</h1>
+            
+            <div class="pricing-toggle">
+                <span class="toggle-label">Monthly</span>
+                <label class="switch">
+                    <input type="checkbox" id="pricing-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-label">Yearly</span>
+            </div>
+            
+            <div class="pricing-grid">
+                {% for plan in page.header.pricing_plans ?? [
+                    {
+                        'name': 'Pro',
+                        'color': '#38bdf8',
+                        'monthly_price': '$9',
+                        'annual_price': '$90',
+                        'features': [
+                            'Unlimited records*',
+                            'Custom Objects & Fields',
+                            'APIs & Webhooks',
+                            'Email Integration',
+                            'No credit-card required'
+                        ],
+                        'button_text': 'Start for Free',
+                        'button_url': '#',
+                        'featured': false
+                    },
+                    {
+                        'name': 'Organization',
+                        'color': '#a855f7',
+                        'monthly_price': '$19',
+                        'annual_price': '$190',
+                        'features': [
+                            'SAML / OIDC SSO',
+                            'Priority support',
+                            'Access to Paid Services',
+                            'All of the Pro Plan',
+                            'No credit-card required'
+                        ],
+                        'button_text': 'Start for Free',
+                        'button_url': '#',
+                        'featured': true
+                    }
+                ] %}
+                    <div class="pricing-card {% if plan.featured %}featured{% endif %}">
+                        <div class="plan-name" style="color: {{ plan.color }}">{{ plan.name }}</div>
+                        <div class="plan-price">
+                            <div class="price monthly">{{ plan.monthly_price }}</div>
+                            <div class="price annual" style="display: none;">{{ plan.annual_price }}</div>
+                            <div class="price-period">/user/month</div>
+                        </div>
+                        
+                        <ul class="plan-features">
+                            {% for feature in plan.features %}
+                                <li>
+                                    <span class="feature-check">✓</span>
+                                    {{ feature }}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        
+                        <a href="{{ plan.button_url }}" class="btn btn-block {% if plan.featured %}btn-primary{% else %}btn-outline{% endif %}">
+                            {{ plan.button_text }}
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            
+            <div class="pricing-contact">
+                <h3>{{ page.header.contact_title ?? 'Need more information?' }}</h3>
+                <p>{{ page.header.contact_description ?? 'Let\'s find the perfect solution for your organization.' }}</p>
+                <a href="{{ page.header.contact_button_url ?? '#' }}" class="btn btn-outline">{{ page.header.contact_button_text ?? 'Schedule a call' }}</a>
+            </div>
+            
+            <div class="pricing-footnote">
+                <p>{{ page.header.pricing_footnote ?? '*Fair usage policy' }}</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}
