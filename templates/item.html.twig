@@ -4,19 +4,23 @@
 {% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
 {% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
 {% set hero_image_name = page.header.hero_image %}
+{% set hero_enabled = page.header.hero_enabled|defined(true) %}
 
 {% block hero %}
-    {% if hero_image_name %}
-        {% set hero_image = page.media[hero_image_name] %}
+   {% if hero_enabled %}
         {% set content %}
             <h1>{{ page.title }}</h1>
             <h2>{{ page.header.subtitle }}</h2>
             {% include 'partials/blog/date.html.twig' %}
             {% include 'partials/blog/taxonomy.html.twig' %}
         {% endset %}
+    
+        {% if hero_image_name %}
+            {% set hero_image = page.media[hero_image_name] %}
+        {% endif %}
         {% include 'partials/hero.html.twig' with {id: 'blog-hero'} %}
-
     {% endif %}
+    
 {% endblock %}
 
 {% block body %}
