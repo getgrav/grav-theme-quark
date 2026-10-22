@@ -1,3 +1,9 @@
+# v2.1.6
+## 10/22/2026
+
+1. [](#bugfix)
+    * The archives sidebar now lists posts by year when the Archives plugin's date format is set to `Y`, instead of showing every entry as 1970 [getgrav/grav-plugin-archives#39](https://github.com/getgrav/grav-plugin-archives/issues/39)
+
 # v2.1.5
 ## 08/04/2026
 

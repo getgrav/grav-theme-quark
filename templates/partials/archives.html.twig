@@ -1,12 +1,13 @@
+{% set by_year = config.plugins.archives.date_display_format == 'Y' %}
 <ul class="archives">
 
 {% for month,items in archives_data %}
     <li>
-    	<a href="{{ base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date(config.plugins.archives.taxonomy_values.month)|lower|e('url') }}">
+    	<a href="{{ base_url }}/{% if by_year %}{{ config.plugins.archives.taxonomy_names.year }}{{ config.system.param_sep }}{{ month|lower|e('url') }}{% else %}{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date(config.plugins.archives.taxonomy_values.month)|lower|e('url') }}{% endif %}">
         {% if archives_show_count %}
         <span class="label label-rounded label-primary">{{ items|length }}</span>
         {% endif %}
-          <span class="archive_date">{{ month|date(config.plugins.archives.date_display_format) }} </span>
+          <span class="archive_date">{{ by_year ? month : month|date(config.plugins.archives.date_display_format) }} </span>
         </a>
     </li>
 {% endfor %}
