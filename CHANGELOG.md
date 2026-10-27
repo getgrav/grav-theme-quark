@@ -1,3 +1,9 @@
+# v2.1.7
+## 10/26/2026
+
+1. [](#bugfix)
+    * The Popular Tags sidebar on a blog post lists the blog's tags instead of coming up empty [getgrav/grav-theme-quark2#29](https://github.com/getgrav/grav-theme-quark2/pull/29)
+
 # v2.1.6
 ## 10/22/2026
 
