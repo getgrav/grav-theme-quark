@@ -16,6 +16,17 @@ form:
       label: Hero Image
       preview_images: true
       description: 'If not specified, this defaults to the first image found in the page''s folder'
+    
+    header.hero_enabled:
+      type: toggle
+      label: Enable Hero Block
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
 
     toggles_title:
       type: spacer

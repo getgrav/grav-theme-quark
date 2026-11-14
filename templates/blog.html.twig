@@ -19,7 +19,9 @@
 
 
 {% block hero %}
-    {% include 'partials/hero.html.twig' with {id: 'blog-hero', content: page.content, hero_image: blog_image} %}
+    {% if page.header.hero_enabled|defined(true) %}
+        {% include 'partials/hero.html.twig' with {id: 'blog-hero', content: page.content, hero_image: blog_image} %}
+    {% endif %}
 {% endblock %}
 
 {% block body %}
