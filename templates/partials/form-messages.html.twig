@@ -1,6 +1,9 @@
 {% if form.message %}
   {% set inline_errors = form.inline_errors is not null ? form.inline_errors : config.plugins.form.inline_errors(false) %}
   {% set status_mapping = {'success':'green', 'error': 'red', 'warning': 'yellow'} %}
-  {% set message = inline_errors and form.messages ? "GRAV.FORM.VALIDATION_FAIL"|t : form.message %}
+  {# Form 9.2.1+ has a message for errors shown beside their fields; older versions fall back to the core one #}
+  {% set inline_message = "PLUGIN_FORM.VALIDATION_FAILED_INLINE"|t %}
+  {% if inline_message == "PLUGIN_FORM.VALIDATION_FAILED_INLINE" %}{% set inline_message = "GRAV.FORM.VALIDATION_FAIL"|t %}{% endif %}
+  {% set message = inline_errors and form.messages ? inline_message : form.message %}
     <div class="toast toast-{{ form.status }} {{ status_mapping[form.status] ?: 'green' }} mt-2 mb-2">{{ message|raw }}</div>
 {% endif %}

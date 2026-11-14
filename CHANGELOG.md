@@ -1,3 +1,9 @@
+# v2.1.8
+## 11/13/2026
+
+1. [](#bugfix)
+    * A form that shows its errors beside each field now says to check the highlighted fields, instead of an empty "Validation failed:" message
+
 # v2.1.7
 ## 10/26/2026
 
