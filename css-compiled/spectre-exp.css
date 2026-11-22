@@ -246,11 +246,11 @@
 
 .slider.tooltip:not([data-tooltip])::after { content: attr(value); }
 
-.slider::-webkit-slider-thumb { -webkit-appearance: none; background: #3085EE; border: 0; border-radius: 50%; height: 0.6rem; margin-top: -0.25rem; transition: transform .2s; width: 0.6rem; }
+.slider::-webkit-slider-thumb { -webkit-appearance: none; background: #3085EE; border: 0; border-radius: 50%; height: 0.6rem; margin-top: -0.25rem; -webkit-transition: transform .2s; transition: transform .2s; width: 0.6rem; }
 
-.slider::-moz-range-thumb { background: #3085EE; border: 0; border-radius: 50%; height: 0.6rem; transition: transform .2s; width: 0.6rem; }
+.slider::-moz-range-thumb { background: #3085EE; border: 0; border-radius: 50%; height: 0.6rem; -moz-transition: transform .2s; transition: transform .2s; width: 0.6rem; }
 
-.slider::-ms-thumb { background: #3085EE; border: 0; border-radius: 50%; height: 0.6rem; transition: transform .2s; width: 0.6rem; }
+.slider::-ms-thumb { background: #3085EE; border: 0; border-radius: 50%; height: 0.6rem; -ms-transition: transform .2s; transition: transform .2s; width: 0.6rem; }
 
 .slider:active::-webkit-slider-thumb { transform: scale(1.25); }
 
