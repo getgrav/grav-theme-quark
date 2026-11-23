@@ -27,9 +27,11 @@
 {% block header_navigation %}
     {% if show_onpage_menu %}
         <ul class="navigation">
-        {% for module in page.collection() if module.header.visible is not same as(false) %}
-            {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
-            <li><a class="{{ current_module }}" href="#{{ module.menu|hyphenize }}">{{ module.menu }}</a></li>
+        {% for module in page.collection() %}
+            {% if module.header.visible is not same as(false) %}
+                {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
+                <li><a class="{{ current_module }}" href="#{{ module.menu|hyphenize }}">{{ module.menu }}</a></li>
+            {% endif %}
         {% endfor %}
         {% for mitem in site.menu %}
             <li>
@@ -46,15 +48,19 @@
 {% endblock %}
 
 {% block hero %}
-    {% for module in page.collection() if module.template == 'modular/hero' %}
-        <div id="{{ module.menu|hyphenize }}"></div>
-        {{ module.content|raw }}
+    {% for module in page.collection() %}
+        {% if module.template == 'modular/hero' %}
+            <div id="{{ module.menu|hyphenize }}"></div>
+            {{ module.content|raw }}
+        {% endif %}
     {% endfor %}
 {% endblock %}
 
 {% block body %}
-    {% for module in page.collection() if module.template != 'modular/hero' %}
-        <div id="{{ module.menu|hyphenize }}"></div>
-        {{ module.content|raw }}
+    {% for module in page.collection() %}
+        {% if module.template != 'modular/hero' %}
+            <div id="{{ module.menu|hyphenize }}"></div>
+            {{ module.content|raw }}
+        {% endif %}
     {% endfor %}
 {% endblock %}
